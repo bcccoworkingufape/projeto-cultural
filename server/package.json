@@ -1,8 +1,8 @@
 {
   "name": "projeto-cultural-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API do projeto cultural",
+  "main": "server.ts",
   "scripts": {
     "start": "nodemon --watch '**' --ext 'ts,json' --ignore '**/*.spec.ts' --exec 'ts-node server.ts'"
   },
