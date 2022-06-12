@@ -1,9 +1,13 @@
-import logo from './logo.svg';
+import logo from './assets/logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Header from './components/header/header';
 
 function App() {
   return (
+    <>
+    <Header />
+    
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -20,6 +24,7 @@ function App() {
         </a>
       </header>
     </div>
+    </>
   );
 }
 
