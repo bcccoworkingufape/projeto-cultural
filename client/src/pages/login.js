@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+/*import 'bootstrap/dist/css/bootstrap.min.css';*/
 
 function login() {
     return (
@@ -7,8 +7,8 @@ function login() {
             <p className='d-flex justify-content-center'>Login</p>
 
             <div className='col'>
-                <button type="submit" className="btn btn-primary p-2 w-50">Entrar com Google</button>
-                <button type="submit" className="btn btn-primary p-2 w-50">Entrar com Facebook</button>
+                <button type="submit" className="btn p-2 w-50">Entrar com Google</button>
+                <button type="submit" className="btn p-2 w-50">Entrar com Facebook</button>
             </div>
 
             <hr />
@@ -31,7 +31,7 @@ function login() {
                 </div>
 
                 <div className='row w-100 m-0 mt-4'>
-                    <button type="submit" className="btn btn-primary p-2">Entrar</button>
+                    <button type="submit" className="btn p-2">Entrar</button>
                 </div>
             </form>
         </div>
@@ -40,8 +40,8 @@ function login() {
             <p className='d-flex justify-content-center'>Ainda não tem conta?</p>
 
             <div className='col d-flex justify-content-between'>
-                <button type="submit" className="btn btn-primary p-2 w-50 mx-1">Sou Criador</button>
-                <button type="submit" className="btn btn-primary p-2 w-50 mx-1">Sou Financiador</button>
+                <button type="submit" className="btn p-2 w-50 mx-1">Sou Criador</button>
+                <button type="submit" className="btn p-2 w-50 mx-1">Sou Financiador</button>
             </div>
         </div>  
         </>

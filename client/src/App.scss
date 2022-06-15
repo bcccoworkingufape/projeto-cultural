@@ -1,3 +1,5 @@
+@import './stylesheets/_colors.scss';
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* SOBRESCRESVENDO O BOOTSTRAP */
+
+.btn, .btn:hover {
+  background-color: $color-button-dark-blue01;
+  color: $color-light-gray01;
 }
