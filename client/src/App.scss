@@ -43,8 +43,10 @@
 
 .btn {
   color: $color-light-gray01;
+  font-size: small;
   width: 100%;
-  height: 3em;
+  height: 4em;
+  padding: 0;
 
 }
 .btn-light, .btn-light:hover {
@@ -64,5 +66,16 @@
 .link {
   text-decoration: none;
   color: $color-button-light-blue02;
+}
+
+.link:hover {
+  color: $color-button-dark-blue01;
+}
+
+.form-control, .form-control:focus {
+  border-radius: 0;
+  background-color: $color-light-gray01;
+  box-shadow: inset -2px 4px 5px -1px rgb(173, 173, 173);
+  border: none;
 }
 
