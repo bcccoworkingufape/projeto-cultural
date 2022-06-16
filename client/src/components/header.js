@@ -16,14 +16,14 @@ function Header() {
 
                 <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-auto" role="search">
                     <div>
-                    <input type="search" className="form-control form-control-dark text-white bg-dark" placeholder="Busque um projeto" aria-label="Search"/>
+                    <input type="search" className="form-control form-control-light text-dark bg-light" placeholder="Busque um projeto" aria-label="Search"/>
                     </div>
 
 
                 </form>
 
                 <div className="text-end">
-                <button type="button" className="btn btn-outline-light me-2">Entrar</button>
+                <button type="button" className="btn btn-light">Entrar</button>
                 </div>
             </div>
         </div>
