@@ -1,3 +1,16 @@
 import { appDataSource } from './data-source';
 
-appDataSource.initialize().then().catch(error => console.log(error));
+export default async (): Promise<void> => {
+    return appDataSource.initialize()
+    .then(() =>
+        console.log("Banco de Dados incializado")
+    )
+    .catch(error => console.log(`Ocorreu um erro durante a inicialização do banco de dados: ${error}`));
+}   
+
+
+
+
+
+
+
