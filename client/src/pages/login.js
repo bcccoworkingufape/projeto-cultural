@@ -4,11 +4,12 @@ function login() {
     return (
         <>
          <div className='container col-4 mt-5'>
+            
             <p className='d-flex justify-content-center'>Login</p>
 
-            <div className='col'>
-                <button type="submit" className="btn p-2 w-50">Entrar com Google</button>
-                <button type="submit" className="btn p-2 w-50">Entrar com Facebook</button>
+            <div className='col d-flex justify-content-between'>
+                <button type="submit" className="btn btn-border">Entrar com Google</button>
+                <button type="submit" className="btn offset-md-1 btn-border">Entrar com Facebook</button>
             </div>
 
             <hr />
@@ -26,12 +27,12 @@ function login() {
                     <div className="form-group mt-4 ">
                         <label>Senha</label>
                         <input type="password" className="form-control" />
-                        <small className="form-text"><a href='?#'>Esqueceu sua senha?</a></small>
+                        <small><a href='?#' className="link">Esqueceu sua senha?</a></small>
                     </div>
                 </div>
 
                 <div className='row w-100 m-0 mt-4'>
-                    <button type="submit" className="btn p-2">Entrar</button>
+                    <button type="submit" className="btn btn-dark">Entrar</button>
                 </div>
             </form>
         </div>
@@ -40,8 +41,8 @@ function login() {
             <p className='d-flex justify-content-center'>Ainda não tem conta?</p>
 
             <div className='col d-flex justify-content-between'>
-                <button type="submit" className="btn p-2 w-50 mx-1">Sou Criador</button>
-                <button type="submit" className="btn p-2 w-50 mx-1">Sou Financiador</button>
+                <button type="submit" className="btn btn-light">Sou Criador</button>
+                <button type="submit" className="btn offset-md-1 btn-light">Sou Financiador</button>
             </div>
         </div>  
         </>
