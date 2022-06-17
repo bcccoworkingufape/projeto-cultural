@@ -43,14 +43,14 @@ function login() {
                     </div>
                 </div>
 
-                <div className='row w-100 m-0 mt-4'>
-                    <button type="submit" className="btn btn-dark shadow font-type">Entrar</button>
+                <div className='row m-0 mt-4'>
+                    <button type="submit" className="btn btn-dark shadow font-type w-100">Entrar</button>
                 </div>
             </form>
         </div>
 
         <div className='container col-4 mt-5'>
-            <h6 className='d-flex justify-content-center mb-4' style={{fontWeight: 500, fontSize: 20}}><b>Ainda não tem conta?</b></h6>
+            <h6 className='d-flex justify-content-center mb-4' style={{fontWeight: 500}}><b>Ainda não tem conta?</b></h6>
 
             <div className='col d-flex justify-content-between'>
                 <button type="submit" className="btn btn-light shadow font-type">Sou Criador</button>
