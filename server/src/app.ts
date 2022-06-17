@@ -3,6 +3,8 @@ import * as dotenv from 'dotenv';
 import cors from 'cors';
 import createConnection from '../src/database/index';
 
+import { router as userRouter } from './routes/user-route';
+
 dotenv.config();
 
 export const app = express();
@@ -15,3 +17,5 @@ app.use(cors({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use('/users', userRouter);
