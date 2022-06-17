@@ -14,10 +14,7 @@ export class User {
 
     @Column()
     type: string;
-
-    @Column()
-    imageUrl: string;
-
+    
     @Column()
     active: boolean;
 

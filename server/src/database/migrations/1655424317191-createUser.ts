@@ -30,10 +30,6 @@ export class createUser1655424317191 implements MigrationInterface {
                         isNullable: false,
                     },
                     {
-                        name: 'imageUrl',
-                        type: 'varchar',
-                    },
-                    {
                         name: 'active',
                         type: 'boolean',
                         default: true
