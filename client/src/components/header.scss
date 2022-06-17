@@ -1,15 +1,5 @@
 @import '../stylesheets/_colors.scss';
 
-.btn {
-    color: $color-light-gray01;
-    width: 70%;
-    height: 65px;
-    padding: 20px 10px;
-    gap: 10px;
-    border-radius: 5px;
-    letter-spacing: -0.015em;
-  
-}
 .header {
     height: 80px;
 }
@@ -26,6 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border:none;
 }
 .submitButton {
     border-radius:0 5px 5px 0;
