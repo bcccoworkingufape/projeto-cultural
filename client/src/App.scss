@@ -49,6 +49,12 @@
 
 /* SOBRESCRESVENDO O BOOTSTRAP */
 
+@mixin input-box ($t: 0, $r: 0, $b: 0, $l: 0) {
+  background: $color-input-background;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: $t $r $b $l;
+}
+
 .font-type {
   font-weight: 700;
   font-size: 18px;
@@ -74,9 +80,6 @@
 }
 
 .btn-border, .btn-border:hover {
-  /*border: solid $color-button-light-blue02;
-  color: $color-button-light-blue02;
-  font-weight: bold;*/
 
   box-sizing: border-box;
   justify-content: center;
@@ -93,17 +96,21 @@
 .link {
   text-decoration: none;
   color: $color-button-light-blue02;
+
+  &:hover {
+    color: $color-button-dark-blue01;
+  }
 }
 
-.link:hover {
-  color: $color-button-dark-blue01;
+.search-box {
+  @include input-box(5px, 0, 0, 5px);
 }
 
 .form-control, .form-control:focus {
-  background: $color-input-background;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0;
+  @include input-box; /* VERIFICAR POR QUE NAO ESTA SOBRESCREVENDO O DO HEADER */
+  border-radius: 0 !important; 
 }
+
 
 .shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -124,7 +131,7 @@
   margin: 50px 0;
   content: " ";
   display: block;
-  border-bottom: 3px solid $color-button-dark-blue01;
+  border: 3px solid $color-button-dark-blue01;
 }
 
 
