@@ -4,7 +4,13 @@
   "description": "API do projeto cultural",
   "main": "server.ts",
   "scripts": {
-    "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node ./bin/server.ts'"
+    "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node ./bin/server.ts'",
+    "migration:create": "ts-node-dev node_modules/typeorm/cli.js migration:create",
+    "migration:up": "ts-node-dev node_modules/typeorm/cli.js migration:run -d src/modules/config/ormconfig.ts",
+    "migration:down": "ts-node-dev node_modules/typeorm/cli.js migration:revert -d src/modules/config/ormconfig.ts",
+    "migration:run": "ts-node-dev node_modules/typeorm/cli.js migration:run  -d src/database/data-source",
+    "migration:revert": "ts-node-dev node_modules/typeorm/cli.js migration:revert  -d src/database/data-source"
+    
   },
   "author": "",
   "license": "ISC",
