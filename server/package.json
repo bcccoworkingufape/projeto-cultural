@@ -4,23 +4,34 @@
   "description": "API do projeto cultural",
   "main": "server.ts",
   "scripts": {
-    "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node ./bin/server.ts'"
+    "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node ./bin/server.ts'",
+    "migration:create": "ts-node-dev node_modules/typeorm/cli.js migration:create",
+    "migration:up": "ts-node-dev node_modules/typeorm/cli.js migration:run -d src/modules/config/ormconfig.ts",
+    "migration:down": "ts-node-dev node_modules/typeorm/cli.js migration:revert -d src/modules/config/ormconfig.ts",
+    "migration:run": "ts-node-dev node_modules/typeorm/cli.js migration:run  -d src/database/data-source",
+    "migration:revert": "ts-node-dev node_modules/typeorm/cli.js migration:revert  -d src/database/data-source"
+    
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/uuid": "^8.3.4",
     "cors": "^2.8.5",
     "debug": "^4.3.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "http": "0.0.1-security",
     "nodemon": "^2.0.16",
-    "typescript": "^4.7.3"
+    "sqlite3": "^5.0.8",
+    "typeorm": "^0.3.6",
+    "typescript": "^4.7.3",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
     "@types/debug": "^4.1.7",
     "@types/express": "^4.17.13",
-    "ts-node": "^10.8.1"
+    "ts-node": "^10.8.1",
+    "ts-node-dev": "^2.0.0"
   }
 }
