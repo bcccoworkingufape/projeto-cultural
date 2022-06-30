@@ -4,7 +4,7 @@ import cors from 'cors';
 
 import createConnection from '../src/database/index';
 
-import { router as userRouter } from './routes/user-route';
+import { router as userRouter } from './routes/User.route';
 
 dotenv.config();
 
