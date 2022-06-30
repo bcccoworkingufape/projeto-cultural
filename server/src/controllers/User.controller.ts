@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import * as userRepository from '../database/repositories/User.repository';
-import { cryptPassword } from '../services/authService.service';
+import { createLoginToken, cryptPassword, descryptPassword } from '../services/authService.service';
 
 
 export const create = async (req: Request, res: Response, next: NextFunction) => {
@@ -12,7 +12,8 @@ export const create = async (req: Request, res: Response, next: NextFunction) =>
                 password: (await cryptPassword(req.body.password)).cryptResponse
             });
 
-            res.status(200).send(user);
+            const token = createLoginToken({ id: user.id, email: user.email });
+            res.status(200).send({ token, id: user.id });
         }
     } catch (error: any) {
         res.status(400).send({ message: 'The request has failed: ' + error });
@@ -24,8 +25,12 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
     try {
         if (!!!user) res.status(400).send({ message: 'The request has failed: User is not signed up' });
         else {
-            if (user.email == req.body.email && user.password == req.body.password) res.status(200).send(user);
-            else res.status(400).send({ message: 'The request has failed: The login information does not match' });
+            const validPassword = await descryptPassword(req.body.password, user.password);
+            
+            if (user.email == req.body.email && validPassword) {
+                const token = createLoginToken({ id: user.id, email: user.email });
+                res.status(200).send({ token, id: user.id });
+            } else res.status(400).send({ message: 'The request has failed: The login information does not match' });
         }
     } catch (error: any) {
         res.status(400).send({ message: 'The request has failed: ' + error });
