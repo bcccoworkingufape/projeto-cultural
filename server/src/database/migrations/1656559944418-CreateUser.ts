@@ -19,13 +19,27 @@ export class CreateUser1656559944418 implements MigrationInterface {
                     },
                     {
                         name: "password",
-                        type: "varchar"
+                        type: "varchar",
+                        isNullable: false,
+                    },
+                    {
+                        name: "user_type",
+                        type: "varchar",
+                    },
+                    {
+                        name: "imageURL",
+                        type: "varchar",
+                    },
+                    {
+                        name: "active",
+                        type: "boolean",
+                        default: true
                     },
                     {
                         name: "createdAt",
                         type: "timestamp",
                         default: "now()"
-                    }
+                    },
                 ]
             })
         )

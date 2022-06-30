@@ -13,6 +13,15 @@ export class User {
     @Column()
     password: string;
 
+    @Column()
+    user_type: string;
+
+    @Column()
+    imageURL: string;
+
+    @Column()
+    active: boolean;
+
     @CreateDateColumn()
     createdAt: Date;
 

@@ -9,6 +9,8 @@ export const create = async(data: any) => {
 
     user.email = data.email;
     user.password = data.password;
+    user.user_type = data.user_type;
+    user.imageURL = data.imageURL;
 
     return await repository.save(user);
 };
