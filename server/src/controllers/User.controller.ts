@@ -1,12 +1,17 @@
 import { NextFunction, Request, Response } from 'express';
-import * as userRepository from '../database/repositories/user-repository';
+import * as userRepository from '../database/repositories/User.repository';
+import { cryptPassword } from '../services/authService.service';
 
 
 export const create = async (req: Request, res: Response, next: NextFunction) => {
     try {
         if (!!(await userRepository.getByEmail(req.body.email))) throw new Error("User already signed up");
         else {
-            const user = await userRepository.create(req.body);
+            const user = await userRepository.create({
+                ...req.body,
+                password: (await cryptPassword(req.body.password)).cryptResponse
+            });
+
             res.status(200).send(user);
         }
     } catch (error: any) {
