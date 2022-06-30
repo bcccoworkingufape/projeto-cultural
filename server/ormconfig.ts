@@ -8,8 +8,8 @@ export const AppDataSource = new DataSource({
     username: 'postgres',
     password: 'postgres',
     database: 'projeto-cultural',
-    synchronize: true,
-    entities: [ User ],
+    synchronize: false,
+    entities: [User],
     migrations: [
          __dirname + "/src/database/migrations/*.ts"
     ],
