@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from 'express';
-import { User } from '../database/entities/User';
 import * as userRepository from '../database/repositories/user-repository';
 
 
@@ -20,7 +19,7 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
     try {
         if (!!!user) res.status(400).send({ message: 'The request has failed: User is not signed up' });
         else {
-            if(user.email == req.body.email && user.password == req.body.password) res.status(200).send(user);
+            if (user.email == req.body.email && user.password == req.body.password) res.status(200).send(user);
             else res.status(400).send({ message: 'The request has failed: The login information does not match' });
         }
     } catch (error: any) {
