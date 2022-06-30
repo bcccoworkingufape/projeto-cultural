@@ -1,15 +1,16 @@
-import { appDataSource } from '../data-source';
-import { User } from '../entities/User';
 
-const repository = appDataSource.getRepository(User);
+import { AppDataSource as database } from '../../../ormconfig'; 
+import { User } from '../entities/User.entity';
+
+const repository = database.getRepository(User);
 
 export const create = async(data: any) => {
     let user = new User();
 
     user.email = data.email;
     user.password = data.password;
-    user.type = data.type;
-    user.active = true;
+    user.user_type = data.user_type;
+    user.imageURL = data.imageURL;
 
     return await repository.save(user);
 };
