@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../assets//images/logo.svg';
 
 import Header from '../components/header';
-
+import Footer from '../components/footer';
 
 function landingPage() {
     return (
@@ -22,6 +22,7 @@ function landingPage() {
                 Learn React
             </a>
             </header>
+	    <Footer/>
         </div>
     );
   }
