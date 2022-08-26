@@ -13,6 +13,14 @@ export class CreateLike1661457614296 implements MigrationInterface {
 				 		isPrimary: true
 					},
 					{
+						name: "user_id",
+						type: "uuid",
+					},
+					{
+						name: "project_id",
+						type: "uuid",
+					},
+					{
 						name: "createdAt",
 				 		type: "timestamp",
 				 		default: "now()"
