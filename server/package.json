@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node ./bin/server.ts'",
     "typeorm": "ts-node-dev node_modules/.bin/typeorm",
-    "migrate:up": "ts-node-dev node_modules/.bin/typeorm migration:run -d ormconfig.ts",
-    "migrate:down": "ts-node-dev node_modules/.bin/typeorm migration:revert -d ormconfig.ts"
+    "migrate:up": "npm run typeorm migration:run -d ormconfig.ts",
+    "migrate:down": "npm run typeorm migration:revert -d ormconfig.ts"
   },
   "author": "",
   "license": "ISC",
