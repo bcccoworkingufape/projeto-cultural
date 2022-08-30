@@ -1,26 +1,23 @@
-import { Entity, Column, CreateDateColumn, PrimaryColumn, OneToOne, JoinColumn } from "typeorm";
+import { Entity, Column, CreateDateColumn, PrimaryColumn } from "typeorm";
 import { v4 as uuid } from 'uuid';
 
-@Entity("users")
+@Entity("digital_presences")
 export class User {
 
     @PrimaryColumn()
     id: string;
 
     @Column()
-    email: string;
+    instagram_url: string;
 
     @Column()
-    password: string;
+    facebook_url: string;
 
     @Column()
-    user_type: string;
+    youtube_url: string;
 
     @Column()
-    imageURL: string;
-
-    @Column()
-    active: boolean;
+    personal_site_url: boolean;
 
     @CreateDateColumn()
     createdAt: Date;
