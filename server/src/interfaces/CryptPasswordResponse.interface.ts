@@ -1,3 +1,3 @@
 export interface CryptResponse {
-    cryptResponse: string
+    cryptResponse: string;
 }

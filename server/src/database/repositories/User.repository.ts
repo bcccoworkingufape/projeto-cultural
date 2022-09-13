@@ -18,3 +18,7 @@ export const create = async(data: any) => {
 export const getByEmail = async(email: string) => {
     return await repository.findOneBy({ email: email });
 };
+
+export const deleteUser = async(email: string) => {
+    return await repository.delete({ email: email })
+}
