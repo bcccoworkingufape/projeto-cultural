@@ -1,7 +1,6 @@
-import { Entity, Column, CreateDateColumn, PrimaryColumn, ManyToMany, JoinTable, ManyToOne, } from "typeorm";
+import { Entity, Column, CreateDateColumn, PrimaryColumn, ManyToMany, JoinTable, ManyToOne, OneToOne, JoinColumn, } from "typeorm";
 import { v4 as uuid } from 'uuid';
 import { StatusActive, StatusDelected } from "../../utils/enums.util";
-import { User } from './User.entity';
 
 @Entity("project_categories")
 export class ProjectCategory {
@@ -21,7 +20,7 @@ export class ProjectCategory {
     @Column({ type: String, name: "image_url"})
     imageURL?: string;
 
-    @Column({ type: String, name: "video_url"})
+    @Column({ type: String , name: "video_url"})
     videoURL?: string;
 
     @Column({ type: 'uuid', name: "user_id", nullable: false })
@@ -31,7 +30,7 @@ export class ProjectCategory {
     @JoinTable()
     categories: ProjectCategory[];
 
-    @Column({ type: "enum", enum: StatusDelected, name: "category_status_enum" })
+    @Column({ type: "enum", enum: StatusDelected, name: "project_status_enum" })
     status!: string;
 
     @Column({ type: "enum", enum: StatusActive, name: "category_status_enum" })
@@ -39,10 +38,6 @@ export class ProjectCategory {
 
     @CreateDateColumn({ name: "created_at" })
     createdAt!: Date;
-
-    @ManyToOne(() => User)
-    @JoinTable({ name: 'user_id' })
-    user!: User;
 
     constructor(){
         if(!this.id) this.id = uuid();
