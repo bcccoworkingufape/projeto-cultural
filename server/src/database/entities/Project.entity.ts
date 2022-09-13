@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid';
 import { StatusActive, StatusDelected } from "../../utils/enums.util";
 
 @Entity("project_categories")
-export class ProjectCategory {
+export class Project {
 
     @PrimaryColumn()
     id!: string;
