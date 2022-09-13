@@ -1,6 +1,7 @@
 import { Entity, Column, CreateDateColumn, PrimaryColumn, ManyToMany, JoinTable, ManyToOne, OneToOne, JoinColumn, } from "typeorm";
 import { v4 as uuid } from 'uuid';
 import { StatusActive, StatusDelected } from "../../utils/enums.util";
+import { ProjectCategory } from "./Project_Category.entity";
 
 @Entity("project_categories")
 export class Project {
