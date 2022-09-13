@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid';
 import { StatusActive, StatusDelected } from "../../utils/enums.util";
 import { ProjectCategory } from "./Project_Category.entity";
 
-@Entity("project_categories")
+@Entity("projects")
 export class Project {
 
     @PrimaryColumn()
