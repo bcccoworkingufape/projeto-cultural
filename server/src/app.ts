@@ -5,6 +5,7 @@ import cors from 'cors';
 import createConnection from '../src/database/index';
 
 import { router as userRouter } from './routes/User.route';
+import { router as partnerRouter } from './routes/Partner.route';
 
 dotenv.config();
 
@@ -20,3 +21,4 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/users', userRouter);
+app.use('/partners', partnerRouter);
