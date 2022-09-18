@@ -14,7 +14,8 @@ export class CreatePartner1663299516793 implements MigrationInterface {
                     },
                     {
                         name: "title",
-                        type: "varchar"
+                        type: "varchar",
+                        isUnique: true
                     },
                     {
                         name: "description",
