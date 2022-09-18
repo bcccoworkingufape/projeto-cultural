@@ -13,14 +13,14 @@ export const create = async (data: any) => {
     return await repository.save(partner);
 };
 
-export const destroy = async (title: string) => {
-    // let partner = getByTitle(title);
+// export const destroy = async (title: string) => {
+//     // let partner = getByTitle(title);
 
-    // if(!!(await repository.findOneBy({title}))) throw new Error("Partner does not exists");
-    // else{
-        await repository.delete(title);
-    // }
-}
+//     // if(!!(await repository.findOneBy({title}))) throw new Error("Partner does not exists");
+//     // else{
+//         await repository.delete(title);
+//     // }
+// }
 
 export const getByTitle = async (title:string) => {
     return await repository.findOneBy({ title:title });
