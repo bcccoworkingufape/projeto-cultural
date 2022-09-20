@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner, Table, TableForeignKey} from "typeorm"
 
-export class CreateSupport1661869959758 implements MigrationInterface {
+export class CreateSupport2661869959758 implements MigrationInterface {
 
 	public async up(queryRunner: QueryRunner): Promise<void> {
 		await queryRunner.createTable(
@@ -11,6 +11,14 @@ export class CreateSupport1661869959758 implements MigrationInterface {
 				 		name: "id",
 				 		type: "uuid",
 				 		isPrimary: true
+					},
+					{
+						name: "user_id",
+						type: "uuid",
+					},
+					{
+						name: "project_id",
+						type: "uuid",
 					},
 					{
 						name: "createdAt",

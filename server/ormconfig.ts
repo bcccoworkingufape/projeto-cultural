@@ -15,7 +15,7 @@ export const AppDataSource = new DataSource({
     password: 'postgrespassword',
     database: 'cultural',
     synchronize: false,
-    entities: [User, Address, DigitalPresence, ProjectCategory, Like, Support, Project], // ajustar aqui para carregar todas que tiverem na pasta de entidades
+    entities: [User, Project, Address, DigitalPresence, ProjectCategory, Like, Support], // ajustar aqui para carregar todas que tiverem na pasta de entidades
     migrations: [
          __dirname + "/src/database/migrations/*.ts"
     ],
