@@ -2,7 +2,7 @@
 import { useNavigate } from 'react-router-dom'
 
 
-function login() {
+function Login() {
     const navigate = useNavigate();
     return (
         <>
@@ -62,4 +62,4 @@ function login() {
     );
   }
 
-  export default login;
+  export default Login;
