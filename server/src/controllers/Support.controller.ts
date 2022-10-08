@@ -8,7 +8,7 @@ export const support = async (req: Request, res: Response, next: NextFunction) =
 	if (!!!userid) res.status(400).send({ message: 'The request has failed: User does not exists.' });
 		if (!!!projectid) res.status(400).send({ message: 'The request has failed: Project does not exists.' });
 		else {
-			const like = await SupportRepository.create({
+			const support = await SupportRepository.create({
 				...req.body
 			});
 		}
