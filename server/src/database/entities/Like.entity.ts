@@ -11,7 +11,7 @@ export class Like {
     user_id: string;
 
     @Column()
-    project_id: boolean;
+    project_id: string;
 
     @CreateDateColumn()
     createdAt: Date;

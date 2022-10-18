@@ -31,10 +31,10 @@ export class Project {
     @JoinTable()
     categories: ProjectCategory[];
 
-    @Column({ type: "enum", enum: StatusDelected, name: "project_status_enum" })
+    @Column({ type: "enum", enum: StatusDelected, name: "project_status" })
     status!: string;
 
-    @Column({ type: "enum", enum: StatusActive, name: "category_status_enum" })
+    @Column({ type: "enum", enum: StatusActive, name: "project_active" })
     active!: string;
 
     @CreateDateColumn({ name: "created_at" })

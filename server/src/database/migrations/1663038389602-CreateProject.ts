@@ -41,7 +41,7 @@ export class CreateProject1663038389602 implements MigrationInterface {
                         type: "uuid",
                     },
                     {
-                        name: "createdAt",
+                        name: "created_at",
                         type: "timestamp",
                         default: "now()"
                     },

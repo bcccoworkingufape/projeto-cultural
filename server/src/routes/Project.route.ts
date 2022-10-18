@@ -3,4 +3,4 @@ import * as projectController from '../controllers/Project.controller';
 export const router = express.Router();
 
 router.post('/createproject', projectController.create);
-router.post('/deleteproject', projectController.delete);
+router.post('/deleteproject', projectController.remove);

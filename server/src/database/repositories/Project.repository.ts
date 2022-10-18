@@ -23,3 +23,6 @@ export const getByName = async(name: string) => {
     return await repository.findOneBy({ name: name });
 };
 
+export const deleteProject = async(name: any) => {
+    return await repository.delete({ name: name.name })
+}
