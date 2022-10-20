@@ -1,6 +1,9 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
+import { useNavigate } from 'react-router-dom'
 
-function login() {
+
+function Login() {
+    const navigate = useNavigate();
     return (
         <>
          <div className='container col-4 mt-5 line'>
@@ -51,12 +54,12 @@ function login() {
             <h6 className='d-flex justify-content-center mb-4' style={{fontWeight: 500}}><b>Ainda não tem conta?</b></h6>
 
             <div className='col d-flex justify-content-between'>
-                <button type="submit" className="btn btn-light shadow font-type w-50">Sou Criador</button>
-                <button type="submit" className="btn offset-custom btn-light shadow font-type w-50">Sou Financiador</button>
+                <button type="submit" className="btn btn-light shadow font-type w-50" onClick={() => {navigate("/signup")}}>Sou Criador</button>
+                <button type="submit" className="btn offset-custom btn-light shadow font-type w-50" onClick={() => {navigate("/signup")}}>Sou Financiador</button>
             </div>
         </div>  
         </>
     );
   }
 
-  export default login;
+  export default Login;

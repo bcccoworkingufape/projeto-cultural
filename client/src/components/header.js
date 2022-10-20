@@ -1,8 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.scss';
 import logo from '../assets/images/logo.svg';
+import { useNavigate } from 'react-router-dom'
 
 function Header() {
+    const navigate = useNavigate();
+    
     return (
     <header className="bg-dark text-white">
             <div className="container header d-flex align-items-center justify-content-center">
@@ -21,7 +24,7 @@ function Header() {
                 </div>
 
                 <div className="col-3 offset-3 d-flex">
-                    <button type="button" className="btn btn-light loginButton w-50">Entrar</button>
+                    <button type="button" className="btn btn-light loginButton w-50" onClick={() => {navigate("/login")}}>Entrar</button>
                 </div>
             </div>
 
