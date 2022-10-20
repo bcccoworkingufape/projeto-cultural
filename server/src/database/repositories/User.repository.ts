@@ -1,4 +1,3 @@
-
 import { AppDataSource as database } from '../../../ormconfig'; 
 import { User } from '../entities/User.entity';
 
@@ -18,3 +17,13 @@ export const create = async(data: any) => {
 export const getByEmail = async(email: string) => {
     return await repository.findOneBy({ email: email });
 };
+
+export const deleteUser = async(email: any) => {
+    return await repository.
+	createQueryBuilder()
+    	.delete()
+	.from(User)
+	.where({email: email.email})
+	.execute()
+    
+}

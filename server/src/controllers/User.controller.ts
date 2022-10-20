@@ -36,3 +36,20 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
         res.status(400).send({ message: 'The request has failed: ' + error });
     }
 };
+
+export const remove = async (req: Request, res: Response) => {
+    const user = await userRepository.getByEmail(req.body.email);
+    try {
+        if (!!!user) throw new Error("User could not be found by email");
+        else {
+            const response = await userRepository.deleteUser({
+                email: req.body.email
+            });
+	    res.status(200).send({ response });
+        }
+    } catch (error: any) {
+        res.status(400).send({ message: 'The request has failed: ' + error });
+    }
+};
+
+
