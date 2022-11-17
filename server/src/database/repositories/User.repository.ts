@@ -18,6 +18,14 @@ export const getByEmail = async(email: string) => {
     return await repository.findOneBy({ email: email });
 };
 
+export const getById = async(id: string) => {
+    return await repository.findBy({ id });
+}
+
+export const updateUser = async(id: string, userData: Partial<User>) => {
+    return await repository.update({ id }, userData);
+}
+ 
 export const deleteUser = async(email: any) => {
     return await repository.
 	createQueryBuilder()
@@ -25,5 +33,4 @@ export const deleteUser = async(email: any) => {
 	.from(User)
 	.where({email: email.email})
 	.execute()
-    
-}
+};
