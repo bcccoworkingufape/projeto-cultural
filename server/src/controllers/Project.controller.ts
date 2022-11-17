@@ -41,13 +41,19 @@ export const update = async(req: Request, res: Response, NextFunction: NextFunct
 	}
 }
 
-// verificar se o usuário que está fazendo a requisição é o dono do projeto 
 export const remove = async (req: Request, res: Response) => {
 	try {
 		if (!!!(await projectRepository.getById(req.body.id))) throw new Error("Non existent project");
 		else {
-			const project = await projectRepository.deleteProject(req.body.id);
-            		res.status(200).send({ project });
+			const project = await projectRepository.getById(req.body.id);
+			const token = req.headers.authorization;
+			const userId = (await decodeLoginToken(token)).id;
+
+			if(project.userId === userId) {
+				await projectRepository.deleteProject(req.body.id);
+				res.status(200).send({ projectDeleted: req.body.id });
+			} 
+			else res.status(401).send({ message: 'Unauthorized user' }); 
 		}
 	} catch (error: any) {
 		res.status(400).send({ message: 'The request has failed: ' + error });
