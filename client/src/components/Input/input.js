@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './default-input.scss';
+import './input.scss';
 
-function DefaultInput({ type, name, placeholder, handleOnChange, value, required, icon}) {
+function Input({ type, name, placeholder, handleOnChange, value, required, icon}) {
     return (
         <div> 
             <input 
@@ -17,4 +17,4 @@ function DefaultInput({ type, name, placeholder, handleOnChange, value, required
     )
 }
 
-export default DefaultInput;
+export default Input;
