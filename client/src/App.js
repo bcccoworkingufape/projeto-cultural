@@ -19,6 +19,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
         {/*Exemplos de uso dos botoes*/}
         <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
         <Route path="/test1" element={<ContinueGoogleButton href="/login"/>}/>
