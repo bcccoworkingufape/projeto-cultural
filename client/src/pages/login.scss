@@ -1,0 +1,32 @@
+@import '../stylesheets/_colors.scss';
+
+body {
+	background: #0A090C;
+}
+
+.h1_116_ubuntu {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 46px; 
+}
+.main_bg {
+	width: 408px;
+	height: 552px;
+	border-radius: 5px;
+	background: rgba(36, 35, 37, 0.4);
+}
+.subtitle_16_ubuntu {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+}
+.forgot_password {
+	color: #0969DA;
+}
+
+
+
