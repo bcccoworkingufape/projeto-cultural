@@ -7,18 +7,18 @@ import LandingPage from './pages/landingPage.js';
 import Login from './pages/login.js';
 import SignUp from './pages/signUp.js';
 
-import NextButton from './components/buttons/nextButton.js/NextButton';
+import LoginButton from './components/buttons/loginButton/LoginButton';
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
 
-        <Route path="/test" element={<NextButton href = "/login">Próximo</NextButton>}/>
+        <Route path="/test" element={<LoginButton href= "/login">Login</LoginButton>}/>
 
       </Routes>
     </BrowserRouter>
