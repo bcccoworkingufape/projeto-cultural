@@ -1,9 +1,9 @@
 import "./LoginNavButton.scss"
 
-const LoginButton = (props) => {
+const LoginNavButton = (props) => {
     return(
         <button type="submit" className="login">Login</button>
     );
 }
 
-export default LoginButton;
+export default LoginNavButton;
