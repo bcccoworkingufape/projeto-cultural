@@ -9,6 +9,7 @@ import SignUp from './pages/signUp.js';
 
 import SignInSignOut from './components/buttons/signInSignOut/SignInSignOut';
 import ContinueGoogle from './components/buttons/continueGoogleButton/ContinueGoogleButton';
+import ContinueFacebookButton from './components/buttons/continueFacebookButton/ContinueFacebookButton';
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
         
 
         <Route path="/test" element={<SignInSignOut>Cadastrar</SignInSignOut>}/> 
-        <Route path="/test1" element={<ContinueGoogle href="/login"/>}/> 
+        <Route path="/test1" element={<ContinueGoogle href="/login"/>}/>
+        <Route path="/test2" element={<ContinueFacebookButton href= "/login"/>}/>
 
       </Routes>
     </BrowserRouter>
