@@ -7,7 +7,7 @@ import LandingPage from './pages/landingPage.js';
 import Login from './pages/login.js';
 import SignUp from './pages/signUp.js';
 
-import LoginButton from './components/buttons/loginButton/LoginButton';
+import SignInSignOut from './components/buttons/signInSignOut/SignInSignOut';
 
 
 function App() {
@@ -18,7 +18,9 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
 
-        <Route path="/test" element={<LoginButton href= "/login">Login</LoginButton>}/>
+        
+
+        <Route path="/test" element={<SignInSignOut>Cadastrar</SignInSignOut>}/> 
 
       </Routes>
     </BrowserRouter>

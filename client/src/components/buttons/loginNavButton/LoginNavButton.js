@@ -1,4 +1,4 @@
-import "./LoginButton.scss"
+import "./LoginNavButton.scss"
 
 const LoginButton = (props) => {
     return(
