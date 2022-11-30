@@ -6,6 +6,7 @@
   font-weight: bolder;
   font-size: 16px;
   line-height: 19px;
+  background-color: #282c34;
 }
 
 .App {
@@ -50,7 +51,7 @@
 /* SOBRESCRESVENDO O BOOTSTRAP */
 
 @mixin input-box ($t: 0, $r: 0, $b: 0, $l: 0) {
-  background: $color-input-background;
+  //background: $color-input-background;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: $t $r $b $l;
 }
@@ -62,7 +63,7 @@
 }
 
 .btn {
-  color: $color-light-gray01;
+  //color: $color-light-gray01;
   height: 65px;
   padding: 20px 10px;
   gap: 10px;
@@ -71,13 +72,13 @@
   border: none;
 }
 
-.btn-light, .btn-light:hover, .btn-light:focus{
-  background-color: $color-button-light-blue02;    
-}
+// .btn-light, .btn-light:hover, .btn-light:focus{
+//   //background-color: $color-button-light-blue02;    
+// }
 
-.btn-dark, .btn-dark:hover {
-  background-color: $color-button-dark-blue01;
-}
+// .btn-dark, .btn-dark:hover {
+//   //background-color: $color-button-dark-blue01;
+// }
 
 .btn-border, .btn-border:hover {
 
@@ -87,19 +88,19 @@
   left: 275px;
   top: 44px;
 
-  background: $color-white02;
-  border: 3px solid $color-button-light-blue02;
-  color: $color-button-light-blue02;
+  //background: $color-white02;
+  //border: 3px solid $color-button-light-blue02;
+  //color: $color-button-light-blue02;
   font-size: 16px;
 }
 
 .link {
   text-decoration: none;
-  color: $color-button-light-blue02;
+  //color: $color-button-light-blue02;
 
-  &:hover {
-    color: $color-button-dark-blue01;
-  }
+  // &:hover {
+  //   //color: $color-button-dark-blue01;
+  // }
 }
 
 .search-box {
@@ -131,8 +132,8 @@
   margin: 50px 0;
   content: " ";
   display: block;
-  border: 2px solid $color-button-dark-blue01;
-  background-color: $color-button-dark-blue01;
+  //border: 2px solid $color-button-dark-blue01;
+  //background-color: $color-button-dark-blue01;
 }
 
 

@@ -1,0 +1,63 @@
+@mixin font-roboto($f-size: 32px){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: $f-size;
+}
+
+@mixin font-ubuntu($f-size: 116px) {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: $f-size;    
+}
+
+/* Roboto */
+
+.font-subtitle-32-roboto {
+    @include font-roboto;
+}
+
+.font-subtitle-24-roboto {
+    @include font-roboto($f-size: 24px);
+}
+
+.font-body-20-roboto {
+    @include font-roboto($f-size: 20px);
+}
+
+.font-input-18-roboto {
+    @include font-roboto($f-size: 18px);
+}
+
+.font-body-16-roboto {
+    @include font-roboto($f-size: 16px);
+}
+
+/* Ubuntu */
+
+.font-h1-116-ubuntu {
+    @include font-ubuntu;
+}
+
+.font-h2-64-ubuntu {
+    @include font-ubuntu($f-size: 64px);
+}
+
+.font-h2-56-ubuntu {
+    @include font-ubuntu($f-size: 56px);
+}
+
+.font-h3-32-ubuntu {
+    @include font-ubuntu($f-size: 32px);
+}
+
+.font-subtitle-24-ubuntu {
+    @include font-ubuntu($f-size: 24px);
+}
+
+.font-button-20-ubuntu {
+    @include font-ubuntu($f-size: 20px);
+}
+
+.font-subtitle-16-ubuntu {
+    @include font-ubuntu($f-size: 16px);
+}
