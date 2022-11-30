@@ -2,6 +2,8 @@
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 import './login.scss';
+import '../stylesheets/_colors.scss';
+import '../stylesheets/_fonts.scss';
 
 
 function Login() {
@@ -12,9 +14,9 @@ function Login() {
 				<img src={logo} height={140} alt="logo"/>
 			</div>
  	   
-			<p className='d-flex justify-content-center h1_116_ubuntu text-white'>Login</p>
+			<p className='d-flex justify-content-center font-h3-32-ubuntu login_text mt-5'>Login</p>
 
-			<div className='mx-auto main_bg text-white'>
+			<div className='mx-auto main text-white'>
 
 				<div className='d-flex container p-5'>
 					<form>

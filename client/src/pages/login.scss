@@ -1,21 +1,10 @@
 @import '../stylesheets/_colors.scss';
 
-body {
-	background: #0A090C;
-}
-
-.h1_116_ubuntu {
-	font-family: 'Ubuntu';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 40px;
-	line-height: 46px; 
-}
-.main_bg {
+.main {
 	width: 408px;
 	height: 552px;
 	border-radius: 5px;
-	background: rgba(36, 35, 37, 0.4);
+	background: $color-medium-gray-01;
 }
 .subtitle_16_ubuntu {
 	font-family: 'Ubuntu';
@@ -26,6 +15,9 @@ body {
 }
 .forgot_password {
 	color: #0969DA;
+}
+.login_text {
+	color: $color-light-01;
 }
 
 
