@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.scss';
-import logo from '../assets/images/logo.svg';
+import logo from '../../assets/images/logo.svg';
 import { useNavigate } from 'react-router-dom'
 
 function Header() {

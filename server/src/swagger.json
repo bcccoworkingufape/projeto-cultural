@@ -1,1 +1,11 @@
-{}
+{
+    "openapi": "3.0.0", 
+    "info": {
+        "title": "API do Projeto de Cultura",
+        "description": "Esta API tem como objetivo principal servir as funcionalidades do projeto de cultura", 
+        "contact": {
+            "email": "joanneegabriela@gmail.com"
+        }, 
+        "version": "1.0.0"
+    }
+}

@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import * as projectRepository from '../database/repositories/Project.repository';
 import { decodeLoginToken } from '../services/authService.service';
 
+
 export const create = async (req: Request, res: Response) => {
 	try {
 		if (!!(await projectRepository.getByName(req.body.name))) throw new Error("Name already chosen");
