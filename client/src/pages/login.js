@@ -4,6 +4,11 @@ import logo from '../assets/images/logo.svg';
 import './login.scss';
 import '../stylesheets/_colors.scss';
 import '../stylesheets/_fonts.scss';
+import LoginNavButton from '../components/buttons/loginNavButton/LoginNavButton'
+import SignInSignOutButton from "../components/buttons/signInSignOutButton/SignInSignOutButton"
+import ContinueGoogleButton from "../components/buttons/continueGoogleButton/ContinueGoogleButton"
+import ContinueFacebookButton from "../components/buttons/continueFacebookButton/ContinueFacebookButton"
+import Input from "../components/Input/input"
 
 
 function Login() {
@@ -23,7 +28,7 @@ function Login() {
 						<div className='row'>
 							<div className="form-group">
 								<label className="mb-2 font-subtitle-16-ubuntu">Email</label>
-								<input type="email" className="form-control" placeholder="name@email.com" />
+								<Input placeholder="name@email.com"/>
 							</div>
 
 							<div className="form-group mt-4 ">
@@ -31,14 +36,16 @@ function Login() {
 										<label className="mb-2 font-subtitle-16-ubuntu">Senha</label>
 										<a href='?#' className="link ms-auto font-subtitle-16-ubuntu forgot_password">Esqueceu sua senha?</a>
 								</div>
-								<input type="password" className="form-control" />
+								<Input/>
 							</div>
 						</div>
 
-						<div className='row m-0 mt-4'>
-							<button type="submit" className="btn btn-dark shadow font-type w-100">Entrar</button>
+						<div className='row m-0 mt-4 mb-3'>
+							<SignInSignOutButton>Entrar</SignInSignOutButton>
 						</div>
 						<div className='line font-subtitle-16-ubuntu'>ou</div>
+						<div className="mb-2 mt-2"><ContinueGoogleButton/></div>
+						<div className="mb-2 mt-2"><ContinueFacebookButton/></div>
 					</form>
 				</div>
 			</div>
