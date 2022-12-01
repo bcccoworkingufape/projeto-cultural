@@ -11,25 +11,25 @@ function Login() {
 		return (
 		<>
 			<div className='d-flex justify-content-center mt-5'>
-				<img src={logo} height={140} alt="logo"/>
+				<img src={logo} height={141} alt="logo"/>
 			</div>
  	   
-			<p className='d-flex justify-content-center font-h3-32-ubuntu login_text mt-5'>Login</p>
+			<p className='d-flex justify-content-center font-h3-32-ubuntu login_text mt-5 mb-5'>Login</p>
 
-			<div className='mx-auto main text-white'>
+			<div className='mx-auto text-white'>
 
-				<div className='d-flex container p-5'>
+				<div className='container p-5 main'>
 					<form>
 						<div className='row'>
 							<div className="form-group">
-								<label className="mb-1">Email</label>
-								<input type="email" className="form-control" />
+								<label className="mb-2 font-subtitle-16-ubuntu">Email</label>
+								<input type="email" className="form-control" placeholder="name@email.com" />
 							</div>
 
 							<div className="form-group mt-4 ">
 								<div className="d-flex">
-										<label className="mb-1">Senha</label>
-										<a href='?#' className="link ms-auto subtitle_16_ubuntu forgot_password">Esqueceu sua senha?</a>
+										<label className="mb-2 font-subtitle-16-ubuntu">Senha</label>
+										<a href='?#' className="link ms-auto font-subtitle-16-ubuntu forgot_password">Esqueceu sua senha?</a>
 								</div>
 								<input type="password" className="form-control" />
 							</div>
@@ -38,18 +38,11 @@ function Login() {
 						<div className='row m-0 mt-4'>
 							<button type="submit" className="btn btn-dark shadow font-type w-100">Entrar</button>
 						</div>
+						<div className='line font-subtitle-16-ubuntu'>ou</div>
 					</form>
 				</div>
-
-				<div className='container col-4 mt-5'>
-					<h6 className='d-flex justify-content-center mb-4' style={{fontWeight: 500}}><b>Ainda não tem conta?</b></h6>
-
-					<div className='col d-flex justify-content-between'>
-						<button type="submit" className="btn btn-light shadow font-type w-50" onClick={() => {navigate("/signup")}}>Sou Criador</button>
-						<button type="submit" className="btn offset-custom btn-light shadow font-type w-50" onClick={() => {navigate("/signup")}}>Sou Financiador</button>
-					</div>
-				</div>	
 			</div>
+			<div className="bottom_text text-white d-flex justify-content-center font-body-20-roboto mt-4 p-2">Novo por aqui? <a href='?#' className="link cadastro font-body-20-roboto">&nbsp;Cadastre-se</a></div>
 		</>
 	);
   }
