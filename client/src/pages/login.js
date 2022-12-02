@@ -11,7 +11,6 @@ import ContinueFacebookButton from "../components/buttons/continueFacebookButton
 import Input from "../components/Input/input"
 
 function Login() {
-		// as bordas dos inputs estao sem a cor de fundo!!!
 		const navigate = useNavigate();
 		const ref = useRef(null);
 		const ref2 = useRef(null);
@@ -23,9 +22,9 @@ function Login() {
  	   
 			<p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Login</p>
 
-			<div className='mx-auto text-white teste'>
+			<div className='mx-auto text-white'>
 
-				<div className='container p-5 main color_gray'>
+				<div className='container p-5 main_login color_gray'>
 					<div className='row color_gray'>
 						<div className="color_gray" onFocus={ () => {
 								ref.current.style.opacity = 1;
@@ -53,11 +52,11 @@ function Login() {
 						<SignInSignOutButton>Entrar</SignInSignOutButton>
 					</div>
 					<div className='line font-subtitle-16-ubuntu color_gray'>ou</div>
-					<div className="mb-2 mt-2 color_gray"><ContinueGoogleButton/></div>
+					<div className="mb-4 mt-2 color_gray"><ContinueGoogleButton/></div>
 					<div className="mb-2 mt-2 color_gray"><ContinueFacebookButton/></div>
 				</div>
 			</div>
-			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? <a href='?#' className="link cadastro font-body-20-700-roboto">&nbsp;Cadastre-se</a></div>
+			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Cadastre-se</a></div>
 		</>
 	);
   }
