@@ -2,12 +2,11 @@
 
 .main {
 	border-radius: 5px;
-	background: $color-medium-gray-01;
 	width: 408px;
 	height: 552px;
 }
 .color_gray {
-	background: $color-medium-gray-01;
+	background: $color-dark-gray-02;
 }
 
 .forgot_password {
@@ -37,4 +36,10 @@
 .cadastro {
 	color: $color-light-purple-01;
 	margin-bottom: 110px;
+}
+.teste {
+	overflow: hidden;
+}
+.opacity_text {
+	opacity: 0.8;
 }
