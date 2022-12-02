@@ -52,7 +52,7 @@ function Login() {
 						<SignInSignOutButton>Entrar</SignInSignOutButton>
 					</div>
 					<div className='line font-subtitle-16-ubuntu color_gray'>ou</div>
-					<div className="mb-4 mt-2 color_gray"><ContinueGoogleButton/></div>
+					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton/></div>
 					<div className="mb-2 mt-2 color_gray"><ContinueFacebookButton/></div>
 				</div>
 			</div>
