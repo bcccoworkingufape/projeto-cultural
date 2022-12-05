@@ -4,10 +4,22 @@
     font-size: $f-size;
 }
 
+@mixin font-roboto-700($f-size: 32px){ //novo
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: $f-size;
+}
+
 @mixin font-ubuntu($f-size: 116px) {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
-    font-size: $f-size;    
+    font-size: $f-size;
+    }
+
+@mixin font-ubuntu-500($f-size: 116px) { //novo
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 500;
+	font-size: $f-size;
 }
 
 /* Roboto */
@@ -22,6 +34,10 @@
 
 .font-body-20-roboto {
     @include font-roboto($f-size: 20px);
+}
+
+.font-body-20-700-roboto { //novo
+    @include font-roboto-700($f-size: 20px);
 }
 
 .font-input-18-roboto {
@@ -46,6 +62,10 @@
     @include font-ubuntu($f-size: 56px);
 }
 
+.font-h2-40-ubuntu { //nova
+    @include font-ubuntu($f-size: 40px);
+}
+
 .font-h3-32-ubuntu {
     @include font-ubuntu($f-size: 32px);
 }
@@ -60,4 +80,11 @@
 
 .font-subtitle-16-ubuntu {
     @include font-ubuntu($f-size: 16px);
+}
+
+.font-subtitle-16-500-ubuntu { //novo
+	@include font-ubuntu-500($f-size: 16px);
+}
+.font-subtitle-12-ubuntu { //nova
+    @include font-ubuntu($f-size: 12px);
 }

@@ -3,7 +3,7 @@ import './input.scss';
 
 function Input({ type, name, placeholder, handleOnChange, value, required, icon}) {
     return (
-        <div> 
+        <div className="bg-transparent"> 
             <input 
                 type={type}
                 name={name}
