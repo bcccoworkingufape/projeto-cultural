@@ -4,8 +4,8 @@ import './App.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LandingPage from './pages/landingPage.js';
-import Login from './pages/login.js';
-import SignUp from './pages/signUp.js';
+import Login from './pages/login/login.js';
+import SignUp from './pages/signUp/signUp.js';
 
 import SignInSignOutButton from './components/buttons/signInSignOutButton/SignInSignOutButton';
 import ContinueGoogleButton from './components/buttons/continueGoogleButton/ContinueGoogleButton';

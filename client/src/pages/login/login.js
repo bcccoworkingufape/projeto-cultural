@@ -8,7 +8,7 @@ import '../../stylesheets/_fonts.scss';
 import SignInSignOutButton from "../../components/buttons/signInSignOutButton/SignInSignOutButton"
 import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/ContinueGoogleButton"
 import ContinueFacebookButton from "../../components/buttons/continueFacebookButton/ContinueFacebookButton"
-import Input from "../../components/input/input"
+import Input from "../../components/input/input";
 
 function Login() {
 		const navigate = useNavigate();
