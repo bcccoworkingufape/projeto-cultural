@@ -3,6 +3,7 @@ import logo from '../assets//images/logo.svg';
 
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
+import PopUpModal from './../components/pop-up-modal/pop-up-modal';
 
 function landingPage() {
     return (

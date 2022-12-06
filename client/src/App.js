@@ -26,7 +26,7 @@ function App() {
         <Route path="/test3" element={<BackButton href="/login">Voltar</BackButton>}/>
         <Route path="/test4" element={<NextButton href="/login">Próximo</NextButton>}/>
         <Route path="/test5" element={<LoginNavButton></LoginNavButton>}/>     
-
+        <Route path="/" element={<LandingPage></LandingPage>}/>     
 
       </Routes>
     </BrowserRouter>

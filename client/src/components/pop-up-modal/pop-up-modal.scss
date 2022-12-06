@@ -1,0 +1,30 @@
+@import "../../stylesheets/colors";
+@import "../../stylesheets/fonts";
+
+
+.pop-up-container {
+    max-width: 500px;
+    min-height: 413px;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-dark-gray-01;
+    padding: 0 48px;
+    text-align: initial;
+
+    h1 {
+        color: $color-light-01;
+        background-color: inherit;
+        margin: 64px 0 32px 0;
+    }
+
+    p {
+        color: $color-primary-grey-00;
+        background-color: inherit;
+        border-bottom: 50px;
+        margin: 0 0 50px 0;
+    }
+
+    .confirm-button {
+        width: 100%;
+    }
+}
