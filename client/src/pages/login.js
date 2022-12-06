@@ -1,65 +1,64 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
-import { useNavigate } from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
+import logo from '../assets/images/logo.svg';
+import './login.scss';
+import '../stylesheets/_colors.scss';
+import '../stylesheets/_fonts.scss';
+import SignInSignOutButton from "../components/buttons/signInSignOutButton/SignInSignOutButton"
+import ContinueGoogleButton from "../components/buttons/continueGoogleButton/ContinueGoogleButton"
+import ContinueFacebookButton from "../components/buttons/continueFacebookButton/ContinueFacebookButton"
+import Input from "../components/Input/input"
 
 function Login() {
-    const navigate = useNavigate();
-    return (
-        <>
-         <div className='container col-4 mt-5 line'>
-                        
-            <p className='d-flex justify-content-center'>Login</p>
+		const navigate = useNavigate();
+		const ref = useRef(null);
+		const ref2 = useRef(null);
+		return (
+		<>
+			<div className='d-flex justify-content-center mt-5'>
+				<img src={logo} height={141} alt="logo"/>
+			</div>
+ 	   
+			<p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Login</p>
 
-            <div className='col d-flex justify-content-between'>
-                <button type="submit" className="btn btn-border font-type w-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-google icon-social" viewBox="0 0 16 16">
-                        <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
-                    </svg>
-                    Entrar com Google
-                </button>
+			<div className='mx-auto text-white'>
 
-                <button type="submit" className="btn offset-custom btn-border font-type w-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-facebook icon-social" viewBox="0 0 16 16">
-                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                    </svg>
-                    Entrar com Facebook
-                </button>
-            </div>
-
-        </div>
-
-
-        <div className='container col-4'>
-            <form>
-                <div className='row'>
-                    <div className="form-group">
-                        <label className="mb-1">Email</label>
-                        <input type="email" className="form-control" />
-                    </div>
-
-                    <div className="form-group mt-4 ">
-                        <label className="mb-1">Senha</label>
-                        <input type="password" className="form-control" />
-                        <small><a href='?#' className="link">Esqueceu sua senha?</a></small>
-                    </div>
-                </div>
-
-                <div className='row m-0 mt-4'>
-                    <button type="submit" className="btn btn-dark shadow font-type w-100">Entrar</button>
-                </div>
-            </form>
-        </div>
-
-        <div className='container col-4 mt-5'>
-            <h6 className='d-flex justify-content-center mb-4' style={{fontWeight: 500}}><b>Ainda não tem conta?</b></h6>
-
-            <div className='col d-flex justify-content-between'>
-                <button type="submit" className="btn btn-light shadow font-type w-50" onClick={() => {navigate("/signup")}}>Sou Criador</button>
-                <button type="submit" className="btn offset-custom btn-light shadow font-type w-50" onClick={() => {navigate("/signup")}}>Sou Financiador</button>
-            </div>
-        </div>  
-        </>
-    );
+				<div className='container p-5 main_login color_gray'>
+					<div className='row color_gray'>
+						<div className="color_gray" onFocus={ () => {
+								ref.current.style.opacity = 1;
+								
+							}} onBlur={ () => {
+								ref.current.style.opacity = 0.8;
+							}}>
+							<label className="mb-2 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref}>Email</label>
+							<Input placeholder="name@email.com" />
+						</div>
+						<div className="mt-4 color_gray" onFocus={ () => {
+								ref2.current.style.opacity = 1;
+								
+							}} onBlur={ () => {
+								ref2.current.style.opacity = 0.8;
+							}}>
+							<div className="d-flex color_gray">
+								<label className="mb-2 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Senha</label>
+								<a href='?#' className="link ms-auto font-subtitle-12-ubuntu forgot_password color_gray">Esqueceu sua senha?</a>
+							</div>
+							<Input/>
+						</div>
+					</div>
+					<div className='row m-0 mt-4 mb-3 color_gray'>
+						<SignInSignOutButton>Entrar</SignInSignOutButton>
+					</div>
+					<div className='line font-subtitle-16-ubuntu color_gray'>ou</div>
+					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton/></div>
+					<div className="mb-2 mt-2 color_gray"><ContinueFacebookButton/></div>
+				</div>
+			</div>
+			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Cadastre-se</a></div>
+		</>
+	);
   }
 
   export default Login;
