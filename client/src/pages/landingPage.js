@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../assets//images/logo.svg';
+import logo from '../assets/images/pyre.svg';
 
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';

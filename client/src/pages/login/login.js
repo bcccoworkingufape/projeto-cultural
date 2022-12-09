@@ -1,7 +1,7 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
-import logo from '../../assets/images/logo.svg';
+import pyre from '../../assets/images/pyre.svg';
 import './login.scss';
 import '../../stylesheets/_colors.scss';
 import '../../stylesheets/_fonts.scss';
@@ -17,7 +17,7 @@ function Login() {
 		return (
 		<>
 			<div className='d-flex justify-content-center mt-5'>
-				<img src={logo} height={141} alt="logo"/>
+				<img src={pyre} height={141} alt="logo"/>
 			</div>
  	   
 			<p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Login</p>

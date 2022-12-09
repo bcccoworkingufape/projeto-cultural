@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from './pages/landingPage.js';
 import Login from './pages/login/login.js';
 import SignUp from './pages/signUp/signUp.js';
+import SignUpEmailIntroduction from './pages/signUp/signUp-email-introduction/signUp-email-introduction';
 
 import SignInSignOutButton from './components/buttons/signInSignOutButton/SignInSignOutButton';
 import ContinueGoogleButton from './components/buttons/continueGoogleButton/ContinueGoogleButton';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
         {/*Exemplos de uso dos botoes*/}
         <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
         <Route path="/test1" element={<ContinueGoogleButton href="/login"/>}/>

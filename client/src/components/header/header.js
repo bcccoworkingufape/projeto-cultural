@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.scss';
-import logo from '../../assets/images/logo.svg';
+import pyre from '../../assets/images/pyre.svg';
 import { useNavigate } from 'react-router-dom'
 
 function Header() {
@@ -11,7 +11,7 @@ function Header() {
             <div className="container header d-flex align-items-center justify-content-center">
                 <div className='col-2'>
                     <a href="/" className="d-flex align-items-center justify-content-center text-white text-decoration-none">
-                        <img src={logo} height= {30} alt="logo" />
+                        <img src={pyre} height= {30} alt="logo" />
                     </a>
                 </div>
                 <div className="col-3 offset-3 d-flex ">

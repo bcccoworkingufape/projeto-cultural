@@ -1,7 +1,7 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
-import logo from '../../assets/images/logo.svg';
+import pyre from '../../assets/images/pyre.svg';
 import './signUp.scss';
 import '../../stylesheets/_colors.scss';
 import '../../stylesheets/_fonts.scss';
@@ -10,13 +10,13 @@ import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/
 import ContinueFacebookButton from "../../components/buttons/continueFacebookButton/ContinueFacebookButton"
 
 function SignUp() {
-		const navigate = useNavigate();
-		const ref = useRef(null);
-		const ref2 = useRef(null);
+		// const navigate = useNavigate();
+		// const ref = useRef(null);
+		// const ref2 = useRef(null);
 		return (
-		<>
+		<div className="sign-up-container">
 			<div className='d-flex justify-content-center mt-5'>
-				<img src={logo} height={141} alt="logo"/>
+				<img src={pyre} height={141} alt="logo"/>
 			</div>
  	   
 			<p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Cadastro</p>
@@ -32,7 +32,7 @@ function SignUp() {
 				</div>
 			</div>
 			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Já tem conta? <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Faça login</a></div>
-		</>
+		</div>
 	);
   }
 
