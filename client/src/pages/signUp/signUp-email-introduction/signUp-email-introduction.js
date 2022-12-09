@@ -1,14 +1,7 @@
-/*import 'bootstrap/dist/css/bootstrap.min.css';*/
-import { useNavigate } from 'react-router-dom';
-import { useRef } from 'react';
 import pyre from '../../../assets/images/pyre.svg';
 import './signUp-email-introduction.scss';
-import '../../../stylesheets/_colors.scss';
-import '../../../stylesheets/_fonts.scss';
 import SignInSignOutButton from "../../../components/buttons/signInSignOutButton/SignInSignOutButton"
-import ContinueGoogleButton from "../../../components/buttons/continueGoogleButton/ContinueGoogleButton"
-import ContinueFacebookButton from "../../../components/buttons/continueFacebookButton/ContinueFacebookButton"
-
+import Input from './../../../components/input/input';
 
 function SignUpEmailIntroduction() {
     return (
@@ -19,17 +12,27 @@ function SignUpEmailIntroduction() {
 
             <p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Cadastro</p>
 
-            <div className='mx-auto text-white teste'>
+            <div className='mx-auto text-white'>
                 <div className='container p-5 main_signup color_gray'>
-                    <div className="mb-4 color_gray"><ContinueGoogleButton /></div>
-                    <div className="mb-4 mt-2 color_gray"><ContinueFacebookButton /></div>
-                    <div className='line font-subtitle-16-ubuntu color_gray'>ou</div>
+                    <Input label="Email"></Input>
+                    <Input type="password" label="Senha"></Input>
+                    <Input type="password" label="Repetir senha"></Input>
                     <div className='row m-0 mt-4 mb-3 color_gray'>
-                        <SignInSignOutButton>Cadastre usando email</SignInSignOutButton>
+                        <SignInSignOutButton>Cadastrar</SignInSignOutButton>
                     </div>
                 </div>
             </div>
-            <div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Já tem conta? <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Faça login</a></div>
+            <div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">
+                Já tem conta?
+                <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Faça login</a></div>
+            <div className="d-flex justify-content-center text-grey font-body-16-roboto font-weigth-400">
+                Ao criar uma conta você concorda com os
+                <a className="external-links">&nbsp;Termos de Serviços.</a>
+            </div>
+            <div className="d-flex justify-content-center text-grey font-body-16-roboto font-weigth-400">
+                Para mais informações acesse nossa
+                <a className="external-links">&nbsp;Política de Privacidade.</a>
+            </div>
         </div>
     );
 }
