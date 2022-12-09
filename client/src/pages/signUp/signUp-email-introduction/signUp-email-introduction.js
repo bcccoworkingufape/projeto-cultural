@@ -27,7 +27,7 @@ function SignUpEmailIntroduction() {
                 <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Faça login</a></div>
             <div className="d-flex justify-content-center text-grey font-body-16-roboto font-weigth-400">
                 Ao criar uma conta você concorda com os
-                <a className="external-links">&nbsp;Termos de Serviços.</a>
+                <a className="external-links">&nbsp;Termos de Serviço.</a>
             </div>
             <div className="d-flex justify-content-center text-grey font-body-16-roboto font-weigth-400">
                 Para mais informações acesse nossa

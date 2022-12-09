@@ -14,6 +14,7 @@ import ContinueFacebookButton from './components/buttons/continueFacebookButton/
 import BackButton from './components/buttons/backButton/BackButton';
 import NextButton from './components/buttons/nextButton.js/NextButton';
 import LoginNavButton from './components/buttons/loginNavButton/LoginNavButton';
+import SignUpPersonalInfo from './pages/signUp/signUp-personal-info/signUp-personal-info';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
+        <Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
         {/*Exemplos de uso dos botoes*/}
         <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
         <Route path="/test1" element={<ContinueGoogleButton href="/login"/>}/>
