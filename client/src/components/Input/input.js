@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './input.scss';
 
-function Input({ type, name, placeholder, handleOnChange, value, required, icon, label }) {
+function Input({ type, name, placeholder, handleOnChange, value, required, label }) {
     return (
-        <div className="bg-transparent">
+        <div class="input-field d-flex flex-column">
             <label className="font-subtitle-16-ubuntu"> {label} </label>
             <input
                 type={type}

@@ -14,7 +14,7 @@ import ContinueFacebookButton from './components/buttons/continueFacebookButton/
 import BackButton from './components/buttons/backButton/BackButton';
 import NextButton from './components/buttons/nextButton.js/NextButton';
 import LoginNavButton from './components/buttons/loginNavButton/LoginNavButton';
-import SignUpPersonalInfo from './pages/signUp/signUp-personal-info/signUp-personal-info';
+import SignUpPersonalInfo from './pages/signUp/signUp-personal-info';
 
 
 function App() {
