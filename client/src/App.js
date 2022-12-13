@@ -15,6 +15,7 @@ import BackButton from './components/buttons/backButton/BackButton';
 import NextButton from './components/buttons/nextButton.js/NextButton';
 import LoginNavButton from './components/buttons/loginNavButton/LoginNavButton';
 import SignUpPersonalInfo from './pages/signUp/signUp-personal-info';
+import SignUpAddressInfo from './pages/signUp/signUp-address-info';
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
         <Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
+        <Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
+
         {/*Exemplos de uso dos botoes*/}
         <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
         <Route path="/test1" element={<ContinueGoogleButton href="/login"/>}/>
