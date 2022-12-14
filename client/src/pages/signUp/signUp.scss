@@ -19,24 +19,24 @@
     color: $color-light-01;
   }
 
-  .line {
+  .ouline {
     display: flex;
     flex-direction: row;
     color: $color-light-01;
   }
 
-  .line:before,
-  .line:after {
+  .ouline:before,
+  .ouline:after {
     content: "";
     flex: 1 1;
     border-bottom: 1.5px solid #38373A;
   }
 
-  .line:before {
+  .ouline:before {
     margin-right: 16px
   }
 
-  .line:after {
+  .ouline:after {
     margin-left: 16px
   }
 

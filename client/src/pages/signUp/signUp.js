@@ -25,7 +25,7 @@ function SignUp() {
 				<div className='container p-5 main_signup color_gray'>
 					<div className="mb-4 color_gray"><ContinueGoogleButton/></div>
 					<div className="mb-4 mt-2 color_gray"><ContinueFacebookButton/></div>
-					<div className='line font-subtitle-16-ubuntu color_gray'>ou</div>
+					<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
 					<div className='row m-0 mt-4 mb-3 color_gray'>
 						<SignInSignOutButton>Cadastre usando email</SignInSignOutButton>
 					</div>

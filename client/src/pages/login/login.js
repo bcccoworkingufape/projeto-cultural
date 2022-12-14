@@ -32,26 +32,26 @@ function Login() {
 							}} onBlur={ () => {
 								ref.current.style.opacity = 0.8;
 							}}>
-							<label className="mb-2 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref}>Email</label>
+							<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref} >Email</label>
 							<Input placeholder="name@email.com" />
 						</div>
-						<div className="mt-4 color_gray" onFocus={ () => {
+						<div className="mt-1 color_gray" onFocus={ () => {
 								ref2.current.style.opacity = 1;
 								
 							}} onBlur={ () => {
 								ref2.current.style.opacity = 0.8;
 							}}>
 							<div className="d-flex color_gray">
-								<label className="mb-2 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Senha</label>
+								<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Senha</label>
 								<a href='?#' className="link ms-auto font-subtitle-12-ubuntu forgot_password color_gray">Esqueceu sua senha?</a>
 							</div>
-							<Input/>
+							<Input type="password"/>
 						</div>
 					</div>
 					<div className='row m-0 mt-4 mb-3 color_gray'>
 						<SignInSignOutButton>Entrar</SignInSignOutButton>
 					</div>
-					<div className='line font-subtitle-16-ubuntu color_gray'>ou</div>
+					<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
 					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton/></div>
 					<div className="mb-2 mt-2 color_gray"><ContinueFacebookButton/></div>
 				</div>
