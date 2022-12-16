@@ -36,7 +36,7 @@ function RecoverPasswordIntro() {
 							<Input/>
 						</div>
 					</div>
-					<div className='row m-0 mt-4 mb-3 color_gray'>
+					<div className='row m-0 mt-4 mb-3 color_gray' onClick={() => {navigate("/recoverPassword")}}>
 						<SignInSignOutButton>Enviar</SignInSignOutButton>
 					</div>
 				</div>

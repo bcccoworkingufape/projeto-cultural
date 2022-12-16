@@ -60,7 +60,7 @@ function Login() {
 							}}>
 							<div className="d-flex color_gray">
 								<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Senha</label>
-								<a href='?#' className="link ms-auto font-subtitle-12-ubuntu forgot_password color_gray">Esqueceu sua senha?</a>
+								<a className="link ms-auto font-subtitle-12-ubuntu forgot_password color_gray" onClick={() => {navigate("/recoverPasswordIntro")}}>Esqueceu sua senha?</a>
 							</div>
 							<Input type="password"/>
 						</div>

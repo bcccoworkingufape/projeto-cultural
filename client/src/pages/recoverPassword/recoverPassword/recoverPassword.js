@@ -18,12 +18,10 @@ function RecoverPassword() {
 
 		function verifyPassword() {
 			
-			console.log(refi1);
-
-			if(ref.value != ref2.value){
-				ref_ops.hidden = false;
+			if(refi1.current.children[0].children[1].value != refi2.current.children[0].children[1].value){
+				ref_ops.current.hidden = false;
 			}else{
-				ref_ops.hidden = true;
+				ref_ops.current.hidden = true;
 			}
 		}
 
@@ -51,7 +49,9 @@ function RecoverPassword() {
 							<div className="d-flex color_gray">
 								<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref}>Senha</label>
 							</div>
-							<Input type="password" ref={refi1}/>
+							<div ref={refi1} className="color_gray"> {/* ref retorna null se estiver no <Input/> */}
+								<Input type="password"/>
+							</div>
 						</div>
 						<div className="mt-1 color_gray" onFocus={ () => {
 								ref2.current.style.opacity = 1;
@@ -62,9 +62,11 @@ function RecoverPassword() {
 							<div className="d-flex color_gray">
 								<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Repetir senha</label>
 							</div>
-							<Input type="password" ref={refi2}/>
+							<div ref={refi2} className="color_gray">
+								<Input type="password"/>
+							</div>
 						</div>
-						<span className="font-subtitle-12-ubuntu color_gray ops_error" ref={ref_ops}><img src="info.svg"/>&nbsp;&nbsp;Ops! As senhas devem ser iguais</span>	
+						<span className="font-subtitle-12-ubuntu color_gray ops_error" hidden ref={ref_ops}><img src="info.svg"/>&nbsp;&nbsp;Ops! As senhas devem ser iguais</span>	
 					</div>
 					<div className='row m-0 mt-4 mb-3 color_gray' onClick={verifyPassword}>
 						<SignInSignOutButton >Criar nova senha</SignInSignOutButton>
