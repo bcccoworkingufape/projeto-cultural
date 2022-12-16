@@ -1,13 +1,17 @@
 import { initializeApp } from "firebase/app";
+import {getAuth} from "firebase/auth"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBelfJpsM9bfWcYvYeeK6zQOkGeYEEXBdY",
-  authDomain: "pyre-a8739.firebaseapp.com",
-  projectId: "pyre-a8739",
-  storageBucket: "pyre-a8739.appspot.com",
-  messagingSenderId: "40561539308",
-  appId: "1:40561539308:web:7123bf2d415fa6660c8dc9"
+  apiKey: "AIzaSyCEpAU7S1hWAgmHgsgkbWa_TTtz9NEDG9w",
+  authDomain: "pyre-63c41.firebaseapp.com",
+  projectId: "pyre-63c41",
+  storageBucket: "pyre-63c41.appspot.com",
+  messagingSenderId: "1051769376281",
+  appId: "1:1051769376281:web:78c39307429ba5ff002488"
+
 };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app)
