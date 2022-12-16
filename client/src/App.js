@@ -1,7 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from './context/authContext';
+import { auth} from './services/firebase';
+import { useEffect, useState } from 'react';
 
 import LandingPage from './pages/landingPage.js';
 import Login from './pages/login/login.js';
@@ -16,30 +19,44 @@ import NextButton from './components/buttons/nextButton.js/NextButton';
 import LoginNavButton from './components/buttons/loginNavButton/LoginNavButton';
 import SignUpPersonalInfo from './pages/signUp/signUp-personal-info';
 import SignUpAddressInfo from './pages/signUp/signUp-address-info';
+import { onAuthStateChanged } from 'firebase/auth';
+import Logout from './pages/logoutTest/logout';
 
 
 function App() {
+  const [user, setUser] = useState(undefined);
+
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user) =>{
+      user && console.log("logado como: " + user.displayName);
+      setUser(user);
+    })
+
+  })
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/signup" element={<SignUp/>}/>
-        <Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
-        <Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
-        <Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
+    <AuthProvider value={user}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage/>}/>
+          <Route path="/login" element={ !user ? <Login/> : <Navigate to={"/logout"}/>}/>
+          <Route path="/signup" element={<SignUp/>}/>
+          <Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
+          <Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
+          <Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
 
-        {/*Exemplos de uso dos botoes*/}
-        <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
-        <Route path="/test1" element={<ContinueGoogleButton href="/login"/>}/>
-        <Route path="/test2" element={<ContinueFacebookButton href= "/login"/>}/>
-        <Route path="/test3" element={<BackButton href="/login">Voltar</BackButton>}/>
-        <Route path="/test4" element={<NextButton href="/login">Próximo</NextButton>}/>
-        <Route path="/test5" element={<LoginNavButton></LoginNavButton>}/>     
-        <Route path="/" element={<LandingPage></LandingPage>}/>     
+          {/*Exemplos de uso dos botoes*/}
+          <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
+          <Route path="/test1" element={<ContinueGoogleButton href="/login"/>}/>
+          <Route path="/test2" element={<ContinueFacebookButton href= "/login"/>}/>
+          <Route path="/test3" element={<BackButton href="/login">Voltar</BackButton>}/>
+          <Route path="/test4" element={<NextButton href="/login">Próximo</NextButton>}/>
+          <Route path="/test5" element={<LoginNavButton></LoginNavButton>}/>     
+          <Route path="/logout" element={<Logout/>}/>     
 
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
