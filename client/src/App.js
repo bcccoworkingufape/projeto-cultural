@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from './context/authContext';
 import { auth} from './services/firebase';
 import { useEffect, useState } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
 
 import LandingPage from './pages/landingPage.js';
 import Login from './pages/login/login.js';
@@ -19,9 +20,9 @@ import NextButton from './components/buttons/nextButton.js/NextButton';
 import LoginNavButton from './components/buttons/loginNavButton/LoginNavButton';
 import SignUpPersonalInfo from './pages/signUp/signUp-personal-info';
 import SignUpAddressInfo from './pages/signUp/signUp-address-info';
-import { onAuthStateChanged } from 'firebase/auth';
 import Logout from './pages/logoutTest/logout';
-
+import RecoverPasswordIntro from './pages/recoverPassword/recoverPasswordIntro/recoverPasswordIntro';
+import RecoverPassword from './pages/recoverPassword/recoverPassword/recoverPassword';
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -44,6 +45,8 @@ function App() {
           <Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
           <Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
           <Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
+	<Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
+	<Route path="/recoverPassword" element={<RecoverPassword/>}/>
 
           {/*Exemplos de uso dos botoes*/}
           <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
