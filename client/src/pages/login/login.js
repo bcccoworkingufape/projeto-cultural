@@ -1,6 +1,9 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
+import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
+import {auth} from "../../services/firebase"
+
 import pyre from '../../assets/images/pyre.svg';
 import './login.scss';
 import '../../stylesheets/_colors.scss';
@@ -14,6 +17,20 @@ function Login() {
 		const navigate = useNavigate();
 		const ref = useRef(null);
 		const ref2 = useRef(null);
+
+		const handleGoogleSingIn = () =>{
+			const provider = new GoogleAuthProvider();
+
+			signInWithPopup(auth, provider)
+			.then((result) =>{
+				console.log(result);
+			})
+			.catch((error)=>{
+				console.log(error);
+			})
+
+		}
+
 		return (
 		<>
 			<div className='d-flex justify-content-center mt-5'>
@@ -52,7 +69,7 @@ function Login() {
 						<SignInSignOutButton>Entrar</SignInSignOutButton>
 					</div>
 					<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
-					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton/></div>
+					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton signIn = {handleGoogleSingIn}/></div>
 					<div className="mb-2 mt-2 color_gray"><ContinueFacebookButton/></div>
 				</div>
 			</div>
