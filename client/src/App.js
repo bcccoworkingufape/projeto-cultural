@@ -45,8 +45,8 @@ function App() {
           <Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
           <Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
           <Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
-	<Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
-	<Route path="/recoverPassword" element={<RecoverPassword/>}/>
+          <Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
+          <Route path="/recoverPassword" element={<RecoverPassword/>}/>
 
           {/*Exemplos de uso dos botoes*/}
           <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
