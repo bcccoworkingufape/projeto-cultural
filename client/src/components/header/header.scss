@@ -1,7 +1,7 @@
 @import '../../stylesheets/_colors.scss';
 
 .header {
-    height: 80px;
+    height: 115px;
 }
 
 .search {
@@ -27,4 +27,7 @@
 }
 .form-control {
     border-radius:5px 0 0 5px;
+}
+.text-header {
+	color: $color-light-01;
 }
