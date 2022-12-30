@@ -4,16 +4,16 @@ import { v4 as uuid } from 'uuid';
 @Entity("supports")
 export class Support {
 
-    @PrimaryColumn()
+    @PrimaryColumn({ type: String })
     id: string;
 
-    @Column()
+    @Column({ type: String })
     user_id: string;
 
-    @Column()
+    @Column({ type: String })
     project_id: string;
 
-    @CreateDateColumn()
+    @CreateDateColumn({ type: String })
     createdAt: Date;
 
     constructor(){

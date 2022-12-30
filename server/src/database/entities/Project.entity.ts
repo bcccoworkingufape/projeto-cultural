@@ -6,7 +6,7 @@ import { ProjectCategory } from "./Project_Category.entity";
 @Entity("projects")
 export class Project {
 
-    @PrimaryColumn()
+    @PrimaryColumn({ type: String })
     id!: string;
 
     @Column({ type: String, name: "name"})

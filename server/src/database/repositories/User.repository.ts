@@ -1,3 +1,4 @@
+import { CustomRepositoryCannotInheritRepositoryError } from 'typeorm';
 import { AppDataSource as database } from '../../../ormconfig'; 
 import { User } from '../entities/User.entity';
 
@@ -39,3 +40,26 @@ export const deleteUser = async(email: any) => {
 	.where({email: email.email})
 	.execute()
 };
+
+
+export const getResetTokenByEmail = async(email: any) => {
+    return await repository.createQueryBuilder('users')
+    .where({ email })
+    .select(['users.passwordResetToken', 'users.passwordResetExpiration'])
+    .getOne();
+};
+
+export const updateResetPasswordToken = async(userId: any, token: any, tokenExpiration: any) => {
+    return await repository.save( {
+        id: userId, 
+        passwordResetToken: token, 
+        passwordResetExpiration: tokenExpiration
+    })
+};
+
+export const updatePassword = async(userId: string, password: any) => {
+    return await repository.save( {
+        id: userId, 
+        password
+    })    
+}

@@ -4,22 +4,22 @@ import { v4 as uuid } from 'uuid';
 @Entity("digital_presences")
 export class DigitalPresence {
 
-    @PrimaryColumn()
+    @PrimaryColumn({ type: String })
     id: string;
 
-    @Column()
+    @Column({ type: String })
     instagram_url: string;
 
-    @Column()
+    @Column({ type: String })
     facebook_url: string;
 
-    @Column()
+    @Column({ type: String })
     youtube_url: string;
 
-    @Column()
+    @Column({ type: String })
     personal_site_url: boolean;
 
-    @CreateDateColumn()
+    @CreateDateColumn({ type: String })
     createdAt: Date;
 
     constructor(){

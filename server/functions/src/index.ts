@@ -1,17 +1,15 @@
+import * as functions from 'firebase-functions';
 import express from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
 import "reflect-metadata";
 
-import createConnection from '../src/database/index';
+import createConnection from '../../src/database/index';
 
-import { router as userRouter } from './routes/User.route';
-import { router as likeRouter } from './routes/Like.route';
-import { router as supportRouter } from './routes/Support.route';
-import { router as projectRouter } from './routes/Project.route';
-
-import swaggerUi from 'swagger-ui-express';
-import swaggerDocs from './swagger.json';
+import { router as userRouter } from '../../src/routes/User.route';
+import { router as likeRouter } from '../../src/routes/Like.route';
+import { router as supportRouter } from '../../src/routes/Support.route';
+import { router as projectRouter } from '../../src/routes/Project.route';
 
 dotenv.config();
 
@@ -35,7 +33,5 @@ app.use('/likes', likeRouter);
 app.use('/supports', supportRouter);
 app.use('/projects', projectRouter);
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-export default app;
-
+export const api = functions.https.onRequest(app);
