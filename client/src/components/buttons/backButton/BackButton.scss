@@ -1,0 +1,23 @@
+@import "../../../stylesheets/colors";
+.back{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+
+    width: 180px;
+    height: 56px;
+
+    background: $color-dark-01;
+    border: 2px solid $color-light-01;
+    border-radius: 5px;
+
+    color: $color-light-01;
+}
+
+.back:hover{
+    background: $color-light-01;
+    color: $color-dark-01;
+}

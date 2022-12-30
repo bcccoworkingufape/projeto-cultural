@@ -4,18 +4,22 @@ export class CreateUser1656559944418 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
-            new Table({ 
-                name: "users", 
+            new Table({
+                name: "users",
                 columns: [
                     {
                         name: "id",
                         type: "uuid",
                         isPrimary: true
-                    }, 
+                    },
                     {
                         name: "email",
                         type: "varchar",
                         isUnique: true,
+                    },
+                    {
+                        name: "name",
+                        type: "varchar",
                     },
                     {
                         name: "password",
@@ -27,13 +31,24 @@ export class CreateUser1656559944418 implements MigrationInterface {
                         type: "varchar",
                     },
                     {
+                        name: "passwordResetToken",
+                        type: "varchar",
+                        isNullable: true,
+                    },
+                    {
+                        name: "passwordResetExpiration",
+                        type: "varchar",
+                        isNullable: true,
+                    },
+                    {
                         name: "imageURL",
                         type: "varchar",
                     },
                     {
                         name: "active",
                         type: "boolean",
-                        default: true
+                        default: true,
+                        isNullable: true,
                     },
                     {
                         name: "createdAt",

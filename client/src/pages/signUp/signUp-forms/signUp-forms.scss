@@ -1,0 +1,21 @@
+@import '../../../App.scss';
+
+
+.pageInfo {
+    width: 45%;
+    color: $color-light-01;
+
+    h1 {
+        margin-bottom: 40px;
+    }
+}
+
+.font-weigth-500 {
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 60px;
+}
+
+.form-title {
+    margin-bottom: 50px;
+}

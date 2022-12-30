@@ -1,0 +1,51 @@
+@import '../../stylesheets/_colors.scss';
+
+.sign-up-container {
+  .main_signup {
+    border-radius: 5px;
+    width: 408px;
+    height: 338px;
+  }
+
+  .color_gray {
+    background: $color-dark-gray-02;
+  }
+
+  .forgot_password {
+    color: $color-link-01;
+  }
+
+  .login_text {
+    color: $color-light-01;
+  }
+
+  .ouline {
+    display: flex;
+    flex-direction: row;
+    color: $color-light-01;
+  }
+
+  .ouline:before,
+  .ouline:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1.5px solid #38373A;
+  }
+
+  .ouline:before {
+    margin-right: 16px
+  }
+
+  .ouline:after {
+    margin-left: 16px
+  }
+
+  .signup {
+    color: $color-light-purple-01;
+    margin-bottom: 110px;
+  }
+
+  .opacity_text {
+    opacity: 0.8;
+  }
+}

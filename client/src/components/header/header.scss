@@ -1,0 +1,33 @@
+@import '../../stylesheets/_colors.scss';
+
+.header {
+    height: 115px;
+}
+
+.search {
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.loginButton {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+}
+.submitButton {
+    border-radius:0 5px 5px 0;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-control {
+    border-radius:5px 0 0 5px;
+}
+.text-header {
+	color: $color-light-01;
+}

@@ -5,7 +5,7 @@ import { StatusDelected } from "../../utils/enums.util";
 @Entity("project_categories")
 export class ProjectCategory {
 
-    @PrimaryColumn()
+    @PrimaryColumn({ type: String })
     id!: string;
 
     @Column({ type: String, name: "name"})

@@ -1,0 +1,25 @@
+@import "../../../stylesheets/colors";
+
+.login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border: none;
+
+    width: 138px;
+    height: 56px;
+    left: 0px;
+    top: 0px;
+
+    background: $color-light-01;
+    color: $color-dark-gray-02;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+
+.login:hover {
+    background: #CDCBCE;
+    
+}

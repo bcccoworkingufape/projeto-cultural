@@ -2,6 +2,7 @@ import crypto from 'crypto';
 import { CryptResponse } from '../interfaces/CryptPasswordResponse.interface';
 import jwt from 'jsonwebtoken';
 import { JWTPayloadResetPasswordResponse } from '../interfaces/JWTPayloadResponse.interface';
+import { randomBytes } from 'crypto';
 
 export const cryptPassword = (password: string) => {
     return new Promise<CryptResponse>((resolve, reject) => {
@@ -30,4 +31,16 @@ export const createLoginToken = (payload: any) => {
 
 export const decodeLoginToken = async (token: any) => {
     return <JWTPayloadResetPasswordResponse>jwt.verify(token, process.env.JWT_SECRET);
+}
+
+export const createResetPasswordToken = () => {
+    return randomBytes(20).toString('hex');
+}
+
+export const decodeResetPasswordResetToken = async (token: any) => {
+    return <JWTPayloadResetPasswordResponse>jwt.verify(token, process.env.JWT_RESET_PASSWORD_URL_SECRET);
+}
+
+export const createResetPasswordResetToken = (payload: any) => {
+    return jwt.sign(payload, process.env.JWT_RESET_PASSWORD_URL_SECRET as string, { expiresIn: "1h" });
 }

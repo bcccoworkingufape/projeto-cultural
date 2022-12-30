@@ -5,7 +5,7 @@ import { StatusDelected } from "../../utils/enums.util";
 @Entity("addresses")
 export class Address {
 
-    @PrimaryColumn()
+    @PrimaryColumn({ type: String })
     id: string;
 
     @Column({ type: String })

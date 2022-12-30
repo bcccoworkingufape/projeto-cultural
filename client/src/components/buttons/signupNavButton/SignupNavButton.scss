@@ -1,0 +1,28 @@
+@import "../../../stylesheets/colors";
+
+.signup-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border: solid;
+    border-color: $color-light-02;
+    border-width: 2px;
+
+    width: 138px;
+    height: 56px;
+    left: 0px;
+    top: 0px;
+
+    background: $color-dark-01;
+    color: $color-primary-grey-00;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+
+.signup-button:hover {
+    background: #CDCBCE;
+    color: $color-dark-01;
+    border: none;
+}

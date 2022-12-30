@@ -1,0 +1,22 @@
+@import "../../../stylesheets/colors";
+
+.continueFacebook{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 17px 0px 17px;
+    border: none;
+
+
+    width: 312px;
+    height: 56px;
+
+    background-color: $color-light-01;
+    color: $color-dark-01;
+    border-radius: 5px;
+}
+
+.continueFacebook:hover{
+    background-color: #CBCBCB;
+}

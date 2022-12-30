@@ -1,0 +1,23 @@
+@import '../../../App.scss';
+
+.container {
+    min-height: 468px;
+}
+
+Input {
+    margin-bottom: 14px;
+}
+
+.text-grey {
+    color:$color-primary-grey-00;
+}
+
+.font-weigth-400 {
+    font-weight: 400;
+}
+
+.external-links {
+    color: $color-link-01;
+    text-decoration: none;
+    cursor: pointer;
+}

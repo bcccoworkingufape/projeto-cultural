@@ -6,26 +6,35 @@ import { DigitalPresence } from "./Digital_Presence.entity";
 @Entity("users")
 export class User {
 
-    @PrimaryColumn()
+    @PrimaryColumn({ type: String })
     id: string;
 
-    @Column()
+    @Column({ type: String })
     email: string;
 
-    @Column()
+    @Column({ type: String })
+    name: string;
+
+    @Column({ type: String })
     password: string;
 
-    @Column()
+    @Column({ type: String, nullable: true })
+    passwordResetToken: string = null;
+
+    @Column({ type: String })
     user_type: string;
 
-    @Column()
+    @Column({ type: String })
     imageURL: string;
 
-    @Column()
-    active: boolean;
+    @Column({ type: String, nullable: true, default: true })
+    active: boolean = true;
 
-    @CreateDateColumn()
+    @CreateDateColumn({ type: String })
     createdAt: Date;
+
+    @Column({ type: String, nullable: true })
+    passwordResetExpiration: Date;
 
     @Column({ type: 'uuid', name: "address_id", nullable: true })
     addressId?: string;

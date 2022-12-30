@@ -9,15 +9,16 @@ import { Support } from './src/database/entities/Support.entity';
 
 export const AppDataSource = new DataSource({
     type: 'postgres',
-    host: 'localhost',
+    url: 'postgres://caxbqiza:E7oNT9z_RmAViATjkHm1oTAaZeJGINCH@suleiman.db.elephantsql.com/caxbqiza',
     port: 5432,
-    username: 'postgres',
-    password: 'postgrespassword',
-    database: 'cultural',
-    synchronize: false,
+    username: 'caxbqiza',
+    password: 'E7oNT9z_RmAViATjkHm1oTAaZeJGINCH',
+    database: 'caxbqiza',
+    synchronize: true,
+    logging: false,
     entities: [User, Project, Address, DigitalPresence, ProjectCategory, Like, Support], // ajustar aqui para carregar todas que tiverem na pasta de entidades
     migrations: [
-         __dirname + "/src/database/migrations/*.ts"
+         __dirname + "/src/database/migrations/*.{js,ts}"
     ],
    
   });

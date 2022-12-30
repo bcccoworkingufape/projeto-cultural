@@ -1,0 +1,22 @@
+@import "../../../stylesheets/colors";
+
+.continueGoogle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 0px 40px 0px 17px;
+
+
+    width: 312px;
+    height: 56px;
+
+    background-color: $color-light-01;
+    color: $color-dark-01;
+    border-radius: 5px;
+}
+
+.continueGoogle:hover{
+    background-color: #CBCBCB;
+}

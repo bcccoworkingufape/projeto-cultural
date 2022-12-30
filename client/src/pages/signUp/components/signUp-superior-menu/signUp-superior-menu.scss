@@ -1,0 +1,14 @@
+@import '../../../../App.scss';
+
+.superior-menu-container {
+    width: 620px;
+    
+    .external-links {
+        color: $color-primary-grey-00;
+        &:hover {
+            color: $color-light-01;
+        }
+    }
+
+
+}

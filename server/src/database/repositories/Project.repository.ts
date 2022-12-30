@@ -3,7 +3,7 @@ import { Project } from '../entities/Project.entity';
 
 const repository = database.getRepository(Project);
 
-export const create = async(data: any) => {
+export const create = async(data: Project) => {
     let project = new Project();
 
     project.name = data.name;
@@ -17,12 +17,20 @@ export const create = async(data: any) => {
     project.active = data.active;
 
     return await repository.save(project);
-};
+}
 
 export const getByName = async(name: string) => {
-    return await repository.findOneBy({ name: name });
-};
+    return await repository.findOneBy({ name });
+}
 
-export const deleteProject = async(name: any) => {
-    return await repository.delete({ name: name.name })
+export const getById = async(id: string) => {
+    return await repository.findOneBy({ id });
+}
+
+export const update = async(id: string, projectData: Partial<Project>) => {
+    return await repository.update({ id }, projectData);
+}
+
+export const deleteProject = async(id: string) => {
+    return await repository.delete({ id })
 }
