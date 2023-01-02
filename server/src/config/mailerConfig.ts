@@ -1,10 +1,10 @@
 export const mailerConfig = {
-  service: 'Gmail',
+  service: process.env.MAILER_SERVICE_TYPE,
   port: 465,
   secure: true,
   auth: {
-    user: 'ufapedev@gmail.com',
-    pass: 'mzgilnvgwmrckgvp',
+    user: process.env.MAILER_SERVICE_USER,
+    pass: process.env.MAILER_SERVICE_PASS,
   }, 
   tls: {
     rejectUnauthorized: false,
