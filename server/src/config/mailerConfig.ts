@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config({ path: '../../.env' });
+
 export const mailerConfig = {
   service: process.env.MAILER_SERVICE_TYPE,
   port: 465,

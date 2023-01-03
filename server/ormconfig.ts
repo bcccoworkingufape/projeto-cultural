@@ -1,10 +1,13 @@
+import dotenv from 'dotenv';
 import { DataSource } from "typeorm";
+dotenv.config({ path: './.env' });
 
+console.log(process.env.TYPEORM_PASSWORD)
 export const AppDataSource = new DataSource({
     type: 'postgres',
-    url: process.env.TYPEORM_URL,
+    url: String(process.env.TYPEORM_URL),
     port: Number(process.env.TYPEORM_PORT),
-    username: process.env.TYPEORM_USERNAME,
+    username: String(process.env.TYPEORM_USERNAME),
     password: process.env.TYPEORM_PASSWORD,
     database: process.env.TYPEORM_DATABASE,
     synchronize: true,
@@ -13,6 +16,5 @@ export const AppDataSource = new DataSource({
     migrations: [
          __dirname + process.env.TYPEORM_MIGRATIONS_DIR
     ],
-   
   });
   
