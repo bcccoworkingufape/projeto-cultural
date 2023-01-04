@@ -2,7 +2,6 @@ import dotenv from 'dotenv';
 import { DataSource } from "typeorm";
 dotenv.config({ path: './.env' });
 
-console.log(process.env.TYPEORM_PASSWORD)
 export const AppDataSource = new DataSource({
     type: 'postgres',
     url: String(process.env.TYPEORM_URL),
