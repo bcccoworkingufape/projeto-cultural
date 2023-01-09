@@ -2,7 +2,7 @@ import app from './app';
 import { createServer } from 'http';
 import { debug } from 'debug';
 
-const port = normalizePort(process.env.PORT || '4200');
+const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 const server = createServer(app);
