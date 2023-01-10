@@ -6,7 +6,7 @@ import './signUp-personal-info.scss';
 
 function SignUpPersonalInfo() {
     return (
-        <div class="container">
+        <div className="container">
             <SignUpForms loadingProgress={50}></SignUpForms>
 
             <div className="input-fields">

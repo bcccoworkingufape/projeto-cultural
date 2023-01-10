@@ -3,7 +3,7 @@ import './input_header.scss';
 
 function InputHeader({ type, name, placeholder, handleOnChange, value, required, label }) {
     return (
-        <div class="input-field d-flex flex-column">
+        <div className="input-field d-flex flex-column">
             <label className="font-subtitle-16-ubuntu"> {label} </label>
             <input
 		className="input_header icon-search"

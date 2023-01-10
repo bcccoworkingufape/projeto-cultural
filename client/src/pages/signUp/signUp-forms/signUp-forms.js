@@ -9,7 +9,7 @@ function SignUpForms({ loadingProgress }) {
         <div>
             <SignUpSuperiorMenu> </SignUpSuperiorMenu>
 
-            <div class="d-flex justify-content-between">
+            <div className="d-flex justify-content-between">
                 <div className="pageInfo">
                     <h1 className="font-h2-56-ubuntu"> Cadastro </h1>
                     <p className="font-subtitle-24-ubuntu font-weigth-500 primary-grey-text-color">

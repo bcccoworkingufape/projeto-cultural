@@ -54,6 +54,10 @@
     @include font-ubuntu;
 }
 
+.font-h1-64-ubuntu {
+    @include font-ubuntu($f-size: 64px); 
+}
+
 .font-h2-64-ubuntu {
     @include font-ubuntu($f-size: 64px);
 }
@@ -85,6 +89,11 @@
 .font-subtitle-16-500-ubuntu { //novo
 	@include font-ubuntu-500($f-size: 16px);
 }
+
+.font-subtitle-24-500-ubuntu { //novo
+	@include font-ubuntu-500($f-size: 24px);
+}
+
 .font-subtitle-12-ubuntu { //nova
     @include font-ubuntu($f-size: 12px);
 }

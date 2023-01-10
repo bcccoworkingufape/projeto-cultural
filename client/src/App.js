@@ -7,7 +7,7 @@ import { auth} from './services/firebase';
 import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 
-import LandingPage from './pages/landingPage.js';
+import LandingPage from './pages/landing/landingPage.js';
 import Login from './pages/login/login.js';
 import SignUp from './pages/signUp/signUp.js';
 import SignUpEmailIntroduction from './pages/signUp/signUp-email-introduction/signUp-email-introduction';

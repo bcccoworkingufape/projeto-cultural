@@ -7,8 +7,6 @@ import InputHeader from "../../components/input_header/input_header";
 import LoginNavButton from "../../components/buttons/loginNavButton/LoginNavButton"
 import SignupNavButton from "../../components/buttons/signupNavButton/SignupNavButton"
 import { getAuth,signOut } from "firebase/auth";
-import {auth} from "../../services/firebase"
-
 
 function Header() {
 	const navigate = useNavigate();

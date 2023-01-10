@@ -63,6 +63,10 @@
   line-height: 21px;
 }
 
+.text-link-grey {
+  color: $color-light-02;
+}
+
 .btn {
   //color: $color-light-gray01;
   height: 65px;
@@ -101,11 +105,12 @@
 
 .link {
   text-decoration: none;
-  //color: $color-button-light-blue02;
+  color: $color-primary-grey-00;
+  cursor: pointer;
 
-  // &:hover {
-  //   //color: $color-button-dark-blue01;
-  // }
+  &:hover {
+    color: $color-light-01;
+  }
 }
 
 .search-box {
