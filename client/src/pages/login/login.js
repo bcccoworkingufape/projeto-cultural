@@ -10,7 +10,6 @@ import '../../stylesheets/_colors.scss';
 import '../../stylesheets/_fonts.scss';
 import SignInSignOutButton from "../../components/buttons/signInSignOutButton/SignInSignOutButton"
 import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/ContinueGoogleButton"
-import ContinueFacebookButton from "../../components/buttons/continueFacebookButton/ContinueFacebookButton"
 import Input from "../../components/input/input";
 
 function Login() {
@@ -70,10 +69,9 @@ function Login() {
 					</div>
 					<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
 					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton signIn = {handleGoogleSingIn}/></div>
-					<div className="mb-2 mt-2 color_gray"><ContinueFacebookButton/></div>
 				</div>
 			</div>
-			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Cadastre-se</a></div>
+			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? <a href='?#' className="link signup font-body-20-700-roboto" onClick={() => {navigate("/signup")}}>&nbsp;Cadastre-se</a></div>
 		</>
 	);
   }
