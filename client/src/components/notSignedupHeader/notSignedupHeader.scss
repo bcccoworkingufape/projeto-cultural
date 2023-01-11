@@ -1,0 +1,18 @@
+@import '../../stylesheets/_colors.scss';
+@import '../../stylesheets/_fonts.scss';
+
+.landing-header {
+    height: 115px;
+    padding: 49px 164px;
+
+    .group-header {
+        div {
+            padding: 0 32px;
+        }
+
+        img {
+            margin-right: 10px;
+        }
+        
+    }
+}
