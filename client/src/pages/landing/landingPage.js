@@ -3,6 +3,7 @@ import pyre from '../../assets/images/pyre.svg';
 import LoginNavButton from '../../components/buttons/loginNavButton/LoginNavButton';
 import './landingPage.scss';
 import { useNavigate } from 'react-router-dom';
+import Baseboard from './../../components/baseboard/baseboard';
 
 function LandingPage() {
     const navigate = useNavigate();

@@ -40,6 +40,11 @@
     @include font-roboto-700($f-size: 20px);
 }
 
+.font-body-16-700-roboto { //novo
+    @include font-roboto-700($f-size: 20px);
+}
+
+
 .font-input-18-roboto {
     @include font-roboto($f-size: 18px);
 }

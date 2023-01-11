@@ -1,0 +1,27 @@
+@import '../../stylesheets/_colors.scss';
+@import '../../stylesheets/_fonts.scss';
+@import '../../App.scss';
+
+.baseboard-container {
+    background-color: $color-dark-gray-01;
+    height: 500px;
+    width: 100vw;
+    padding: 100px 104px;
+
+    span {
+        color: $color-light-gray-01;
+        margin-top: 100px;
+    }
+
+    .baseboard-column {
+        p {
+            @extend .link;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            margin-bottom: 48px;
+            color: $color-light-01;
+        }
+    }
+}
