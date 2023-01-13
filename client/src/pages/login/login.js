@@ -59,7 +59,7 @@ function Login() {
 							}}>
 							<div className="d-flex color_gray">
 								<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Senha</label>
-								<a href="#?"className="link ms-auto font-subtitle-12-ubuntu forgot_password color_gray" onClick={() => {navigate("/recoverPasswordIntro")}}>Esqueceu sua senha?</a>
+								<a href="?#" className="ms-auto font-subtitle-12-ubuntu forgot_password color_gray" onClick={() => {navigate("/recoverPasswordIntro")}}>Esqueceu sua senha?</a>
 							</div>
 							<Input type="password"/>
 						</div>
@@ -71,7 +71,7 @@ function Login() {
 					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton signIn = {handleGoogleSingIn}/></div>
 				</div>
 			</div>
-			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? <a href='?#' className="link signup font-body-20-700-roboto" onClick={() => {navigate("/signup")}}>&nbsp;Cadastre-se</a></div>
+			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? &nbsp;<a href='?#' className="signup font-body-20-700-roboto" onClick={() => {navigate("/signup")}}>Cadastre-se</a></div>
 		</>
 	);
   }
