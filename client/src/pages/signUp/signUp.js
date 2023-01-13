@@ -1,5 +1,5 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 import {auth} from "../../services/firebase"
 import pyre from '../../assets/images/pyre.svg';
@@ -10,7 +10,6 @@ import SignInSignOutButton from "../../components/buttons/signInSignOutButton/Si
 import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/ContinueGoogleButton"
 
 function SignUp() {
-	const navigate = useNavigate();
 	const handleGoogleSingIn = () =>{
 		const provider = new GoogleAuthProvider();
 		signInWithPopup(auth, provider)
@@ -34,12 +33,14 @@ function SignUp() {
 				<div className='container p-5 main_signup color_gray'>
 					<div className="mb-4 color_gray"><ContinueGoogleButton signIn = {handleGoogleSingIn}/></div>
 					<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
-					<div className='row m-0 mt-4 mb-3 color_gray'>
-						<SignInSignOutButton>Cadastre usando email</SignInSignOutButton>
+					<div className='m-0 mt-4 mb-3 color_gray'>
+						<Link to="intro" className="link"><SignInSignOutButton>Cadastre usando email</SignInSignOutButton></Link>
 					</div>
 				</div>
 			</div>
-			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Já tem conta? <a href='?#' className="link signup font-body-20-700-roboto" onClick={() => {navigate("/login")}}>&nbsp;Faça login</a></div>
+			<div className="font-body-20-700-roboto d-flex justify-content-center mt-4 p-2 text-white" >Já tem conta?&nbsp;
+				<Link to="/login" className="link font-body-20-700-roboto signup">Faça login</Link>
+			</div>
 		</div>
 	);
   }

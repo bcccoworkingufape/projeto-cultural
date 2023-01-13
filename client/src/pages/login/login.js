@@ -1,5 +1,5 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 import {auth} from "../../services/firebase"
@@ -13,7 +13,6 @@ import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/
 import Input from "../../components/input/input";
 
 function Login() {
-		const navigate = useNavigate();
 		const ref = useRef(null);
 		const ref2 = useRef(null);
 
@@ -59,7 +58,7 @@ function Login() {
 							}}>
 							<div className="d-flex color_gray">
 								<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Senha</label>
-								<a href="?#" className="ms-auto font-subtitle-12-ubuntu forgot_password color_gray" onClick={() => {navigate("/recoverPasswordIntro")}}>Esqueceu sua senha?</a>
+								<Link to="/recoverPasswordIntro" className="ms-auto font-subtitle-12-ubuntu forgot_password color_gray">Esqueceu sua senha?</Link>
 							</div>
 							<Input type="password"/>
 						</div>
@@ -71,7 +70,9 @@ function Login() {
 					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton signIn = {handleGoogleSingIn}/></div>
 				</div>
 			</div>
-			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? &nbsp;<a href='?#' className="signup font-body-20-700-roboto" onClick={() => {navigate("/signup")}}>Cadastre-se</a></div>
+			<div className="font-body-20-700-roboto d-flex justify-content-center mt-4 p-2 text-white" >Novo por aqui?&nbsp;
+				<Link to="/signup" className="font-body-20-700-roboto signup">Cadastre-se</Link>
+			</div>
 		</>
 	);
   }
