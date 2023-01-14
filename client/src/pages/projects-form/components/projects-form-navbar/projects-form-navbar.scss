@@ -1,0 +1,49 @@
+@import '../../../../stylesheets/_colors.scss';
+@import '../../../../stylesheets/_fonts.scss';
+
+.projects-form-navbar-container {
+    padding: 69px 40px;
+    position: absolute;
+    width: 319px;
+    height: 1143px;
+
+    .project-image {
+        width: 242px;
+        height: 201px;
+        background-color: $color-light-gray-01;
+        margin-bottom: 21px;
+    }
+
+    h4 {
+        color: $color-light-02;
+        margin-bottom: 81px;
+    }
+
+    .navbar-items {
+        height: 240px;
+        margin-bottom: 223px;
+
+        .navbar-item {
+            color: $color-light-gray-01;
+
+            path,
+            svg {
+                margin-right: 15px;
+                fill: $color-light-gray-01;
+            }
+
+            &:hover {
+                color: $color-light-02;
+
+                path {
+                    fill: $color-light-02;
+                }
+            }
+        }
+    }
+
+    .delete-button {
+        background-color: $color-icon-like-01;
+        margin-top: 24px;
+    }
+}

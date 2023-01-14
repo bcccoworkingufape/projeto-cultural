@@ -23,6 +23,7 @@ import SignUpAddressInfo from './pages/signUp/signUp-address-info';
 import Logout from './pages/logoutTest/logout';
 import RecoverPasswordIntro from './pages/recoverPassword/recoverPasswordIntro/recoverPasswordIntro';
 import RecoverPassword from './pages/recoverPassword/recoverPassword/recoverPassword';
+import ProjectsFormNavbar from './pages/projects-form/components/projects-form-navbar/projects-form-navbar';
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -47,6 +48,7 @@ function App() {
           <Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
           <Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
           <Route path="/recoverPassword" element={<RecoverPassword/>}/>
+          <Route path="/test" element={<ProjectsFormNavbar/>}/>
 
           {/*Exemplos de uso dos botoes*/}
           <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 

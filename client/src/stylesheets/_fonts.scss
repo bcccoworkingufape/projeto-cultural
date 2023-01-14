@@ -87,6 +87,10 @@
     @include font-ubuntu($f-size: 20px);
 }
 
+.font-18-ubuntu {
+    @include font-ubuntu($f-size: 18px);
+}
+
 .font-subtitle-16-ubuntu {
     @include font-ubuntu($f-size: 16px);
 }
