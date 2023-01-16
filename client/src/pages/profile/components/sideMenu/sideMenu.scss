@@ -1,0 +1,32 @@
+@import '../../../../stylesheets/_colors.scss';
+@import '../../../../stylesheets/_fonts.scss';
+
+.sidemenu-container {
+    padding: 69px 40px;
+    position: relative;
+    width: 319px;
+
+    .sidemenu-items {
+	margin-top: 26px;
+	margin-left: 43px;
+	height: 90vh;
+
+        .sidemenu-item {
+            color: $color-light-gray-01;
+	    margin-bottom: 51px;
+
+	    path,
+	    svg {
+                margin-right: 15px;
+                fill: $color-light-gray-01;
+            }
+
+            &:hover {
+                color: $color-light-02;
+		path {
+		    fill: $color-light-02;
+		}
+	    }
+        }
+    }
+}

@@ -25,6 +25,7 @@ import RecoverPasswordIntro from './pages/recoverPassword/recoverPasswordIntro/r
 import RecoverPassword from './pages/recoverPassword/recoverPassword/recoverPassword';
 import ProjectsFormNavbar from './pages/projects-form/components/projects-form-navbar/projects-form-navbar';
 
+
 function App() {
   const [user, setUser] = useState(undefined);
 
