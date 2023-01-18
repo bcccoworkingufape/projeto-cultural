@@ -1,0 +1,15 @@
+@import '../../../../../../stylesheets/_colors.scss';
+@import '../../../../../../stylesheets/_fonts.scss';
+
+.frame-container{
+}
+.frame-box{
+	background-color: $color-dark-01;
+	border: 0.5px solid #565656;
+	border-radius: 5px;
+}
+.add-sign{
+	display: flex;
+	align-items: center;
+}
+

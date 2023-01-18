@@ -1,0 +1,19 @@
+@import '../../../../stylesheets/_colors.scss';
+@import '../../../../stylesheets/_fonts.scss';
+
+.body {
+	background-color: $color-dark-gray-01;
+}
+.portfolio-container {
+	padding-left: 88px;
+	padding-top: 88px;
+	background-color: $color-dark-gray-01;
+}
+
+.portfolio-words {
+	color: $color-light-01;
+}
+
+.portfolio-subword {
+	margin-bottom: 50px;
+}
