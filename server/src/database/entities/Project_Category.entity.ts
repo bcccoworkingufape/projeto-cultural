@@ -6,13 +6,13 @@ import { StatusDelected } from "../../utils/enums.util";
 export class ProjectCategory {
 
     @PrimaryColumn({ type: String })
-    id!: string;
+    id: string;
 
     @Column({ type: String, name: "name"})
     name!: string;
 
-    @Column({ type: "enum", enum: StatusDelected, name: "category_status_enum" })
-    status!: string;
+    @Column({ type: "enum", enum: StatusDelected, name: "category_status_enum", nullable: false, default: 'NOT_DELETED' })
+    status: string = 'NOT_DELETED';
 
     @CreateDateColumn({ name: "created_at" })
     createdAt!: Date;

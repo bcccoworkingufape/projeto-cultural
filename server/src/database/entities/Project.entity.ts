@@ -2,6 +2,7 @@ import { Entity, Column, CreateDateColumn, PrimaryColumn, ManyToMany, JoinTable,
 import { v4 as uuid } from 'uuid';
 import { StatusActive, StatusDelected } from "../../utils/enums.util";
 import { ProjectCategory } from "./Project_Category.entity";
+import { User } from './User.entity';
 
 @Entity("projects")
 export class Project {
@@ -15,27 +16,25 @@ export class Project {
     @Column({ type: String, name: "description"})
     description!: string;
 
-    @Column({ type: String, name: "external_url"})
-    externalURL?: string;
-
-    @Column({ type: String, name: "image_url"})
-    imageURL?: string;
-
-    @Column({ type: String , name: "video_url"})
-    videoURL?: string;
+    @Column({ type: String, name: "locality"})
+    locality!: string;
 
     @Column({ type: 'uuid', name: "user_id", nullable: false })
-    userId!: string;
+    user_id!: string;
+
+    @OneToOne(() => User, { cascade: true })
+    @JoinColumn({ name: 'user_id' })
+    user: User;
     
-    @ManyToMany(() => ProjectCategory)
-    @JoinTable()
-    categories: ProjectCategory[];
+    @Column({ type: 'uuid', name: "category_id", nullable: false })
+    category_id!: string;
 
-    @Column({ type: "enum", enum: StatusDelected, name: "project_status" })
-    status!: string;
+    @OneToOne(() => ProjectCategory, { cascade: false })
+    @JoinColumn({ name: 'category_id' })
+    category: ProjectCategory;
 
-    @Column({ type: "enum", enum: StatusActive, name: "project_active" })
-    active!: string;
+    @Column({ type: "enum", enum: StatusDelected, name: "project_status", nullable: true, default: 'NOT_DELETED' })
+    status: string = 'NOT_DELETED';
 
     @CreateDateColumn({ name: "created_at" })
     createdAt!: Date;

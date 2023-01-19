@@ -26,8 +26,8 @@ export class Address {
     @Column({ type: String })
     city?: string;
 
-    @Column({ type: "enum", enum: StatusDelected, name: "address_status_enum" })
-    status!: string;
+    @Column({ type: "enum", enum: StatusDelected, name: "address_status_enum", nullable: false, default: 'NOT_DELETED' })
+    status: string = 'NOT_DELETED';
 
     @CreateDateColumn({ name: "created_at" })
     createdAt!: Date;

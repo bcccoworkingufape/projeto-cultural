@@ -8,3 +8,4 @@ router.post('/login', userController.login);
 router.post('/deleteuser', userController.remove);
 router.post('/forgotPassword', userController.forgotPassword)
 router.post('/resetPassword', userController.resetPassword)
+router.post('/notifications', userController.getNotifications)

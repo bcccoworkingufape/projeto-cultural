@@ -1,5 +1,6 @@
 import { Entity, Column, CreateDateColumn, PrimaryColumn } from "typeorm";
 import { v4 as uuid } from 'uuid';
+import { StatusDelected } from "../../utils/enums.util";
 
 @Entity("digital_presences")
 export class DigitalPresence {
@@ -18,6 +19,9 @@ export class DigitalPresence {
 
     @Column({ type: String })
     personal_site_url: boolean;
+
+    @Column({ type: "enum", enum: StatusDelected, name: "address_status_enum", nullable: false, default: 'NOT_DELETED' })
+    status: string = 'NOT_DELETED';
 
     @CreateDateColumn({ type: String })
     createdAt: Date;

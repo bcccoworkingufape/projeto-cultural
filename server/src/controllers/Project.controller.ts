@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import * as projectRepository from '../database/repositories/Project.repository';
 import { decodeLoginToken } from '../services/authService.service';
+import { getById as getUserById } from '../database/repositories/User.repository';
 
 
 export const create = async (req: Request, res: Response) => {
@@ -10,7 +11,8 @@ export const create = async (req: Request, res: Response) => {
 			const project = await projectRepository.create({
 				...req.body
 			});
-            		res.status(200).send({ project });
+            
+			res.status(200).send({ project });
 		}
 	} catch (error: any) {
 		res.status(400).send({ message: 'The request has failed: ' + error });
@@ -32,7 +34,7 @@ export const update = async(req: Request, res: Response, NextFunction: NextFunct
 		const token = req.headers.authorization;
 		const userId = (await decodeLoginToken(token)).id;
 
-		if(project.userId === userId) {
+		if(project.user_id === userId) {
 			await projectRepository.update(req.body.id, req.body.projectData);
 			res.status(200).send({ projectId: project.id })
 		} 
@@ -50,7 +52,7 @@ export const remove = async (req: Request, res: Response) => {
 			const token = req.headers.authorization;
 			const userId = (await decodeLoginToken(token)).id;
 
-			if(project.userId === userId) {
+			if(project.user_id === userId) {
 				await projectRepository.deleteProject(req.body.id);
 				res.status(200).send({ projectDeleted: req.body.id });
 			} 
@@ -60,5 +62,19 @@ export const remove = async (req: Request, res: Response) => {
 		res.status(400).send({ message: 'The request has failed: ' + error });
 	}
 };
+
+	export const getByUser = async (req: Request, res: Response) => {
+		try {
+			if (!!!(await getUserById(req.body.userId))) throw new Error("The user does not exists in our database");
+
+			else {
+				
+			}
+
+		} catch(error) {
+			res.status(400).send({ message: 'The request has failed: ' + error });
+		}
+	}
+
 
 

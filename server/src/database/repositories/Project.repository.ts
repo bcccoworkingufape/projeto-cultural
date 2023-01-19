@@ -1,5 +1,6 @@
 import { AppDataSource as database } from '../../../ormconfig'; 
 import { Project } from '../entities/Project.entity';
+import { CustomRepositoryCannotInheritRepositoryError } from 'typeorm';
 
 const repository = database.getRepository(Project);
 
@@ -8,13 +9,10 @@ export const create = async(data: Project) => {
 
     project.name = data.name;
     project.description = data.description;
-    project.externalURL = data.externalURL;
-    project.imageURL = data.imageURL;
-    project.videoURL = data.videoURL;
-    project.userId = data.userId;
-    project.categories = data.categories;
+    project.user_id = data.user_id;
+    project.category_id = data.category_id;
     project.status = data.status;
-    project.active = data.active;
+    project.locality = data.locality;
 
     return await repository.save(project);
 }
@@ -33,4 +31,11 @@ export const update = async(id: string, projectData: Partial<Project>) => {
 
 export const deleteProject = async(id: string) => {
     return await repository.delete({ id })
+}
+
+export const getProjectsByUser = async (userId: string) => {
+    return await repository.createQueryBuilder("projects")
+    .innerJoinAndSelect("project.user", "user")
+    .where("user.id = :userId", { userId })
+    .getMany();
 }

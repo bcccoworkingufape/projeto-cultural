@@ -3,6 +3,8 @@ import * as userRepository from '../database/repositories/User.repository';
 import { createLoginToken, createResetPasswordResetToken, createResetPasswordToken, cryptPassword, decodeLoginToken, decodeResetPasswordResetToken, descryptPassword } from '../services/authService.service';
 import { sendEmail } from '../utils/sendEmail';
 import { NodemailerDataFormat } from './../interfaces/NodemailerDataFormat.interface';
+import { getNotificationsByUser } from './../database/repositories/Notification.repository';
+
 
 export const create = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -102,7 +104,6 @@ export const forgotPassword = async (req: Request, res: Response) => {
 }
 
 export const resetPassword = async (req: Request, res: Response) => {
-
     try {
         const { email, tokenReset } = await decodeResetPasswordResetToken(req.body.token);
 
@@ -123,5 +124,15 @@ export const resetPassword = async (req: Request, res: Response) => {
         res.status(400).send({ message: 'The request has failed: ' + error });
     }
 }
+
+export const getNotifications = async (req: Request, res: Response) => {
+    try {
+        const notifications = await getNotificationsByUser(req.body.user_id);
+        res.status(200).send(notifications);
+    } catch (err) {
+        res.status(400).send({ message: 'The request has failed: ' + err });
+    }
+}
+
 
 
