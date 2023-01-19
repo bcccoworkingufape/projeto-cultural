@@ -25,6 +25,9 @@ import RecoverPasswordIntro from './pages/recoverPassword/recoverPasswordIntro/r
 import RecoverPassword from './pages/recoverPassword/recoverPassword/recoverPassword';
 import ProjectsFormNavbar from './pages/projects-form/components/projects-form-navbar/projects-form-navbar';
 
+import Portfolio from './pages/profile/components/portfolio/portfolio';
+
+
 function App() {
   const [user, setUser] = useState(undefined);
 
@@ -49,6 +52,9 @@ function App() {
           <Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
           <Route path="/recoverPassword" element={<RecoverPassword/>}/>
           <Route path="/test" element={<ProjectsFormNavbar/>}/>
+
+	  {/*teste*/}
+	  <Route path="/portfolio" element={<Portfolio/>}/>
 
           {/*Exemplos de uso dos botoes*/}
           <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
