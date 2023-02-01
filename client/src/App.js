@@ -26,6 +26,7 @@ import RecoverPassword from './pages/recoverPassword/recoverPassword/recoverPass
 import ProjectsFormNavbar from './pages/projects-form/components/projects-form-navbar/projects-form-navbar';
 
 import Portfolio from './pages/profile/components/portfolio/portfolio';
+import Info from './pages/profile/components/info/info';
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
 
 	  {/*teste*/}
 	  <Route path="/portfolio" element={<Portfolio/>}/>
+	  <Route path="/info" element={<Info/>}/>
 
           {/*Exemplos de uso dos botoes*/}
           <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 

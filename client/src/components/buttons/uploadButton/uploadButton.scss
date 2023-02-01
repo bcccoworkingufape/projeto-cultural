@@ -1,0 +1,27 @@
+@import "../../../stylesheets/colors";
+
+.uploadButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-color: $color-light-02;
+    border-width: 2px;
+
+    width: 169px;
+    height: 56px;
+    left: 0px;
+    top: 0px;
+
+    background: $color-medium-gray-01;
+    color: $color-primary-grey-00;
+    opacity: 0.8;
+    border: 1px solid $color-primary-grey-00;
+    border-radius: 8px;
+}
+
+.uploadButton:hover {
+    background: $color-light-gray-01;
+    border: none;
+}
