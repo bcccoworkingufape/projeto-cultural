@@ -22,7 +22,7 @@ function Header() {
 	return (
 		<header>
 			<div className="header d-flex align-items-center justify-content-around">
-				<div className="justify-items-start">
+				<div className="justify-items-start" style={{ marginLeft: "168px"}}>
 					<a href="/">
 						<img src={pyre} height= {55} alt="logo"/>
 			                </a>
@@ -36,7 +36,7 @@ function Header() {
 		                </div>
 				{!user &&
 					<div className="d-flex">
-						<div className="me-3" onClick={() => {navigate("/login")}} ><LoginNavButton/></div>
+						<div className="me-3" onClick={() => {navigate("/login")}} ><LoginNavButton>Login</LoginNavButton></div>
 						<div onClick={() => {navigate("/signup")}}><SignupNavButton/></div>
 					</div>
 				}
