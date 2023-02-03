@@ -27,6 +27,9 @@ import ProjectsFormNavbar from './pages/projects-form/components/projects-form-n
 
 import Portfolio from './pages/profile/components/portfolio/portfolio';
 import Info from './pages/profile/components/info/info';
+import Profile from './pages/profile/profile';
+import Header from './components/header/header';
+import NotSignedupHeader from './components/notSignedupHeader/notSignedupHeader';
 
 
 function App() {
@@ -54,9 +57,11 @@ function App() {
           <Route path="/recoverPassword" element={<RecoverPassword/>}/>
           <Route path="/test" element={<ProjectsFormNavbar/>}/>
 
-	  {/*teste*/}
-	  <Route path="/portfolio" element={<Portfolio/>}/>
-	  <Route path="/info" element={<Info/>}/>
+	  
+	  <Route path="/profile" element={<Profile/>}>
+		<Route exact path="/profile/portfolio" element={<Portfolio/>}/>
+		<Route path="/profile/info" element={<Info/>}/>
+	  </Route>
 
           {/*Exemplos de uso dos botoes*/}
           <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
@@ -66,6 +71,10 @@ function App() {
           <Route path="/test4" element={<NextButton href="/login">Próximo</NextButton>}/>
           <Route path="/test5" element={<LoginNavButton></LoginNavButton>}/>     
           <Route path="/logout" element={<Logout/>}/>     
+
+	  {/*test*/}
+	  <Route path="/header1" element={<Header/>}/>
+	  <Route path="/header2" element={<NotSignedupHeader/>}/>
 
         </Routes>
       </BrowserRouter>
