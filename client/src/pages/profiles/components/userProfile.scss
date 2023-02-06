@@ -1,0 +1,60 @@
+@import '../../../stylesheets/_colors.scss';
+@import '../../../stylesheets/_fonts.scss';
+
+.profile-image {
+	object-fit: cover;
+	width: 343px;
+	height: 343px;
+	margin-top: 397px;
+	margin-left: 163px;
+	border-radius: 100%;
+	border: 0.5px solid #CBCBCB
+
+}
+.first-section {
+	width: 1920px;
+	height: 987px;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 5.95%, rgba(44, 45, 48, 0.9) 58.66%, rgba(44, 45, 48, 0) 58.66%);
+}
+.general-info {
+	margin-left: 97px;
+	margin-top: 200px;
+}
+.general-info-2 {
+	margin-left: 200px;
+	margin-top: 200px;
+}
+.profile-little-text {
+	color: $color-primary-grey-00;
+	margin-bottom: 16.5px;
+	path,
+	svg {
+                fill: $color-primary-grey-00;
+	}
+}
+.profile-name { 
+	color: $color-light-01;
+	margin-bottom: 46.5px;
+}
+.profile-description-text {
+	color: $color-light-01;
+}
+.profile-button {
+	margin-bottom: 12px;
+	margin-right: 24px;
+	width: 225px;
+	height: 56px;
+	opacity: 0.8;
+	border: 1px solid $color-light-01;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: $color-light-01;
+	img{
+		margin-left: 34px;
+	}
+	span{
+		margin-left: 34px;
+	}
+}

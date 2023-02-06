@@ -24,12 +24,13 @@ import Logout from './pages/logoutTest/logout';
 import RecoverPasswordIntro from './pages/recoverPassword/recoverPasswordIntro/recoverPasswordIntro';
 import RecoverPassword from './pages/recoverPassword/recoverPassword/recoverPassword';
 import ProjectsFormNavbar from './pages/projects-form/components/projects-form-navbar/projects-form-navbar';
-
 import Portfolio from './pages/profile/components/portfolio/portfolio';
 import Info from './pages/profile/components/info/info';
 import Profile from './pages/profile/profile';
 import Header from './components/header/header';
 import NotSignedupHeader from './components/notSignedupHeader/notSignedupHeader';
+import Profiles from './pages/profiles/profiles';
+import UserProfile from './pages/profiles/components/userProfile';
 
 
 function App() {
@@ -56,11 +57,12 @@ function App() {
           <Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
           <Route path="/recoverPassword" element={<RecoverPassword/>}/>
           <Route path="/test" element={<ProjectsFormNavbar/>}/>
-
-	  
 	  <Route path="/profile" element={<Profile/>}>
-		<Route exact path="/profile/portfolio" element={<Portfolio/>}/>
+		<Route path="/profile/portfolio" element={<Portfolio/>}/>
 		<Route path="/profile/info" element={<Info/>}/>
+	  </Route>
+	  <Route path="/profiles" element={<Profiles/>}>
+		<Route path="/profiles/*" element={<UserProfile/>}/>
 	  </Route>
 
           {/*Exemplos de uso dos botoes*/}
@@ -70,7 +72,7 @@ function App() {
           <Route path="/test3" element={<BackButton href="/login">Voltar</BackButton>}/>
           <Route path="/test4" element={<NextButton href="/login">Próximo</NextButton>}/>
           <Route path="/test5" element={<LoginNavButton></LoginNavButton>}/>     
-          <Route path="/logout" element={<Logout/>}/>     
+          <Route path="/logout" element={<Logout/>}/>
 
 	  {/*test*/}
 	  <Route path="/header1" element={<Header/>}/>
