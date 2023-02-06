@@ -31,7 +31,7 @@ import Header from './components/header/header';
 import NotSignedupHeader from './components/notSignedupHeader/notSignedupHeader';
 import Profiles from './pages/profiles/profiles';
 import UserProfile from './pages/profiles/components/userProfile';
-
+import UserPortfolio from './pages/profiles/components/userPortfolio';
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -62,7 +62,8 @@ function App() {
 		<Route path="/profile/info" element={<Info/>}/>
 	  </Route>
 	  <Route path="/profiles" element={<Profiles/>}>
-		<Route path="/profiles/*" element={<UserProfile/>}/>
+		  <Route path="/profiles/:userId" element={<UserProfile/>}/>
+		  <Route path="/profiles/:userId/portfolio" element={<UserPortfolio/>}/>
 	  </Route>
 
           {/*Exemplos de uso dos botoes*/}
