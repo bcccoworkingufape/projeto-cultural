@@ -9,6 +9,11 @@ import tiktokPic from "../../../assets/images/profile-tiktok.svg";
 import twitterPic from "../../../assets/images/profile-twitter.svg";
 import linkPic from "../../../assets/images/profile-link.svg";
 import youtubePic from "../../../assets/images/profile-youtube.svg";
+import portfolioPic from "../../../assets/images/user-portfolio.svg";
+import projectPic from "../../../assets/images/project-form-basic.svg";
+import contribuitionPic from "../../../assets/images/project-form-payment.svg";
+import { Link } from 'react-router-dom';
+import Frame from "../../profile/components/portfolio/components/frame/frame";
 
 function UserProfile(){
 	return(
@@ -46,6 +51,53 @@ function UserProfile(){
 						</div>
 					</div>
 				</div>
+			</div>
+			<div className="d-flex flex-column second-section">
+				<div className="d-flex flex-column second-main">
+					<div className="font-button-20-ubuntu">
+						<img src={portfolioPic}/>
+						<span className="second-bigger-text">Portfólio</span>
+					</div>
+					<div className="d-flex flex-row" style={{width: "1595px"}}>
+						<span className="second-smaller-text">Conheça melhor o trabalho de (nome) através da galeria em seu portfólio</span>
+						<Link to="/profiles/(nome)portfolio" className="second-link"><span className="font-subtitle-16-ubuntu">Ver mais</span></Link>
+					</div>
+					<div>
+						<Frame inverseOrientation="false"/>
+					</div>
+				</div>
+
+				<div className="d-flex flex-column second-main">
+					<div className="font-button-20-ubuntu">
+						<img src={projectPic}/>
+						<span className="second-bigger-text p-1">Projetos</span>
+					</div>
+					<div className="d-flex flex-row" style={{width: "1595px"}}>
+						<span className="second-smaller-text">Esses são os projetos publicados pelo (nome) até o momento. Clique no card para conhecer mais.</span>
+						<Link to="/profiles/(nome)portfolio" className="second-link"><span className="font-subtitle-16-ubuntu">(X) publicados</span></Link>
+					</div>
+					<div>
+						<span className="second-smaller-text">Colocar aqui 4 projetos de (nome).</span>
+					</div>
+				</div>
+
+				<div className="d-flex flex-column second-main">
+					<div className="font-button-20-ubuntu">
+						<img src={contribuitionPic}/>
+						<span className="second-bigger-text p-1">Contribuições</span>
+					</div>
+					<div className="d-flex flex-row" style={{width: "1595px"}}>
+						<span className="second-smaller-text">Esses projetos contaram com a contribuição financeira do (nome)</span>
+						<Link to="/profiles/(nome)portfolio" className="second-link"><span className="font-subtitle-16-ubuntu">(X) contribuições</span></Link>
+					</div>
+					<div>
+						<span className="second-smaller-text">Colocar aqui as contribuições</span>
+					</div>
+				</div>
+				
+
+
+
 			</div>
 		</div>
 	)
