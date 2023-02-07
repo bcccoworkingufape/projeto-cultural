@@ -36,6 +36,7 @@ import FormCard from './pages/projects-form/components/form-card/form-card';
 import CreateProject from './pages/projects-form/createProject';
 import Description from './pages/projects-form/components/description/description';
 import Funding from './pages/projects-form/components/funding/funding';
+import Card from './components/card/card';
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -87,6 +88,7 @@ function App() {
 	  <Route path="/header1" element={<Header/>}/>
 	  <Route path="/header2" element={<NotSignedupHeader/>}/>
           <Route path="/test" element={<ProjectsFormNavbar/>}/>
+	  <Route path="/card" element={<Card/>}/>
 
         </Routes>
       </BrowserRouter>
