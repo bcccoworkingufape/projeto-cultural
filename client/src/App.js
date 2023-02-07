@@ -32,6 +32,8 @@ import NotSignedupHeader from './components/notSignedupHeader/notSignedupHeader'
 import Profiles from './pages/profiles/profiles';
 import UserProfile from './pages/profiles/components/userProfile';
 import UserPortfolio from './pages/profiles/components/userPortfolio';
+import FormCard from './pages/projects-form/components/form-card/form-card';
+import CreateProject from './pages/projects-form/createProject';
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -56,7 +58,6 @@ function App() {
           <Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
           <Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
           <Route path="/recoverPassword" element={<RecoverPassword/>}/>
-          <Route path="/test" element={<ProjectsFormNavbar/>}/>
 	  <Route path="/profile" element={<Profile/>}>
 		<Route path="/profile/portfolio" element={<Portfolio/>}/>
 		<Route path="/profile/info" element={<Info/>}/>
@@ -64,6 +65,9 @@ function App() {
 	  <Route path="/profiles" element={<Profiles/>}>
 		  <Route path="/profiles/:userId" element={<UserProfile/>}/>
 		  <Route path="/profiles/:userId/portfolio" element={<UserPortfolio/>}/>
+	  </Route>
+	  <Route path="/create" element={<CreateProject/>}>
+		  <Route path="/create/initial" element={<FormCard/>}/>
 	  </Route>
 
           {/*Exemplos de uso dos botoes*/}
@@ -78,6 +82,7 @@ function App() {
 	  {/*test*/}
 	  <Route path="/header1" element={<Header/>}/>
 	  <Route path="/header2" element={<NotSignedupHeader/>}/>
+          <Route path="/test" element={<ProjectsFormNavbar/>}/>
 
         </Routes>
       </BrowserRouter>

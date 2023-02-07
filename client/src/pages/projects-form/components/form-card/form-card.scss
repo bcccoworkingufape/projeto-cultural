@@ -1,0 +1,36 @@
+@import '../../../../stylesheets/_colors.scss';
+
+.initial-container{
+	margin-top: 64px;
+	margin-left: 116px;
+}
+.initial-title {
+	margin-bottom: 18px;
+	color: $color-light-01;
+}
+.initial-description{
+	color: $color-light-01;
+	margin-bottom: 72px;
+}
+.initial-block{
+	width: 1144px;
+	height: 150px;
+	background: rgba(44, 45, 48, 0.4);
+	border-radius: 4px;
+	margin-bottom: 25px;
+	align-items: center;
+}
+.initial-block-title{
+	color: $color-light-01;
+	margin-bottom: 12px;
+}
+.initial-block-description{
+	color: $color-light-01;
+}
+.initial-block-text{
+	margin-left: 72px;
+}
+.initial-block-action{
+	margin-left: auto;
+	margin-right: 78px;
+}

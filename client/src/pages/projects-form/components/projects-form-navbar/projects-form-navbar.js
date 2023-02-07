@@ -2,12 +2,10 @@ import { ReactComponent as BasicIcon } from '../../../../assets/images/project-f
 import { ReactComponent as DescriptionIcon } from '../../../../assets/images/project-form-description.svg';
 import { ReactComponent as PaymentIcon } from '../../../../assets/images/project-form-payment.svg';
 import { ReactComponent as PreviewIcon } from '../../../../assets/images/project-form-preview.svg';
-
 import { ReactComponent as DeleteIcon } from '../../../../assets/images/project-button-delete.svg';
 import { ReactComponent as PublishIcon } from '../../../../assets/images/project-button-publish.svg';
 
 import './projects-form-navbar.scss';
-
 
 function ProjectsFormNavbar() {
     return (
