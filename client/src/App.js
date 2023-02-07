@@ -34,6 +34,8 @@ import UserProfile from './pages/profiles/components/userProfile';
 import UserPortfolio from './pages/profiles/components/userPortfolio';
 import FormCard from './pages/projects-form/components/form-card/form-card';
 import CreateProject from './pages/projects-form/createProject';
+import Description from './pages/projects-form/components/description/description';
+import Funding from './pages/projects-form/components/funding/funding';
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -68,6 +70,8 @@ function App() {
 	  </Route>
 	  <Route path="/create" element={<CreateProject/>}>
 		  <Route path="/create/initial" element={<FormCard/>}/>
+		  <Route path="/create/description" element={<Description/>}/>
+		  <Route path="/create/funding" element={<Funding/>}/>
 	  </Route>
 
           {/*Exemplos de uso dos botoes*/}
