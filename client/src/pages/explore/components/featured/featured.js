@@ -1,5 +1,4 @@
 import './featured.scss';
-import { Outlet } from "react-router-dom";
 import Card from "../../../../components/card/card";
 
 function Featured(){

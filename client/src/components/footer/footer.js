@@ -1,26 +1,27 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './footer.scss';
+import Logo from "../../assets/images/pyre.svg";
 
 function Footer() {
 	return (
-	<footer className="bg-dark text-white">
-		<div className="d-flex align-items-center justify-content-center">
-			<div className="col">
-				<h3 className="text-uppercase">Lorem Ipsum</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam iaculis justo ut ipsum sagittis, eget laoreet neque gravida. Duis nec sem bibendum, imperdiet lorem ac, luctus mi. Proin bibendum ut ex euismod efficitur. Duis fringilla condimentum orci, id tincidunt tortor fermentum eu.
-				</p>
+	<footer className="footer-container">
+		<div className="d-flex flex-row justify-content-between">
+			<div className="footer-logo">
+				<img src={Logo}/>
 			</div>
-			<div className="col">
-				<h3 className="text-uppercase">Lorem Ipsum</h3>
-				<p>
-			    		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam iaculis justo ut ipsum sagittis, eget laoreet neque gravida. Duis nec sem bibendum, imperdiet lorem ac, luctus mi. Proin bibendum ut ex euismod efficitur. Duis fringilla condimentum orci, id tincidunt tortor fermentum eu.
-				</p>
+			<div className="footer-info-1 d-flex flex-column">
+				<span className="foorter-info-title font-h3-32-ubuntu">Redes Sociais</span>
+				<span className="footer-info-item font-body-20-700-roboto">LinkedIn</span>
+				<span className="footer-info-item font-body-20-700-roboto">Instagram</span>
+				<span className="footer-info-item font-body-20-700-roboto">Novidade</span>
+			</div>
+			<div className="footer-info-2 d-flex flex-column">
+				<span className="foorter-info-title font-h3-32-ubuntu">Outros</span>
+				<span className="footer-info-item font-body-20-700-roboto">Blog</span>
+				<span className="footer-info-item font-body-20-700-roboto">Termos de uso</span>
+				<span className="footer-info-item font-body-20-700-roboto">Política e privacidade</span>
 			</div>
 		</div>
-		<div className="copyright bg-secondary d-flex align-items-center justify-content-center">
-	    		<h6 className="text-uppercase">Copyright</h6>
-		</div>
+		<span className="footer-copyright font-body-16-roboto">@ Pyre 2022 copyright. All rights reserved.</span>
 	</footer>
 	);
 }

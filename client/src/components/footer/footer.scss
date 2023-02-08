@@ -1,11 +1,33 @@
 @import '../../stylesheets/_colors.scss';
 
-.copyright{
-	height:40px;
+.footer-container {
+	width: 1920px;
+	height: 569px;
+	background: $color-dark-gray-01;
+	margin-top: 250px;
+	padding-left: 200px;
+	padding-right: 200px;
 }
-.col{
-	margin-right:100px;
-	margin-left:100px;
+.footer-logo {
+	img{
+		width: 162px;
+		height: 173.05px;
+	}
+	margin-top: 160px;
 }
-
-
+.foorter-info-title {
+	color: $color-light-01;
+	margin-top: 160px;
+	margin-bottom: 48px;
+}
+.footer-info-item {
+	color: #f1f1f1;
+	margin-bottom: 24px;
+	opacity: 0.6;
+}
+.footer-copyright {
+	color: $color-light-02;
+	opacity: 0.3;
+	position: relative;
+	top: 120px;
+}
