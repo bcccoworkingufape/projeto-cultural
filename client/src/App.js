@@ -38,6 +38,8 @@ import Description from './pages/projects-form/components/description/descriptio
 import Funding from './pages/projects-form/components/funding/funding';
 import Card from './components/card/card';
 import Explore from './pages/explore/explore';
+import CardSmall from './components/card-small/card-small';
+import CardBig from './components/card-big/card-big';
 
 function App() {
 	const [user, setUser] = useState(undefined);
@@ -86,11 +88,13 @@ function App() {
 					<Route path="/test5" element={<LoginNavButton></LoginNavButton>}/>		 
 					<Route path="/logout" element={<Logout/>}/>
 
-		{/*test*/}
-		<Route path="/header1" element={<Header/>}/>
-		<Route path="/header2" element={<NotSignedupHeader/>}/>
+					{/*test*/}
+					<Route path="/header1" element={<Header/>}/>
+					<Route path="/header2" element={<NotSignedupHeader/>}/>
 					<Route path="/test" element={<ProjectsFormNavbar/>}/>
-		<Route path="/card" element={<Card/>}/>
+					<Route path="/card" element={<Card/>}/>
+					<Route path="/cardsmall" element={<CardSmall/>}/>
+					<Route path="/cardbig" element={<CardBig/>}/>
 
 				</Routes>
 			</BrowserRouter>
