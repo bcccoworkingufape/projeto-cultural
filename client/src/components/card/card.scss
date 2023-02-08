@@ -1,31 +1,32 @@
 @import '../../App.scss';
 
 .card-container{
+	position:relative;
 	width: 780px;
 	height: 411px;
-}
-img {
-	width: 780px;
-	height: 411px;
-	border: 0.5px solid #565656;
-	border-radius: 5px;
-	display: block;
-}
-.card-title{
-	position: absolute;
-	width: 146px;
-	height: 46px;
-	left: 40px;
-	top: 50px;
-	color: $color-light-01;
-	opacity: 0.9;
-	text-shadow: 0px 0px 70px #000000;
-}
-.card-author{
-	position: absolute;
-	width: 97px;
-	height: 16px;
-	left: 40px;
-	top: 105px;
-	color: $color-light-02;
+
+	img {
+		width: 780px;
+		height: 411px;
+		border: 0.5px solid #565656;
+		border-radius: 5px;
+	}
+	.card-title{
+		position: absolute;
+		top: 65px;
+		left:40px;
+		width: 146px;
+		height: 46px;
+		color: $color-light-01;
+		opacity: 0.9;
+		text-shadow: 0px 0px 70px #000000;
+	}
+	.card-author{
+		position: absolute;
+		top: 105px;
+		left:40px;
+		width: 200px;
+		height: 16px;
+		color: #B3B3B3;
+	}
 }

@@ -37,63 +37,65 @@ import CreateProject from './pages/projects-form/createProject';
 import Description from './pages/projects-form/components/description/description';
 import Funding from './pages/projects-form/components/funding/funding';
 import Card from './components/card/card';
+import Explore from './pages/explore/explore';
 
 function App() {
-  const [user, setUser] = useState(undefined);
+	const [user, setUser] = useState(undefined);
 
-  useEffect(()=>{
-    onAuthStateChanged(auth, (user) =>{
-      user && console.log("logado como: " + user.displayName);
-      setUser(user);
-    })
+	useEffect(()=>{
+		onAuthStateChanged(auth, (user) =>{
+			user && console.log("logado como: " + user.displayName);
+			setUser(user);
+		})
 
-  })
+	})
 
-  return (
-    <AuthProvider value={user}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<LandingPage/>}/>
-          <Route path="/login" element={ !user ? <Login/> : <Navigate to={"/logout"}/>}/>
-          <Route path="/signup" element={<SignUp/>}/>
-          <Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
-          <Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
-          <Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
-          <Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
-          <Route path="/recoverPassword" element={<RecoverPassword/>}/>
-	  <Route path="/profile" element={<Profile/>}>
-		<Route path="/profile/portfolio" element={<Portfolio/>}/>
-		<Route path="/profile/info" element={<Info/>}/>
-	  </Route>
-	  <Route path="/profiles" element={<Profiles/>}>
-		  <Route path="/profiles/:userId" element={<UserProfile/>}/>
-		  <Route path="/profiles/:userId/portfolio" element={<UserPortfolio/>}/>
-	  </Route>
-	  <Route path="/create" element={<CreateProject/>}>
-		  <Route path="/create/initial" element={<FormCard/>}/>
-		  <Route path="/create/description" element={<Description/>}/>
-		  <Route path="/create/funding" element={<Funding/>}/>
-	  </Route>
+	return (
+		<AuthProvider value={user}>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<LandingPage/>}/>
+					<Route path="/login" element={ !user ? <Login/> : <Navigate to={"/logout"}/>}/>
+					<Route path="/signup" element={<SignUp/>}/>
+					<Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
+					<Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
+					<Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
+					<Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
+					<Route path="/recoverPassword" element={<RecoverPassword/>}/>
+					<Route path="/profile" element={<Profile/>}>
+						<Route path="/profile/portfolio" element={<Portfolio/>}/>
+						<Route path="/profile/info" element={<Info/>}/>
+					</Route>
+					<Route path="/profiles" element={<Profiles/>}>
+						<Route path="/profiles/:userId" element={<UserProfile/>}/>
+						<Route path="/profiles/:userId/portfolio" element={<UserPortfolio/>}/>
+					</Route>
+					<Route path="/create" element={<CreateProject/>}>
+						<Route path="/create/initial" element={<FormCard/>}/>
+						<Route path="/create/description" element={<Description/>}/>
+						<Route path="/create/funding" element={<Funding/>}/>
+					</Route>
+					<Route path="/explore" element={<Explore/>}/>
 
-          {/*Exemplos de uso dos botoes*/}
-          <Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
-          <Route path="/test1" element={<ContinueGoogleButton href="/login"/>}/>
-          <Route path="/test2" element={<ContinueFacebookButton href= "/login"/>}/>
-          <Route path="/test3" element={<BackButton href="/login">Voltar</BackButton>}/>
-          <Route path="/test4" element={<NextButton href="/login">Próximo</NextButton>}/>
-          <Route path="/test5" element={<LoginNavButton></LoginNavButton>}/>     
-          <Route path="/logout" element={<Logout/>}/>
+					{/*Exemplos de uso dos botoes*/}
+					<Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
+					<Route path="/test1" element={<ContinueGoogleButton href="/login"/>}/>
+					<Route path="/test2" element={<ContinueFacebookButton href= "/login"/>}/>
+					<Route path="/test3" element={<BackButton href="/login">Voltar</BackButton>}/>
+					<Route path="/test4" element={<NextButton href="/login">Próximo</NextButton>}/>
+					<Route path="/test5" element={<LoginNavButton></LoginNavButton>}/>		 
+					<Route path="/logout" element={<Logout/>}/>
 
-	  {/*test*/}
-	  <Route path="/header1" element={<Header/>}/>
-	  <Route path="/header2" element={<NotSignedupHeader/>}/>
-          <Route path="/test" element={<ProjectsFormNavbar/>}/>
-	  <Route path="/card" element={<Card/>}/>
+		{/*test*/}
+		<Route path="/header1" element={<Header/>}/>
+		<Route path="/header2" element={<NotSignedupHeader/>}/>
+					<Route path="/test" element={<ProjectsFormNavbar/>}/>
+		<Route path="/card" element={<Card/>}/>
 
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
-  );
+				</Routes>
+			</BrowserRouter>
+		</AuthProvider>
+	);
 }
 
 export default App;
