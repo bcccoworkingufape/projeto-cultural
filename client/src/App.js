@@ -40,6 +40,9 @@ import Card from './components/card/card';
 import Explore from './pages/explore/explore';
 import CardSmall from './components/card-small/card-small';
 import CardBig from './components/card-big/card-big';
+import Search from './pages/search/search';
+import ViewProject from './pages/view-project/view-project';
+import Project from './pages/view-project/components/project';
 
 function App() {
 	const [user, setUser] = useState(undefined);
@@ -78,6 +81,12 @@ function App() {
 						<Route path="/create/funding" element={<Funding/>}/>
 					</Route>
 					<Route path="/explore" element={<Explore/>}/>
+					<Route path="/search" element={<Search/>}>
+						<Route path="/search/:searchName" element={<Search/>}/>
+					</Route>
+					<Route path="/project" element={<ViewProject/>}>
+						<Route path="/search/:projectName" element={<Project/>}/>
+					</Route>
 
 					{/*Exemplos de uso dos botoes*/}
 					<Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
