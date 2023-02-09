@@ -85,7 +85,7 @@ function App() {
 						<Route path="/search/:searchName" element={<Search/>}/>
 					</Route>
 					<Route path="/project" element={<ViewProject/>}>
-						<Route path="/search/:projectName" element={<Project/>}/>
+						<Route path="/project/:projectName" element={<Project/>}/>
 					</Route>
 
 					{/*Exemplos de uso dos botoes*/}
