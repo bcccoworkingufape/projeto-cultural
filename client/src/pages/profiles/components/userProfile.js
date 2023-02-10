@@ -14,6 +14,7 @@ import projectPic from "../../../assets/images/project-form-basic.svg";
 import contribuitionPic from "../../../assets/images/project-form-payment.svg";
 import { Link } from 'react-router-dom';
 import Frame from "../../profile/components/portfolio/components/frame/frame";
+import Card from "../../../components/card/card";
 
 function UserProfile(){
 	return(
@@ -58,9 +59,9 @@ function UserProfile(){
 						<img src={portfolioPic}/>
 						<span className="second-bigger-text">Portfólio</span>
 					</div>
-					<div className="d-flex flex-row" style={{width: "1595px"}}>
+					<div className="d-flex flex-row" style={{width: "1395px"}}>
 						<span className="second-smaller-text">Conheça melhor o trabalho de (nome) através da galeria em seu portfólio</span>
-						<Link to="/profiles/(nome)portfolio" className="second-link"><span className="font-subtitle-16-ubuntu">Ver mais</span></Link>
+						<Link to="/profiles/(nome)/portfolio" className="second-link"><span className="font-subtitle-16-ubuntu">Ver mais</span></Link>
 					</div>
 					<div>
 						<Frame inverseOrientation="false"/>
@@ -74,10 +75,18 @@ function UserProfile(){
 					</div>
 					<div className="d-flex flex-row" style={{width: "1595px"}}>
 						<span className="second-smaller-text">Esses são os projetos publicados pelo (nome) até o momento. Clique no card para conhecer mais.</span>
-						<Link to="/profiles/(nome)portfolio" className="second-link"><span className="font-subtitle-16-ubuntu">(X) publicados</span></Link>
+						<Link to="/profiles/(nome)/portfolio" className="second-link"><span className="font-subtitle-16-ubuntu">(X) publicados</span></Link>
 					</div>
-					<div>
-						<span className="second-smaller-text">Colocar aqui 4 projetos de (nome).</span>
+					<div className="d-flex flex-row">
+						<div className="d-flex flex-column">
+							<Card title="Arcanjo" author="voce"/>
+							<Card title="Arcanjo" author="voce"/>
+						</div>
+						<div className="d-flex flex-column">
+							<Card title="Arcanjo" author="voce"/>
+							<Card title="Arcanjo" author="voce"/>
+						</div>
+
 					</div>
 				</div>
 
@@ -88,7 +97,7 @@ function UserProfile(){
 					</div>
 					<div className="d-flex flex-row" style={{width: "1595px"}}>
 						<span className="second-smaller-text">Esses projetos contaram com a contribuição financeira do (nome)</span>
-						<Link to="/profiles/(nome)portfolio" className="second-link"><span className="font-subtitle-16-ubuntu">(X) contribuições</span></Link>
+						<Link to="/profiles/(nome)/portfolio" className="second-link"><span className="font-subtitle-16-ubuntu">(X) contribuições</span></Link>
 					</div>
 					<div>
 						<span className="second-smaller-text">Colocar aqui as contribuições</span>
