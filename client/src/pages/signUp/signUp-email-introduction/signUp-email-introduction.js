@@ -2,6 +2,7 @@ import pyre from '../../../assets/images/pyre.svg';
 import './signUp-email-introduction.scss';
 import SignInSignOutButton from "../../../components/buttons/signInSignOutButton/SignInSignOutButton"
 import Input from './../../../components/input/input';
+import { Link } from 'react-router-dom';
 
 function SignUpEmailIntroduction() {
     return (
@@ -24,7 +25,7 @@ function SignUpEmailIntroduction() {
             </div>
             <div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">
                 Já tem conta?
-                <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Faça login</a></div>
+                <Link to='/login' className="link signup font-body-20-700-roboto">&nbsp;Faça login</Link></div>
             <div className="d-flex justify-content-center text-grey font-body-16-roboto font-weigth-400">
                 Ao criar uma conta você concorda com os
                 <a className="external-links" href='/'>&nbsp;Termos de Serviço.</a>

@@ -7,6 +7,7 @@ import InputHeader from "../../components/input_header/input_header";
 import LoginNavButton from "../../components/buttons/loginNavButton/LoginNavButton"
 import SignupNavButton from "../../components/buttons/signupNavButton/SignupNavButton"
 import { getAuth,signOut } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 function Header() {
 	const navigate = useNavigate();
@@ -27,9 +28,9 @@ function Header() {
 						<img src={pyre} height= {55} alt="logo"/>
 			                </a>
 			        </div>
-				<div className="text-header font-button-20-ubuntu"> Explorar </div>
-				<div className="text-header font-button-20-ubuntu"> Blog </div>
-				<div className="text-header font-button-20-ubuntu"> Sobre nós </div>
+				<Link to="/explore" style={{textDecoration: "none"}}><div className="text-header font-button-20-ubuntu"> Explorar </div></Link>
+				<Link to="/blog" style={{textDecoration: "none"}}><div className="text-header font-button-20-ubuntu"> Blog </div></Link>
+				<Link to="/about" style={{textDecoration: "none"}}><div className="text-header font-button-20-ubuntu"> Sobre nós </div></Link>
  
 				<div className="d-flex col-5 offset-1">
 					<InputHeader/>

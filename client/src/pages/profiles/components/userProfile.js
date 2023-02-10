@@ -41,14 +41,26 @@ function UserProfile(){
 					<span className="profile-description-text" style={{width: "474px", marginBottom: "45px"}}>Clique nos links das redes sociais para conhecer mais sobre o (nome) e sua relevância online.</span>
 					<div className="d-flex flex-row">
 						<div className="d-flex flex-column">
-							<div className="profile-button"><img src={facebookPic}/><span className="font-body-16-roboto p-3">Facebook</span></div>
-							<div className="profile-button"><img src={instagramPic}/><span className="font-body-16-roboto p-2">Instagram</span></div>
-							<div className="profile-button"><img src={tiktokPic}/><span className="font-body-16-roboto p-1">Tiktok</span></div>
+							<Link to="/" className="profile-button" style={{textDecoration: "none", color: "#FEFBFF"}}>
+								<img src={facebookPic}/><span className="font-body-16-roboto p-3">Facebook</span>
+							</Link>
+							<Link to="/" className="profile-button" style={{textDecoration: "none", color: "#FEFBFF"}}>
+									<img src={instagramPic}/><span className="font-body-16-roboto p-2">Instagram</span>
+							</Link>
+							<Link to="/" className="profile-button" style={{textDecoration: "none", color: "#FEFBFF"}}>
+									<img src={tiktokPic}/><span className="font-body-16-roboto p-1">Tiktok</span>
+							</Link>
 						</div>
 						<div className="d-flex flex-column">
-							<div className="profile-button"><img src={twitterPic}/><span className="font-body-16-roboto">Twitter</span></div>
-							<div className="profile-button"><img src={linkPic}/><span className="font-body-16-roboto">Site pessoal</span></div>
-							<div className="profile-button"><img src={youtubePic}/><span className="font-body-16-roboto">Youtube</span></div>
+							<Link to="/" className="profile-button" style={{textDecoration: "none", color: "#FEFBFF"}}>
+									<img src={twitterPic}/><span className="font-body-16-roboto">Twitter</span>
+							</Link>
+							<Link to="/" className="profile-button" style={{textDecoration: "none", color: "#FEFBFF"}}>
+									<img src={linkPic}/><span className="font-body-16-roboto">Site pessoal</span>
+							</Link>
+							<Link to="/" className="profile-button" style={{textDecoration: "none", color: "#FEFBFF"}}>
+									<img src={youtubePic}/><span className="font-body-16-roboto">Youtube</span>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -97,7 +109,7 @@ function UserProfile(){
 					</div>
 					<div className="d-flex flex-row" style={{width: "1595px"}}>
 						<span className="second-smaller-text">Esses projetos contaram com a contribuição financeira do (nome)</span>
-						<Link to="/profiles/(nome)/portfolio" className="second-link"><span className="font-subtitle-16-ubuntu">(X) contribuições</span></Link>
+						<Link to="/profiles/(nome)/funding" className="second-link"><span className="font-subtitle-16-ubuntu">(X) contribuições</span></Link>
 					</div>
 					<div>
 						<span className="second-smaller-text">Colocar aqui as contribuições</span>

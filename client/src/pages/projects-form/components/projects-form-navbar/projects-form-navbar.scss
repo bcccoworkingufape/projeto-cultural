@@ -26,6 +26,7 @@
 
 		.navbar-item {
 			color: $color-light-gray-01;
+			text-decoration: none;
 
 			path,
 			svg {
@@ -49,5 +50,8 @@
 	}
 	button {
 		border: none;
+	}
+	.navbar-buttons{
+		width: 164px;
 	}
 }

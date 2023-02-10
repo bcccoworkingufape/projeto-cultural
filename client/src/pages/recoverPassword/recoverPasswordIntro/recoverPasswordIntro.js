@@ -1,5 +1,4 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
-import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 import pyre from '../../../assets/images/pyre.svg';
 import './recoverPasswordIntro.scss';
@@ -7,9 +6,9 @@ import '../../../stylesheets/_colors.scss';
 import '../../../stylesheets/_fonts.scss';
 import SignInSignOutButton from "../../../components/buttons/signInSignOutButton/SignInSignOutButton"
 import Input from "../../../components/input/input";
+import { Link } from 'react-router-dom';
 
 function RecoverPasswordIntro() {
-		const navigate = useNavigate();
 		const ref2 = useRef(null);
 		return (
 		<>
@@ -36,12 +35,12 @@ function RecoverPasswordIntro() {
 							<Input/>
 						</div>
 					</div>
-					<div className='row m-0 mt-4 mb-3 color_gray' onClick={() => {navigate("/recoverPassword")}}>
+					<Link style={{textDecoration: "none"}}className='row m-0 mt-4 mb-3 color_gray' to="/recoverPassword">
 						<SignInSignOutButton>Enviar</SignInSignOutButton>
-					</div>
+					</Link>
 				</div>
 			</div>
-			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Cadastre-se</a></div>
+			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? <Link to='/signup' className="signup font-body-20-700-roboto">&nbsp;Cadastre-se</Link></div>
 		</>
 	);
   }

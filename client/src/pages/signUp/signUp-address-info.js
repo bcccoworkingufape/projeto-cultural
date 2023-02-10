@@ -4,6 +4,7 @@ import NextButton from './../../components/buttons/nextButton.js/NextButton';
 import BackButton from './../../components/buttons/backButton/BackButton';
 import './signUp-personal-info.scss';
 import './signUp-address-info.scss';
+import { Link } from 'react-router-dom';
 
 function SignUpAddressInfo() {
     return (
@@ -27,8 +28,8 @@ function SignUpAddressInfo() {
             </div>
 
             <div className="d-flex justify-content-end buttons-line">
-                <BackButton> Anterior </BackButton>
-                <NextButton> Próximo </NextButton>
+                <Link to="/signup/personal-information" style={{textDecoration: "none"}}><BackButton> Anterior </BackButton></Link>
+                <Link to="/" style={{textDecoration: "none"}}><NextButton> Próximo </NextButton></Link>
             </div>
 
         </div>
