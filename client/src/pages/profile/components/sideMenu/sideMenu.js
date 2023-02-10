@@ -12,7 +12,7 @@ function SideMenu() {
         <div className="sidemenu-container">
             <div className="sidemenu-items d-flex flex-column justify-content-between">
                 <div className="sidemenu-item d-flex align-items-center">
-		    <Link to="/profile/info" style={{ textDecoration: 'none' }}>
+		    <Link to="/profile/projects" style={{ textDecoration: 'none' }}>
                         <MyProjectsIcon style={{ marginRight: "3px", marginLeft: "3px"}}/>
                         <span> Meus projetos </span>
 		    </Link>

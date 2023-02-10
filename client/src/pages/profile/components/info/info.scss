@@ -1,13 +1,16 @@
 @import '../../../../stylesheets/_colors.scss';
 @import '../../../../stylesheets/_fonts.scss';
 
-.body {
-	background-color: $color-dark-gray-01;
-}
 .info-container {
 	padding-left: 116px;
 	padding-top: 64px;
 	background-color: $color-dark-gray-01;
+	input, textarea{
+		width: 584px;
+	}
+	textarea{
+		height: 142px;
+	}
 }
 .info-subcontainer {
 	background: rgba(44, 45, 48, 0.4);
@@ -34,6 +37,7 @@
 
 .info-words {
 	color: $color-light-01;
+	width: 1144px;
 }
 
 .info-subword {

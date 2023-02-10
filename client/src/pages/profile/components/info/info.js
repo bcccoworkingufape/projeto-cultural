@@ -34,7 +34,7 @@ function Info(){
 					<p className="info-subcontainer-subword font-body-16-roboto">Descreva sobre você em um twitte</p>
 				</div>
 				<div className="info-subcontainer-extra align-items-end">
-					<Input placeholder="Lorem Ipsum bem grande"></Input>
+					<textarea placeholder="Lorem Ipsum bem grande"></textarea>
 				</div>
 			</div>
 
