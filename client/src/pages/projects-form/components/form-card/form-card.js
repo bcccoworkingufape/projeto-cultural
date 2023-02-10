@@ -1,4 +1,5 @@
 import './form-card.scss';
+import Upload from "../../../../assets/images/upload.svg";
 
 function FormCard() {
 	return( 
@@ -33,7 +34,12 @@ function FormCard() {
 							<span className="initial-block-title font-subtitle-24-ubuntu">Imagens</span>
 							<span className="initial-block-description font-body-16-roboto">Você pode incluir até 4 imagens</span>
 						</div>
-						<input className="initial-block-action"/>
+						<button className="initial-upload-button initial-block-action font-button-20-ubuntu">
+							<div className="d-flex flex-row">
+								Upload
+								<img src={Upload} style={{marginLeft: "29px"}}/>
+							</div>
+						</button>
 					</div>
 				</div>
 			</div>
