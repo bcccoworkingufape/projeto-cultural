@@ -43,6 +43,7 @@ import CardBig from './components/card-big/card-big';
 import Search from './pages/search/search';
 import ViewProject from './pages/view-project/view-project';
 import Project from './pages/view-project/components/project';
+import MyProjects from './pages/profile/components/myProjects/myProjects';
 
 function App() {
 	const [user, setUser] = useState(undefined);
@@ -70,6 +71,7 @@ function App() {
 					<Route path="/profile" element={<Profile/>}>
 						<Route path="/profile/portfolio" element={<Portfolio/>}/>
 						<Route path="/profile/info" element={<Info/>}/>
+						<Route path="/profile/projects" element={<MyProjects/>}/>
 					</Route>
 					<Route path="/profiles" element={<Profiles/>}>
 						<Route path="/profiles/:userId" element={<UserProfile/>}/>

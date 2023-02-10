@@ -6,7 +6,7 @@ function Card({ url, title, author }) {
 		<div className="card-container d-flex flex-column">
 			<img className="card-img"/>
 			<span className="card-title font-h2-40-ubuntu">{title}</span>
-			<span className="card-author font-subtitle-16-ubuntu">{author}</span>
+			<span className="card-author font-subtitle-16-ubuntu">por {author}</span>
 
 			<style jsx>{`
 				.card-img {

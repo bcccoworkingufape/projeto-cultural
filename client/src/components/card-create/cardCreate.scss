@@ -1,0 +1,29 @@
+@import '../../App.scss';
+
+.cardCreate-container{
+	position: relative;
+	background: #1F1E21;
+	width: 780px;
+	height: 411px;
+	border: 0.5px solid #565656;
+	border-radius: 5px;
+	img{
+		position: absolute;
+		left: 42.63%;
+		right: 42.77%;
+		top: 36.28%;
+		bottom: 36.02%;
+	}
+	.cardCreate-title{
+		margin-top: 41.81px;
+		margin-left: 33.49px;
+		font-family: 'Ubuntu';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 33.4872px;
+		line-height: 38px;
+		color: $color-primary-grey-00;
+		opacity: 0.9;
+		text-shadow: 0px 0px 58.6026px #000000;
+	}
+}

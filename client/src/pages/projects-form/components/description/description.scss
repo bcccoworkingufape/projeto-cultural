@@ -3,6 +3,10 @@
 .description-container{
 	margin-top: 64px;
 	margin-left: 116px;
+	button{
+		border: none;
+		margin-top: 50px;
+	}
 }
 .description-title {
 	margin-bottom: 18px;
@@ -11,4 +15,12 @@
 .description-description{
 	color: $color-light-01;
 	margin-bottom: 50px;
+}
+.description-textarea{
+	width: 1144px;
+	height: 686px;
+	&:not(:active) {
+		opacity: 1;
+	}
+
 }

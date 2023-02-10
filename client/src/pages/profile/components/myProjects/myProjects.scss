@@ -1,0 +1,24 @@
+@import '../../../../stylesheets/_colors.scss';
+@import '../../../../stylesheets/_fonts.scss';
+
+.body {
+	background-color: $color-dark-gray-01;
+}
+.myProjects-container {
+	padding-left: 88px;
+	padding-top: 88px;
+	background-color: $color-dark-gray-01;
+	.card-container{
+		margin-right: 27px;
+		margin-bottom: 27px;
+	}
+}
+
+.myProjects-words {
+	color: $color-light-01;
+	margin-bottom: 84px;
+}
+
+.myProjects-subword {
+	margin-bottom: 50px;
+}

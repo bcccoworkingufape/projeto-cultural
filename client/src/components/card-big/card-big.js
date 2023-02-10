@@ -6,7 +6,7 @@ function CardBig({ url, title, author }) {
 		<div className="card-big-container d-flex flex-column">
 			<img className="card-big-img"/>
 			<span className="card-big-title font-h2-40-ubuntu">{title}</span>
-			<span className="card-big-author font-subtitle-16-ubuntu">{author}</span>
+			<span className="card-big-author font-subtitle-16-ubuntu">por {author}</span>
 
 			<style jsx>{`
 				.card-big-img {
