@@ -6,7 +6,7 @@ function Profiles(){
 	return(
 		<div>
 			<Header/>
-			<div className="d-flex flex-row">
+			<div className="d-flex flex-row justify-content-center">
 				<Outlet/>
 			</div>
 		</div>

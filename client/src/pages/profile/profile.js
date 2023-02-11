@@ -7,7 +7,7 @@ function Profile(){
 	return(
 		<div>
 			<Header/>
-			<div className="d-flex flex-row">
+			<div className="d-flex flex-row justify-content-center">
 				<SideMenu/>
 				<Outlet/>
 			</div>

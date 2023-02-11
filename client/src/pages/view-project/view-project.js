@@ -7,8 +7,10 @@ function ViewProject(){
 	return(
 		<div>
 			<Header/>
-			<Outlet/>
-			<Footer/>
+			<div className="d-flex flex-column align-items-center">
+				<Outlet/>
+				<Footer/>
+			</div>
 		</div>
 	)
 }

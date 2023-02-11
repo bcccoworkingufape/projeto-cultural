@@ -8,7 +8,7 @@ function CreateProject() {
 	return( 
 		<div> 
 			<Header/>
-			<div className="d-flex flex-row">
+			<div className="d-flex flex-row justify-content-center">
 				<Navbar/>
 				<Outlet/>
 			</div>

@@ -9,10 +9,12 @@ function Explore(){
 	return(
 		<div>
 			<Header/>
-			<Featured/>
-			<Recent/>
-			<Popular/>
-			<Footer/>
+			<div className="d-flex flex-column align-items-center">
+				<Featured/>
+				<Recent/>
+				<Popular/>
+				<Footer/>
+			</div>
 		</div>
 	)
 }
