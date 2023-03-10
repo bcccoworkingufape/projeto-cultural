@@ -1,9 +1,8 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
 import { Link } from 'react-router-dom';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 import {auth} from "../../services/firebase"
-
 import pyre from '../../assets/images/pyre.svg';
 import './login.scss';
 import '../../stylesheets/_colors.scss';
@@ -11,30 +10,59 @@ import '../../stylesheets/_fonts.scss';
 import SignInSignOutButton from "../../components/buttons/signInSignOutButton/SignInSignOutButton"
 import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/ContinueGoogleButton"
 import Input from "../../components/input/input";
+import axios from 'axios';
 
 function Login() {
-		const ref = useRef(null);
-		const ref2 = useRef(null);
+	const ref = useRef(null);
+	const ref2 = useRef(null);
+	const [ loginValue, setLoginValue ] = useState('');
+	const [ passwordValue, setPasswordValue ] = useState('');
+	var failLogin = false;
+	
+	const handleGoogleSingIn = () =>{
+		const provider = new GoogleAuthProvider();
 
-		const handleGoogleSingIn = () =>{
-			const provider = new GoogleAuthProvider();
+		signInWithPopup(auth, provider)
+		.then((result) =>{
+			console.log(result);
+		})
+		.catch((error)=>{
+			console.log(error);
+		})
 
-			signInWithPopup(auth, provider)
-			.then((result) =>{
-				console.log(result);
-			})
-			.catch((error)=>{
-				console.log(error);
-			})
+	}
 
-		}
+	function login_request(){
+		console.log(axios({
+			method: "post",
+			url: "http://3.87.47.178:3000/users/login",
+			data: {
+				email: loginValue,
+				password: passwordValue
+			},
+		}).then((result) =>{
+			if(result.status === 400){
+				failLogin = true;
+			}
+		}));
+	}
 
-		return (
+	const handleLoginChange = (event) => {
+		console.log(event.target.value);
+		setLoginValue(event.target.value);
+	};
+
+	const handlePasswordChange = (event) => {
+		console.log(event.target.value);
+		setPasswordValue(event.target.value);
+	};
+
+	return (
 		<>
 			<div className='d-flex justify-content-center mt-5'>
 				<img src={pyre} height={141} alt="logo"/>
 			</div>
- 	   
+	   
 			<p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Login</p>
 
 			<div className='mx-auto text-white'>
@@ -43,16 +71,14 @@ function Login() {
 					<div className='row color_gray'>
 						<div className="color_gray" onFocus={ () => {
 								ref.current.style.opacity = 1;
-								
 							}} onBlur={ () => {
 								ref.current.style.opacity = 0.8;
 							}}>
-							<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref} >Email</label>
-							<Input placeholder="name@email.com" />
+							<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref} >Email</label>	
+							<Input value={loginValue} handleOnChange={handleLoginChange} placeholder="name@email.com" />
 						</div>
 						<div className="mt-1 color_gray" onFocus={ () => {
 								ref2.current.style.opacity = 1;
-								
 							}} onBlur={ () => {
 								ref2.current.style.opacity = 0.8;
 							}}>
@@ -60,10 +86,16 @@ function Login() {
 								<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Senha</label>
 								<Link to="/recoverPasswordIntro" className="ms-auto font-subtitle-12-ubuntu forgot_password color_gray">Esqueceu sua senha?</Link>
 							</div>
-							<Input type="password"/>
+							<Input value={passwordValue} handleOnChange={handlePasswordChange} type="password"/>
+							{failLogin &&
+								<div className="d-flex flex-row justify-content-center">
+									<label className="font-subtitle-16-ubuntu color_red">Informações de login incorretas!</label>
+								</div>
+							}
+
 						</div>
 					</div>
-					<div className='row m-0 mt-4 mb-3 color_gray'>
+					<div className='row m-0 mt-4 mb-3 color_gray' onClick = {login_request}>
 						<SignInSignOutButton>Entrar</SignInSignOutButton>
 					</div>
 					<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
@@ -75,6 +107,6 @@ function Login() {
 			</div>
 		</>
 	);
-  }
+}
 
-  export default Login;
+export default Login;

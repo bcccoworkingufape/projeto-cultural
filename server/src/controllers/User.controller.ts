@@ -8,6 +8,7 @@ import { getNotificationsByUser } from './../database/repositories/Notification.
 
 export const create = async (req: Request, res: Response, next: NextFunction) => {
     try {
+	res.status(400).send({ message: 'The request has failed: '});
         if (!!(await userRepository.getByEmail(req.body.email))) throw new Error("User already signed up");
         else {
             const user = await userRepository.create({
