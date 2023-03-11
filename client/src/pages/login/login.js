@@ -33,7 +33,7 @@ function Login() {
 	}
 
 	function login_request(){
-		console.log(axios({
+		axios({
 			method: "post",
 			url: "http://3.87.47.178:3000/users/login",
 			data: {
@@ -44,16 +44,14 @@ function Login() {
 			if(result.status === 400){
 				failLogin = true;
 			}
-		}));
+		});
 	}
 
 	const handleLoginChange = (event) => {
-		console.log(event.target.value);
 		setLoginValue(event.target.value);
 	};
 
 	const handlePasswordChange = (event) => {
-		console.log(event.target.value);
 		setPasswordValue(event.target.value);
 	};
 

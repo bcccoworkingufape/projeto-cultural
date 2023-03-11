@@ -26,11 +26,21 @@ export const getByEmail = async(email: string) => {
 };
 
 export const getByName = async(name: string) => {
+	try{
 	return await repository.findOneBy({ name: name});
+	}
+	catch(err){
+		return null;
+	}
 };
 
 export const getById = async(id: string) => {
+	try{
 	return await repository.findBy({ id });
+	}
+	catch(err){
+		return null;
+	}
 }
 
 export const updateUser = async(id: string, userData: Partial<User>) => {
