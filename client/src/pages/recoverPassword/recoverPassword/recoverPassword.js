@@ -68,7 +68,7 @@ function RecoverPassword() {
 						<span className="font-subtitle-12-ubuntu color_gray ops_error" hidden ref={ref_ops}><img src="info.svg"/>&nbsp;&nbsp;Ops! As senhas devem ser iguais</span>	
 					</div>
 					<div className='row m-0 mt-4 mb-3 color_gray' onClick={verifyPassword}>
-						<Link to="/" style={{textDecoration: "none"}}><SignInSignOutButton >Criar nova senha</SignInSignOutButton></Link>
+						<Link to="/" style={{textDecoration: "none"}} className="p-0"><SignInSignOutButton >Criar nova senha</SignInSignOutButton></Link>
 					</div>
 				</div>
 			</div>

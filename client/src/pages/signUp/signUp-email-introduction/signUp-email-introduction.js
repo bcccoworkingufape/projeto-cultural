@@ -11,6 +11,7 @@ function SignUpEmailIntroduction() {
 	const [ passwordValue, setPasswordValue ] = useState('');
 	const [ passwordVerValue, setPasswordVerValue ] = useState('');
 	const [ nameValue, setNameValue ] = useState('');
+	const [ signedUpValue, setSignedUpValue ] = useState('');
 
 	const handleEmailChange = (event) => {
 		setEmailValue(event.target.value);
@@ -26,9 +27,10 @@ function SignUpEmailIntroduction() {
 	};
 
 	function signup_request(){
+		setSignedUpValue(true);
 		axios({
 			method: "post",
-			url: "http://3.87.47.178:3000/users/login",
+			url: "http://3.87.47.178:3000/users/signup",
 			data: {
 				name: nameValue,
 				email: emailValue,
@@ -53,10 +55,13 @@ function SignUpEmailIntroduction() {
 					<Input value={emailValue} handleOnChange={handleEmailChange} label="Email"></Input>
 					<Input value={passwordValue} handleOnChange={handlePasswordChange} type="password" label="Senha"></Input>
 					<Input value={passwordVerValue} handleOnChange={handlePasswordVerChange} type="password" label="Repetir senha"></Input>
-					<div className='row m-0 mt-4 mb-3 color_gray'>
-						<Link to='/signup/personal-information' className="p-0 link">
+					<div className='row m-0 mt-4 mb-3 color_gray justift-content-center'>
+						{signedUpValue &&
+							<p className="signed_up"> Informações enviadas para cadastro! </p>
+						}
+						<div className="p-0 link" onClick={signup_request}>
 							<SignInSignOutButton>Cadastrar</SignInSignOutButton>
-						</Link>
+						</div>
 					</div>
 				</div>
 			</div>

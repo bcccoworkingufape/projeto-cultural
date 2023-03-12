@@ -17,7 +17,7 @@ function Login() {
 	const ref2 = useRef(null);
 	const [ loginValue, setLoginValue ] = useState('');
 	const [ passwordValue, setPasswordValue ] = useState('');
-	var failLogin = false;
+	const [ failValue, setFailValue ] = useState(false);
 	
 	const handleGoogleSingIn = () =>{
 		const provider = new GoogleAuthProvider();
@@ -42,7 +42,10 @@ function Login() {
 			},
 		}).then((result) =>{
 			if(result.status === 400){
-				failLogin = true;
+				setFailValue(true);
+			}
+			if(result.status === 200){
+				window.location.replace('http://localhost:3000/'); //mudar de acordo com o site.
 			}
 		});
 	}
@@ -85,7 +88,7 @@ function Login() {
 								<Link to="/recoverPasswordIntro" className="ms-auto font-subtitle-12-ubuntu forgot_password color_gray">Esqueceu sua senha?</Link>
 							</div>
 							<Input value={passwordValue} handleOnChange={handlePasswordChange} type="password"/>
-							{failLogin &&
+							{failValue &&
 								<div className="d-flex flex-row justify-content-center">
 									<label className="font-subtitle-16-ubuntu color_red">Informações de login incorretas!</label>
 								</div>

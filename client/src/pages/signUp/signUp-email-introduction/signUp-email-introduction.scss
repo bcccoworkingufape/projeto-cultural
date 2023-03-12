@@ -1,7 +1,10 @@
 @import '../../../App.scss';
 
 .container {
-    min-height: 568px;
+    min-height: 588px;
+}
+.signed_up{
+	color: $color-status-bar-01;
 }
 
 Input {
