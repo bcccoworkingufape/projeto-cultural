@@ -5,7 +5,6 @@ import { ReactComponent as PreviewIcon } from '../../../../assets/images/project
 
 import { ReactComponent as DeleteIcon } from '../../../../assets/images/project-button-delete.svg';
 import { ReactComponent as PublishIcon } from '../../../../assets/images/project-button-publish.svg';
-
 import './projects-form-navbar.scss';
 
 
@@ -15,13 +14,13 @@ function ProjectsFormNavbar() {
             <div className="project-image"> </div>
             <h4 className="font-subtitle-24-ubuntu"> Nome do projeto </h4>
 
-            <div class="navbar-items d-flex flex-column justify-content-between">
+            <div className="navbar-items d-flex flex-column justify-content-between">
                 <div className="navbar-item d-flex align-items-center">
                     <BasicIcon />
                     <span style={{ marginLeft: '2px' }}> Básico </span>
                 </div>
 
-                <div className="navbar-item d-flex align-items-center">
+                <div className="navbar-item d-flex align-items-centser">
                     <DescriptionIcon />
                     <span style={{ marginLeft: '4px' }}> Descrição </span>
                 </div>
@@ -37,7 +36,7 @@ function ProjectsFormNavbar() {
                 </div>
             </div>
 
-            <div class="navbar-buttons">
+            <div className="navbar-buttons">
                 <button>
                     <PublishIcon />
                     <span className="font-button-20-ubuntu"> Publicar </span>
@@ -47,10 +46,6 @@ function ProjectsFormNavbar() {
                     <span className="font-button-20-ubuntu"> Deletar </span>
                 </button>
             </div>
-
-
-
-
         </div>
     )
 }

@@ -10,6 +10,13 @@
     font-size: $f-size;
 }
 
+@mixin font-roboto-400($f-size: 32px){ //novo
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: $f-size;
+}
+
+
 @mixin font-ubuntu($f-size: 116px) {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
@@ -44,6 +51,9 @@
     @include font-roboto-700($f-size: 20px);
 }
 
+.font-body-16-400-roboto { //novo
+    @include font-roboto-400($f-size: 16px);
+}
 
 .font-input-18-roboto {
     @include font-roboto($f-size: 18px);

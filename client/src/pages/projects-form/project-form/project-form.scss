@@ -1,0 +1,28 @@
+@import '../../../stylesheets/_colors.scss';
+@import '../../../stylesheets/_fonts.scss';
+
+.form-subforms{
+    padding: 64px 116px;
+    color: $color-light-01;
+    background-color: $color-dark-gray-01;
+
+}
+
+.project-form-basic {
+    .project-form-input {
+        background-color: rgba(44, 45, 48, 0.4);
+        width: 100%;
+        height: 100%;
+        padding: 43px 72px;
+        border-radius: 4px;
+        margin-bottom: 25px;
+
+        h3 {
+            @extend .font-subtitle-24-ubuntu;
+        }
+
+        p {
+            @extend .font-body-16-400-roboto;
+        }
+    }
+}

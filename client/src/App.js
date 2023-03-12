@@ -26,6 +26,7 @@ import RecoverPassword from './pages/recoverPassword/recoverPassword/recoverPass
 import ProjectsFormNavbar from './pages/projects-form/components/projects-form-navbar/projects-form-navbar';
 
 import Portfolio from './pages/profile/components/portfolio/portfolio';
+import ProjectForm from './pages/projects-form/project-form/project-form';
 
 
 function App() {
@@ -51,7 +52,7 @@ function App() {
           <Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
           <Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
           <Route path="/recoverPassword" element={<RecoverPassword/>}/>
-          <Route path="/test" element={<ProjectsFormNavbar/>}/>
+          <Route path="/project/add" element={<ProjectForm/>}/>
 
 	  {/*teste*/}
 	  <Route path="/portfolio" element={<Portfolio/>}/>
