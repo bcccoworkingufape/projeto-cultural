@@ -5,37 +5,52 @@ import { User } from '../entities/User.entity';
 const repository = database.getRepository(User);
 
 export const create = async(data: any) => {
-    let user = new User();
+	let user = new User();
 
-    user.email = data.email;
-    user.name = data.name;
-    user.password = data.password;
-    user.user_type = data.user_type;
-    user.imageURL = data.imageURL;
+	user.email = data.email;
+	user.name = data.name;
+	user.password = data.password;
+	user.user_type = data.user_type;
+	user.imageURL = data.imageURL;
 
-    return await repository.save(user);
+	return await repository.save(user);
 };
 
 export const getByEmail = async(email: string) => {
-    return await repository.findOneBy({ email: email });
+	try{
+		return await repository.findOneBy({ email: email });
+	}
+	catch(err){
+		return null;
+	}
 };
 
 export const getByName = async(name: string) => {
+	try{
 	return await repository.findOneBy({ name: name});
+	}
+	catch(err){
+		return null;
+	}
 };
 
 export const getById = async(id: string) => {
-    return await repository.findBy({ id });
+	try{
+	return await repository.findBy({ id });
+	}
+	catch(err){
+		return null;
+	}
 }
 
 export const updateUser = async(id: string, userData: Partial<User>) => {
-    return await repository.update({ id }, userData);
+	return await repository.update({ id }, userData);
 }
  
 export const deleteUser = async(email: any) => {
-    return await repository.
+	return await repository.
 	createQueryBuilder()
-    	.delete()
+		.delete()
 	.from(User)
 	.where({email: email.email})
 	.execute()
@@ -43,23 +58,23 @@ export const deleteUser = async(email: any) => {
 
 
 export const getResetTokenByEmail = async(email: any) => {
-    return await repository.createQueryBuilder('users')
-    .where({ email })
-    .select(['users.passwordResetToken', 'users.passwordResetExpiration'])
-    .getOne();
+	return await repository.createQueryBuilder('users')
+	.where({ email })
+	.select(['users.passwordResetToken', 'users.passwordResetExpiration'])
+	.getOne();
 };
 
 export const updateResetPasswordToken = async(userId: any, token: any, tokenExpiration: any) => {
-    return await repository.save( {
-        id: userId, 
-        passwordResetToken: token, 
-        passwordResetExpiration: tokenExpiration
-    })
+	return await repository.save( {
+		id: userId, 
+		passwordResetToken: token, 
+		passwordResetExpiration: tokenExpiration
+	})
 };
 
 export const updatePassword = async(userId: string, password: any) => {
-    return await repository.save( {
-        id: userId, 
-        password
-    })    
+	return await repository.save( {
+		id: userId, 
+		password
+	})	  
 }

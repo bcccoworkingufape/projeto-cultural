@@ -1,0 +1,56 @@
+@import '../../../../stylesheets/_colors.scss';
+
+.initial-container{
+	margin-top: 64px;
+	margin-left: 116px;
+	input{
+		width: 584px;
+	}
+}
+.initial-title {
+	margin-bottom: 18px;
+	color: $color-light-01;
+}
+.initial-description{
+	color: $color-light-01;
+	margin-bottom: 72px;
+}
+.initial-block{
+	width: 1144px;
+	height: 150px;
+	background: rgba(44, 45, 48, 0.4);
+	border-radius: 4px;
+	margin-bottom: 25px;
+	align-items: center;
+}
+.initial-block-title{
+	color: $color-light-01;
+	margin-bottom: 12px;
+}
+.initial-block-description{
+	color: $color-light-01;
+}
+.initial-block-text{
+	margin-left: 72px;
+}
+.initial-block-action{
+	margin-left: auto;
+	margin-right: 78px;
+}
+.initial-upload-button{
+	width: 169px;
+	height: 56px;
+	border: 1px solid #FEFBFF;
+	border-radius: 8px;	
+	background: rgba(44, 45, 48, 0.4);
+}
+.initial-upload-button:hover{
+	border: none;
+	background: $color-light-01;
+	color: $color-dark-gray-01;
+	opacity: 0.8;
+	img{
+		filter: invert(98%) sepia(0%) saturate(1%) hue-rotate(174deg) brightness(88%) contrast(82%);
+	}
+}
+

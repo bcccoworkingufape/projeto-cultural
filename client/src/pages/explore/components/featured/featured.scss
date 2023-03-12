@@ -1,0 +1,24 @@
+@import '../../../../stylesheets/_colors.scss';
+@import '../../../../stylesheets/_fonts.scss';
+
+.featured-container {
+	margin-top: 208px;
+	margin-left: 164px;
+	width: 1592px;
+}
+.featured-title {
+	color: $color-light-01;
+	margin-bottom: 56px;
+}
+.featured-card-container-container {
+	margin-top: 56px;
+}
+.featured-card-container {
+	margin-bottom: 32px;
+}
+.featured-card-workaround {
+	margin-right: 32px;
+}
+.featured-extra {
+	color: $color-primary-grey-00;
+}

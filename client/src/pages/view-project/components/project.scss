@@ -1,0 +1,162 @@
+@import '../../../stylesheets/_colors.scss';
+@import '../../../stylesheets/_fonts.scss';
+
+.project-container{
+	margin-top:116px;
+	margin-left: 164px;
+	width: 1760px;
+	button{
+		border: none;
+		width: 138px;
+		height: 56px;
+	}
+}
+.project-title{
+	color: $color-light-01;
+}
+.project-author{
+	opacity: 0.9;
+	color: $color-light-01;
+	margin-top: 35px;
+}
+.project-details {
+	width: 923px;
+	margin-right: 155px;
+	margin-top: 206px;
+}
+.project-big-image{
+	height: 561px;
+	width: 923px;
+	margin-bottom: 11px;
+}
+.project-small-image{
+	height: 129px;
+	width: 176px;
+	margin-right: 11px;
+}
+.project-after-image {
+	margin-top: 32px;
+	color: $color-light-01;
+}
+.project-info{
+	margin-top: 190px;
+	padding-left: 62px;
+	padding-right: 62px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background: $color-dark-gray-01;
+	border: 0.5px solid #565656;
+	border-radius: 4px;
+}
+.project-info-title{
+	color: $color-light-01;
+	margin-bottom: 44px;
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 37px;
+}
+.project-info-description{
+	color: $color-light-01;
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+}
+.project-extra{
+	width: 474px;
+	margin-top: 206px;
+}
+.project-extra-support{
+	background: $color-dark-gray-01;
+	padding-left: 53px;
+	padding-right: 53px;
+	padding-top: 48px;
+	padding-bottom:48px;
+	border: 0.5px solid #565656;
+	border-radius: 4px;
+	width: 474px;
+	height: 408px;
+	margin-bottom: 40px;
+}
+.project-extra-title{
+	color: $color-light-01;
+	margin-bottom: 24px;
+}
+.project-extra-description{
+	color: $color-light-01;
+	opacity: 0.7;
+	margin-bottom: 64px;
+}
+.project-extra-pic{
+	width: 64px;
+	height: 64px;
+	border-radius: 100%;
+	margin-right: 18px;
+}
+.project-extra-author{
+	width: 474px;
+	height: 253px;
+	border: 0.5px solid #565656;
+	border-radius: 4px;
+	color: $color-dark-gray-01;
+	padding-left: 57px;
+	padding-right: 57px;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	margin-bottom: 171px;
+}
+.project-extra-author-title{
+	color: $color-light-01;
+	opacity: 0.9;
+	margin-bottom: 20px;
+}
+.project-extra-author-name{
+	color: $color-light-01;
+	opacity: 0.9;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.project-extra-author-rank{
+	color: $color-light-01;
+	opacity: 0.6;
+}
+.project-extra-rewards{
+	color: $color-light-01;
+	margin-bottom: 56px;
+}
+.project-extra-funding{
+	width: 474px;
+	height: 612px;
+	border: 0.5px solid #565656;
+	border-radius: 4px;
+	background: $color-dark-gray-01;
+	padding-left: 55px;
+	padding-right: 55px;
+	padding-top: 57px;
+	padding-bottom: 57px;
+	margin-bottom: 134px;
+}
+.project-extra-funding-title{
+	color:$color-light-01;
+	opacity: 0.9;
+	margin-bottom: 50px;
+}
+.project-extra-funding-img{
+	height: 93.5px;
+	width: 84.89px;
+	margin-bottom: 70px;
+	align-self: center;
+	opacity: 0.3px;
+}
+.project-extra-funding-text{
+	color: $color-light-01;
+	opacity: 0.7px;
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+}

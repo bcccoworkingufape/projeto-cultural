@@ -2,6 +2,7 @@
 
 .header {
     height: 115px;
+    border: 0.5px solid #565656;
 }
 
 .search {
@@ -30,4 +31,5 @@
 }
 .text-header {
 	color: $color-light-01;
+	margin-left: 50px;
 }

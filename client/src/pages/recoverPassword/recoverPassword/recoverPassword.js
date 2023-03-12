@@ -1,5 +1,4 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
-import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 import pyre from '../../../assets/images/pyre.svg';
 import './recoverPassword.scss';
@@ -7,9 +6,9 @@ import '../../../stylesheets/_colors.scss';
 import '../../../stylesheets/_fonts.scss';
 import SignInSignOutButton from "../../../components/buttons/signInSignOutButton/SignInSignOutButton"
 import Input from "../../../components/input/input";
+import { Link } from "react-router-dom";
 
 function RecoverPassword() {
-		const navigate = useNavigate();
 		const ref_ops = useRef(null);
 		const ref = useRef(null);
 		const ref2 = useRef(null);
@@ -69,7 +68,7 @@ function RecoverPassword() {
 						<span className="font-subtitle-12-ubuntu color_gray ops_error" hidden ref={ref_ops}><img src="info.svg"/>&nbsp;&nbsp;Ops! As senhas devem ser iguais</span>	
 					</div>
 					<div className='row m-0 mt-4 mb-3 color_gray' onClick={verifyPassword}>
-						<SignInSignOutButton >Criar nova senha</SignInSignOutButton>
+						<Link to="/" style={{textDecoration: "none"}} className="p-0"><SignInSignOutButton >Criar nova senha</SignInSignOutButton></Link>
 					</div>
 				</div>
 			</div>

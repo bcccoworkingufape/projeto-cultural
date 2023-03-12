@@ -5,23 +5,27 @@
     padding: 69px 40px;
     position: relative;
     width: 319px;
-
+    border-right: 0.5px solid rgba(86, 86, 86, 0.8);
     .sidemenu-items {
 	margin-top: 26px;
 	margin-left: 43px;
 	height: 90vh;
 
         .sidemenu-item {
+	    white-space: nowrap;
+	    overflow: hidden;
             color: $color-light-gray-01;
 	    margin-bottom: 51px;
+	    a{
+	      color: $color-light-gray-01;
+	    }
 
 	    path,
 	    svg {
-                margin-right: 15px;
                 fill: $color-light-gray-01;
             }
 
-            &:hover {
+            &:hover, a:hover {
                 color: $color-light-02;
 		path {
 		    fill: $color-light-02;

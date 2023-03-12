@@ -1,0 +1,24 @@
+@import '../../../../stylesheets/_colors.scss';
+@import '../../../../stylesheets/_fonts.scss';
+
+.popular-container {
+	margin-top: 208px;
+	margin-left: 164px;
+	width: 1592px;
+}
+.popular-title {
+	color: $color-light-01;
+	margin-bottom: 56px;
+}
+.popular-card-container-container {
+	margin-top: 56px;
+}
+.popular-card-container {
+	margin-bottom: 23px;
+}
+.popular-card-workaround {
+	margin-right: 13px;
+}
+.popular-extra {
+	color: $color-primary-grey-00;
+}

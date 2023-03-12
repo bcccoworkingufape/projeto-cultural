@@ -1,16 +1,31 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
-import { useNavigate } from 'react-router-dom';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import axios from 'axios';
 import pyre from '../../../assets/images/pyre.svg';
 import './recoverPasswordIntro.scss';
 import '../../../stylesheets/_colors.scss';
 import '../../../stylesheets/_fonts.scss';
 import SignInSignOutButton from "../../../components/buttons/signInSignOutButton/SignInSignOutButton"
 import Input from "../../../components/input/input";
+import { Link } from 'react-router-dom';
 
 function RecoverPasswordIntro() {
-		const navigate = useNavigate();
 		const ref2 = useRef(null);
+		const [ emailValue, setEmailValue ] = useState('');
+		const [ emailSentValue, setEmailSentValue ] = useState('');
+		function email_request(){
+			setEmailSentValue(true);
+			axios({
+				method: "post",
+				url: "http://3.87.47.178:3000/users/forgotPassword",
+				data: {
+					email: emailValue,
+				},
+			});
+		}
+		const handleEmailChange = (event) => {
+			setEmailValue(event.target.value);
+		};
 		return (
 		<>
 			<div className='d-flex justify-content-center mt-5'>
@@ -33,15 +48,18 @@ function RecoverPasswordIntro() {
 							<div className="d-flex color_gray">
 								<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Digite seu email</label>
 							</div>
-							<Input/>
+							<Input value={emailValue} handleOnChange={handleEmailChange}/>
 						</div>
 					</div>
-					<div className='row m-0 mt-4 mb-3 color_gray' onClick={() => {navigate("/recoverPassword")}}>
+					{emailSentValue &&
+						<p className="email-sent"> Um e-mail será enviado para o endereço! </p>
+					}
+					<div style={{textDecoration: "none"}} className='row m-0 mt-4 mb-3 color_gray' onClick={email_request}>
 						<SignInSignOutButton>Enviar</SignInSignOutButton>
 					</div>
 				</div>
 			</div>
-			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Cadastre-se</a></div>
+			<div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">Novo por aqui? <Link to='/signup' className="signup font-body-20-700-roboto">&nbsp;Cadastre-se</Link></div>
 		</>
 	);
   }
