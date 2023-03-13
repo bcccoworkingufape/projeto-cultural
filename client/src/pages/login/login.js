@@ -29,22 +29,21 @@ function Login({ setToken }) {
 		.catch((error)=>{
 			console.log(error);
 		})
-
 	}
 
 	function login_request(){
 		axios.post("http://localhost:3000/users/login",
-			{
-				email: loginValue,
-				password: passwordValue
-			},
-		).then((result) =>{
-			if(result.status === 400){
-				setFailValue(true);
-			}
-			if(result.status === 200){
-				window.location.replace('http://localhost:3001/'); //mudar de acordo com o site.
-			}
+		{
+			email: loginValue,
+			password: passwordValue,
+		}
+		).then(response => { 
+			localStorage.setItem('logged_user', response.data);
+			window.location.replace('http://localhost:3001/explore');
+		})
+		.catch(error => {
+			alert('Ocorreu um erro no login. Confira as informções e tente novamente');
+			//NotificationManager.error('Ocorreu um erro na criação de usuário', 'Confira as informções e tente novamente', 5000);
 		});
 	}
 

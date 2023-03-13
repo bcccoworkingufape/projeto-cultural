@@ -28,7 +28,6 @@ function SignUpEmailIntroduction() {
 	};
 
 	function signup_request(){
-		
 		axios.post("http://localhost:3000/users/signup",
 		{
 			name: nameValue,
@@ -40,13 +39,12 @@ function SignUpEmailIntroduction() {
 		).then(response => { 
 			setSignedUpValue(true);
 			localStorage.setItem('logged_user', response.data);
-			window.location.replace('http://localhost:3001/login');
+			window.location.replace('http://localhost:3001/explore');
 		})
 		.catch(error => {
 			alert('Ocorreu um erro na criação de usuário. Confira as informções e tente novamente');
 			//NotificationManager.error('Ocorreu um erro na criação de usuário', 'Confira as informções e tente novamente', 5000);
 		});
-	
 	}
 
 	return (

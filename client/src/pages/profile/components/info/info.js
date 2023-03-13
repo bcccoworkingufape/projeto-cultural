@@ -31,7 +31,7 @@ function Info(){
 			<div className="d-flex flex-row info-subcontainer">
 				<div>
 					<p className="info-subcontainer-masterword font-subtitle-24-ubuntu">Sobre</p>
-					<p className="info-subcontainer-subword font-body-16-roboto">Descreva sobre você em um twitte</p>
+					<p className="info-subcontainer-subword font-body-16-roboto">Descreva sobre você em um tweet</p>
 				</div>
 				<div className="info-subcontainer-extra align-items-end">
 					<textarea placeholder="Lorem Ipsum bem grande"></textarea>

@@ -110,6 +110,10 @@ function App() {
 						<Route path="/project/:projectName" element={<Project/>}/>
 					</Route>
 
+					<Route path="/my-projects" element={<MyProjects/>}/>
+						
+
+
 					{/*Exemplos de uso dos botoes*/}
 					<Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
 					<Route path="/test1" element={<ContinueGoogleButton href="/login"/>}/>
