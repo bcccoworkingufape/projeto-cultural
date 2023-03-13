@@ -12,7 +12,7 @@ import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/
 import Input from "../../components/input/input";
 import axios from 'axios';
 
-function Login() {
+function Login({ setToken }) {
 	const ref = useRef(null);
 	const ref2 = useRef(null);
 	const [ loginValue, setLoginValue ] = useState('');

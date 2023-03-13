@@ -10,18 +10,18 @@ function Popular(){
 			<div className="popular-card-container-container">
 				<div className="d-flex flex-row popular-card-container">
 					<div className="popular-card-workaround">
-						<CardBig title="Stickman" author="por Lucas Branco"/>
+						<CardBig title="Stickman" author="Lucas Branco"/>
 					</div>
 					<div className="d-flex flex-column">
 						<div className="d-flex flex-row popular-card-container">
 							<div className="popular-card-workaround">
-								<CardSmall title="Stickman" author="por Lucas Branco"/>
+								<CardSmall title="Stickman" author="Lucas Branco"/>
 							</div>
 							<div className="popular-card-workaround">
-								<CardSmall title="Stickman" author="por Lucas Branco"/>
+								<CardSmall title="Stickman" author="Lucas Branco"/>
 							</div>
 						</div>
-						<Card title="Stickman" author="por Lucas Branco"/>
+						<Card title="Stickman" author="Lucas Branco"/>
 					</div>
 				</div>
 			</div>

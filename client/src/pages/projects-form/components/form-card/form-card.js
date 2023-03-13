@@ -1,7 +1,21 @@
 import './form-card.scss';
 import Upload from "../../../../assets/images/upload.svg";
+import { useOutletContext } from "react-router-dom";
 
 function FormCard() {
+	const { name, location, tags, imageURL } = useOutletContext();
+	const handleNameChange = (event) => {
+		name.setName(event.target.value);
+	};
+	const handleLocationChange = (event) => {
+		location.setLocation(event.target.value);
+	};
+	const handleTagsChange = (event) => {
+		tags.setTags(event.target.value);
+	};
+	const handleimageURLChange = (event) => {
+		imageURL.setImageURL(event.target.value);
+	};
 	return( 
 		<div> 
 			<div className="d-flex flex-column initial-container">
@@ -13,21 +27,21 @@ function FormCard() {
 							<span className="initial-block-title font-subtitle-24-ubuntu">Nome do projeto</span>
 							<span className="initial-block-description font-body-16-roboto">Esse é o nome do projeto</span>
 						</div>
-						<input className="initial-block-action"/>
+						<input value={name.name} onChange={handleNameChange} className="initial-block-action"/>
 					</div>
 					<div className="d-flex flex-row initial-block">
 						<div className="d-flex flex-column initial-block-text">
 							<span className="initial-block-title font-subtitle-24-ubuntu">Local do projeto</span>
 							<span className="initial-block-description font-body-16-roboto">Onde o projeto foi construído</span>
 						</div>
-						<input className="initial-block-action"/>
+						<input value={location.location} onChange={handleLocationChange} className="initial-block-action"/>
 					</div>
 					<div className="d-flex flex-row initial-block">
 						<div className="d-flex flex-column initial-block-text">
 							<span className="initial-block-title font-subtitle-24-ubuntu">Tags</span>
 							<span className="initial-block-description font-body-16-roboto">Selecione as categorias do seu projeto</span>
 						</div>
-						<input className="initial-block-action"/>
+						<input value={tags.tags} onChange={handleTagsChange} className="initial-block-action"/>
 					</div>
 					<div className="d-flex flex-row initial-block">
 						<div className="d-flex flex-column initial-block-text">

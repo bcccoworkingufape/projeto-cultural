@@ -11,7 +11,6 @@ export const create = async(data: Project) => {
     project.description = data.description;
     project.user_id = data.user_id;
     project.category_id = data.category_id;
-    project.status = data.status;
     project.locality = data.locality;
 
     return await repository.save(project);
