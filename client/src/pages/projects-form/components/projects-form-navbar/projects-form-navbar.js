@@ -19,7 +19,7 @@ function ProjectsFormNavbar(props) {
 			data: {
 				name: props.name,
 				description: props.description,
-				user_id: props.user.id,
+				user_id: props.user.uid, // tem que ser o uid tanto do usuario normal quanto do usuario google.
 				category_id: 0,//props.categoryId,
 				locality: props.location,
 			}

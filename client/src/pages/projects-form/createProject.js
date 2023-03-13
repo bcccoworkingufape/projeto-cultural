@@ -4,7 +4,7 @@ import Navbar from "./components/projects-form-navbar/projects-form-navbar";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 
-function CreateProject(user) {
+function CreateProject(props) {
 	const [name, setName] = useState('');
 	const [location, setLocation] = useState('');
 	const [tags, setTags ] = useState('');
@@ -14,7 +14,7 @@ function CreateProject(user) {
 		<div> 
 			<Header/>
 			<div className="d-flex flex-row justify-content-center">
-				<Navbar name={name} location={location} imageURL={images} description={description} tags={tags} user={user}/>
+				<Navbar name={name} location={location} imageURL={images} description={description} tags={tags} user={props.user}/>
 				<Outlet context={
 					[name, setName, 
 					location, setLocation,

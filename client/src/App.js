@@ -62,7 +62,7 @@ function getUser(token){
 
 function App() {
 	const [userG, setUserG] = useState(undefined);
-	var user = {id: '', name: ''};
+	var user = {id: '', name: '', token: ''};
 	const token = getToken();
 	user = getUser(token);
 
@@ -73,7 +73,7 @@ function App() {
 		})
 	})
 	if(user === undefined && userG !== null && userG !== undefined){
-		user = {id: userG.uid, name: userG.displayName};
+		user = {id: userG.uid, name: userG.displayName, token: userG.accessToken};
 	}
 
 	return (
@@ -97,7 +97,7 @@ function App() {
 						<Route path="/profiles/:userId" element={<UserProfile/>}/>
 						<Route path="/profiles/:userId/portfolio" element={<UserPortfolio/>}/>
 					</Route>
-					<Route path="/create" element={<CreateProject/>} user={user}>
+					<Route path="/create" element={<CreateProject user={user}/>}>
 						<Route path="/create/initial" element={<FormCard/>}/>
 						<Route path="/create/description" element={<Description/>}/>
 						<Route path="/create/funding" element={<Funding/>}/>

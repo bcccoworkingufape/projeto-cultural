@@ -37,6 +37,7 @@ function SignUpEmailIntroduction() {
 			imageURL: "",
 		}
 		).then(response => { 
+			console.log(response);
 			setSignedUpValue(true);
 			localStorage.setItem('logged_user', response.data);
 			window.location.replace('http://localhost:3001/explore');
