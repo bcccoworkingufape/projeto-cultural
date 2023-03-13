@@ -46,7 +46,7 @@ function Header() {
 					</div>
 				) :
 					(
-						<div class="d-flex">
+						<div className="d-flex">
 							<Link to="/explore" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Explorar </div></Link>
 							<Link to="/create/initial" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Criar projeto </div></Link>
 							<Link to="/profile/projects" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Meus Projetos </div></Link>
@@ -59,7 +59,7 @@ function Header() {
 						<div onClick={() => { navigate("/signup") }}><SignupNavButton /></div>
 					</div>
 				) : (
-					<div class="d-flex justify-content-around">
+					<div className="d-flex justify-content-around">
 						<img style={{ marginRight: '64px' }} src={notification} height={30} alt="notifications" />
 						<img style={{ marginRight: '64px' }} src={userImage} height={30} alt="userImage" />
 						<img onClick={handleLogOut} style={{ marginRight: '64px' }} src={signOutIcon} height={30} alt="signOut" />

@@ -12,9 +12,9 @@ import { useOutletContext } from "react-router-dom";
 }*/ // submit sera feito pelo navbar
 
 function Description() {
-	const { description } = useOutletContext();
+	const [ name, setName, location, setLocation, tags, setTags, images, setImage, description, setDescription ] = useOutletContext();
 	const handleDescriptionChange = (event) => {
-		description.setDescription(event.target.value);
+		setDescription(event.target.value);
 	};
 	return( 
 		<div> 
@@ -22,7 +22,7 @@ function Description() {
 				<span className="description-title font-h3-32-ubuntu">Descrição</span>
 				<span className="description-description font-body-16-roboto">Você poderá adicionar textos, imagens e vídeos sobre o seu projeto.</span>
 				{/*<form method="post" onsubmit={handleSubmit}>
-					*/}<textarea className="description-textarea" value={description.description} onChange={handleDescriptionChange}/>{/*
+					*/}<textarea className="description-textarea" value={description} onChange={handleDescriptionChange}/>{/*
 					<button type="submit" className="font-button-20-ubuntu">Alterar</button>
 				</form>*/}
 			</div>
