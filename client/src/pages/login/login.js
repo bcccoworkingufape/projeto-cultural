@@ -12,7 +12,7 @@ import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/
 import Input from "../../components/input/input";
 import axios from 'axios';
 
-function Login() {
+function Login({ setToken }) {
 	const ref = useRef(null);
 	const ref2 = useRef(null);
 	const [ loginValue, setLoginValue ] = useState('');
@@ -45,6 +45,7 @@ function Login() {
 				setFailValue(true);
 			}
 			if(result.status === 200){
+				setToken(result.token);
 				window.location.replace('http://localhost:3000/'); //mudar de acordo com o site.
 			}
 		});

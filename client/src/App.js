@@ -1,17 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from './context/authContext';
 import { auth} from './services/firebase';
 import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
-
 import LandingPage from './pages/landing/landingPage.js';
 import Login from './pages/login/login.js';
 import SignUp from './pages/signUp/signUp.js';
 import SignUpEmailIntroduction from './pages/signUp/signUp-email-introduction/signUp-email-introduction';
-
 import SignInSignOutButton from './components/buttons/signInSignOutButton/SignInSignOutButton';
 import ContinueGoogleButton from './components/buttons/continueGoogleButton/ContinueGoogleButton';
 import ContinueFacebookButton from './components/buttons/continueFacebookButton/ContinueFacebookButton';
@@ -47,23 +44,44 @@ import ViewProject from './pages/view-project/view-project';
 import Project from './pages/view-project/components/project';
 import MyProjects from './pages/profile/components/myProjects/myProjects';
 
+function getToken(){
+	const tokenString = sessionStorage.getItem('token');
+	const userToken =JSON.parse(tokenString);
+	return userToken?.token;
+}
+
+function setToken(userToken){
+	sessionStorage.setItem('token', JSON.stringify(userToken));
+}
+
+function getUser(token){
+	return undefined;
+	//return user (id e name)
+}
+
+
 function App() {
-	const [user, setUser] = useState(undefined);
+	const [userG, setUserG] = useState(undefined);
+	var user = {id: '', name: ''};
+	const token = getToken();
+	user = getUser(token);
 
 	useEffect(()=>{
-		onAuthStateChanged(auth, (user) =>{
-			user && console.log("logado como: " + user.displayName);
-			setUser(user);
+		onAuthStateChanged(auth, (userG) =>{
+			userG && console.log("logado como: " + userG.displayName);
+			setUserG(userG);
 		})
-
 	})
+	if(user === undefined && userG !== null && userG !== undefined){
+		user = {id: userG.uid, name: userG.displayName};
+	}
 
 	return (
-		<AuthProvider value={user}>
+		<AuthProvider value={userG}>
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<LandingPage/>}/>
-					<Route path="/login" element={ !user ? <Login/> : <Navigate to={"/logout"}/>}/>
+					<Route path="/login" element={ !userG ? <Login/> : <Navigate to={"/logout"}/>} setToken = {setToken}/>
 					<Route path="/signup" element={<SignUp/>}/>
 					<Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
 					<Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
@@ -79,7 +97,7 @@ function App() {
 						<Route path="/profiles/:userId" element={<UserProfile/>}/>
 						<Route path="/profiles/:userId/portfolio" element={<UserPortfolio/>}/>
 					</Route>
-					<Route path="/create" element={<CreateProject/>}>
+					<Route path="/create" element={<CreateProject/>} user={user}>
 						<Route path="/create/initial" element={<FormCard/>}/>
 						<Route path="/create/description" element={<Description/>}/>
 						<Route path="/create/funding" element={<Funding/>}/>

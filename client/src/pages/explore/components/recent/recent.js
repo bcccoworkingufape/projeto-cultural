@@ -8,30 +8,30 @@ function Recent(){
 			<div className="recent-card-container-container">
 				<div className="d-flex flex-row recent-card-container">
 					<div className="recent-card-workaround">
-						<CardSmall title="Stickman" author="por Lucas Branco"/>
+						<CardSmall title="Stickman" author="Lucas Branco"/>
 					</div>
 					<div className="recent-card-workaround">
-						<CardSmall title="Stickman" author="por Lucas Branco"/>
+						<CardSmall title="Stickman" author="Lucas Branco"/>
 					</div>
 					<div className="recent-card-workaround">
-						<CardSmall title="Stickman" author="por Lucas Branco"/>
+						<CardSmall title="Stickman" author="Lucas Branco"/>
 					</div>
 					<div className="recent-card-workaround">
-						<CardSmall title="Stickman" author="por Lucas Branco"/>
+						<CardSmall title="Stickman" author="Lucas Branco"/>
 					</div>
 				</div>
 				<div className="d-flex flex-row recent-card-container">
 					<div className="recent-card-workaround">
-						<CardSmall title="Stickman" author="por Lucas Branco"/>
+						<CardSmall title="Stickman" author="Lucas Branco"/>
 					</div>
 					<div className="recent-card-workaround">
-						<CardSmall title="Stickman" author="por Lucas Branco"/>
+						<CardSmall title="Stickman" author="Lucas Branco"/>
 					</div>
 					<div className="recent-card-workaround">
-						<CardSmall title="Stickman" author="por Lucas Branco"/>
+						<CardSmall title="Stickman" author="Lucas Branco"/>
 					</div>
 					<div className="recent-card-workaround">
-						<CardSmall title="Stickman" author="por Lucas Branco"/>
+						<CardSmall title="Stickman" author="Lucas Branco"/>
 					</div>
 				</div>
 			</div>

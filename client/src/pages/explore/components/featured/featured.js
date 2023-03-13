@@ -8,18 +8,18 @@ function Featured(){
 			<div className="featured-card-container-container">
 				<div className="d-flex flex-row featured-card-container">
 					<div className="featured-card-workaround">
-						<Card title="Stickman" author="por Lucas Branco"/>
+						<Card title="Stickman" author="Lucas Branco"/>
 					</div>
 					<div className="featured-card-workaround">
-						<Card title="Stickman" author="por Lucas Branco"/>
+						<Card title="Stickman" author="Lucas Branco"/>
 					</div>
 				</div>
 				<div className="d-flex flex-row featured-card-container">
 					<div className="featured-card-workaround">
-						<Card title="Stickman" author="por Lucas Branco"/>
+						<Card title="Stickman" author="Lucas Branco"/>
 					</div>
 					<div className="featured-card-workaround">
-						<Card title="Stickman" author="por Lucas Branco"/>
+						<Card title="Stickman" author="Lucas Branco"/>
 					</div>
 				</div>
 			</div>
