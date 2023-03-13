@@ -81,7 +81,7 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<LandingPage/>}/>
-					<Route path="/login" element={ !userG ? <Login/> : <Navigate to={"/logout"}/>} setToken = {setToken}/>
+					<Route path="/login" element={ !userG ? <Login/> : <Navigate to={"/explore"}/>} setToken = {setToken}/>
 					<Route path="/signup" element={<SignUp/>}/>
 					<Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
 					<Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>

@@ -4,7 +4,7 @@ import SignInSignOutButton from "../../../components/buttons/signInSignOutButton
 import Input from './../../../components/input/input';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import {NotificationContainer, NotificationManager} from 'react-notifications';
+//import {NotificationContainer, NotificationManager} from 'react-notifications';
 import axios from 'axios';
 
 function SignUpEmailIntroduction() {

@@ -34,22 +34,22 @@ function Header() {
 				</div>
 
 				{!isUserLogged ? (
-					<div>
-						<div>
-							<Link to="/explore" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu"> Explorar </div></Link>
-							<Link to="/blog" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu"> Blog </div></Link>
-							<Link to="/about" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu"> Sobre nós </div></Link>
+					<div className="d-flex flex-row">
+						<div className="d-flex flex-row align-items-center">
+							<Link to="/explore" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Explorar </div></Link>
+							<Link to="/blog" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Blog </div></Link>
+							<Link to="/about" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Sobre nós </div></Link>
 						</div>
-						<div className="d-flex col-5 offset-1">
+						{/*<div className="d-flex col-5 offset-1">
 							<InputHeader />
-						</div>
+						</div>*/}
 					</div>
 				) :
 					(
 						<div class="d-flex">
-							<Link to="/explore" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu"> Explorar </div></Link>
-							<Link to="/create" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu"> Criar projeto </div></Link>
-							<Link to="/about" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu"> Meus Projetos </div></Link>
+							<Link to="/explore" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Explorar </div></Link>
+							<Link to="/create/initial" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Criar projeto </div></Link>
+							<Link to="/profile/projects" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Meus Projetos </div></Link>
 						</div>
 					)}
 

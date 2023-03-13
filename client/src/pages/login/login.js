@@ -24,7 +24,9 @@ function Login({ setToken }) {
 
 		signInWithPopup(auth, provider)
 		.then((result) =>{
-			console.log(result);
+			console.log(result.user);
+			localStorage.setItem('logged_user', result.user.accessToken);
+			window.location.replace('http://localhost:3000/explore');
 		})
 		.catch((error)=>{
 			console.log(error);
