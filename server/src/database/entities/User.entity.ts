@@ -51,8 +51,8 @@ export class User {
     @JoinColumn({ name: 'digital_presence_id' })
     digitalPresence: DigitalPresence;
 
-    @Column({ type: "enum", enum: StatusDelected, name: "address_status_enum", nullable: false, default: 'NOT_DELETED' })
-    status: string = 'NOT_DELETED';
+    // @Column({ type: "enum", enum: StatusDelected, name: "user_status_enum", nullable: false, default: 'NOT_DELETED' })
+    // status: string = 'NOT_DELETED';
     
     constructor(){
         if(!this.id) this.id = uuid();

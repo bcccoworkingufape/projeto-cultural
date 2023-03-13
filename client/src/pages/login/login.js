@@ -33,19 +33,17 @@ function Login() {
 	}
 
 	function login_request(){
-		axios({
-			method: "post",
-			url: "http://3.87.47.178:3000/users/login",
-			data: {
+		axios.post("http://localhost:3000/users/login",
+			{
 				email: loginValue,
 				password: passwordValue
 			},
-		}).then((result) =>{
+		).then((result) =>{
 			if(result.status === 400){
 				setFailValue(true);
 			}
 			if(result.status === 200){
-				window.location.replace('http://localhost:3000/'); //mudar de acordo com o site.
+				window.location.replace('http://localhost:3001/'); //mudar de acordo com o site.
 			}
 		});
 	}

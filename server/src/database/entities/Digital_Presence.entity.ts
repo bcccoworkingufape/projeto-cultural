@@ -20,7 +20,7 @@ export class DigitalPresence {
     @Column({ type: String })
     personal_site_url: boolean;
 
-    @Column({ type: "enum", enum: StatusDelected, name: "address_status_enum", nullable: false, default: 'NOT_DELETED' })
+    @Column({ type: "enum", enum: StatusDelected, name: "digital_presence_status_enum", nullable: false, default: 'NOT_DELETED' })
     status: string = 'NOT_DELETED';
 
     @CreateDateColumn({ type: String })

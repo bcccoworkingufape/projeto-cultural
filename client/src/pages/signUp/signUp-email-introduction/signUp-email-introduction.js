@@ -4,6 +4,7 @@ import SignInSignOutButton from "../../../components/buttons/signInSignOutButton
 import Input from './../../../components/input/input';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 import axios from 'axios';
 
 function SignUpEmailIntroduction() {
@@ -27,18 +28,25 @@ function SignUpEmailIntroduction() {
 	};
 
 	function signup_request(){
-		setSignedUpValue(true);
-		axios({
-			method: "post",
-			url: "http://3.87.47.178:3000/users/signup",
-			data: {
-				name: nameValue,
-				email: emailValue,
-				password: passwordValue,
-				user_type: "artista",
-				imageURL: "",
-			},
+		
+		axios.post("http://localhost:3000/users/signup",
+		{
+			name: nameValue,
+			email: emailValue,
+			password: passwordValue,
+			user_type: "ARTISTA",
+			imageURL: "",
+		}
+		).then(response => { 
+			setSignedUpValue(true);
+			localStorage.setItem('logged_user', response.data);
+			window.location.replace('http://localhost:3001/login');
+		})
+		.catch(error => {
+			alert('Ocorreu um erro na criação de usuário. Confira as informções e tente novamente');
+			//NotificationManager.error('Ocorreu um erro na criação de usuário', 'Confira as informções e tente novamente', 5000);
 		});
+	
 	}
 
 	return (

@@ -23,5 +23,3 @@ export const AppDataSource = new DataSource({
          __dirname + process.env.TYPEORM_MIGRATIONS_DIR
     ],
   });
-  
-  console.log(__dirname + process.env.TYPEORM_MIGRATIONS_DIR)
