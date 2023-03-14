@@ -11,7 +11,6 @@ import axios from 'axios';
 import './projects-form-navbar.scss';
 
 function ProjectsFormNavbar(props) {
-
 	const [valor, setValor] = useState(1);
 
 	function handleChange(event) {

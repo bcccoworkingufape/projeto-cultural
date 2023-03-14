@@ -4,7 +4,7 @@ import SignInSignOutButton from "../../../components/buttons/signInSignOutButton
 import Input from './../../../components/input/input';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import {NotificationContainer, NotificationManager} from 'react-notifications';
+//import {NotificationContainer, NotificationManager} from 'react-notifications';
 import axios from 'axios';
 
 function SignUpEmailIntroduction() {
@@ -37,6 +37,7 @@ function SignUpEmailIntroduction() {
 			imageURL: "",
 		}
 		).then(response => { 
+			console.log(response);
 			setSignedUpValue(true);
 			localStorage.setItem('logged_user', response.data);
 			window.location.replace('http://localhost:3001/explore');

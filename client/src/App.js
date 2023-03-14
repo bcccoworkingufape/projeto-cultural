@@ -63,7 +63,7 @@ function getUser(token){
 
 function App() {
 	const [userG, setUserG] = useState(undefined);
-	var user = {id: '', name: ''};
+	var user = {id: '', name: '', token: ''};
 	const token = getToken();
 	user = getUser(token);
 
@@ -74,7 +74,7 @@ function App() {
 		})
 	})
 	if(user === undefined && userG !== null && userG !== undefined){
-		user = {id: userG.uid, name: userG.displayName};
+		user = {id: userG.uid, name: userG.displayName, token: userG.accessToken};
 	}
 
 	return (
@@ -82,7 +82,7 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<LandingPage/>}/>
-					<Route path="/login" element={ !userG ? <Login/> : <Navigate to={"/logout"}/>} setToken = {setToken}/>
+					<Route path="/login" element={ !userG ? <Login/> : <Navigate to={"/explore"}/>} setToken = {setToken}/>
 					<Route path="/signup" element={<SignUp/>}/>
 					<Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
 					<Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>

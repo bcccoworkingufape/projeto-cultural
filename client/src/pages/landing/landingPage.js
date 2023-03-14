@@ -1,5 +1,5 @@
 import LoginNavButton from '../../components/buttons/loginNavButton/LoginNavButton';
-import NotSignedupHeader from '../../components/notSignedupHeader/notSignedupHeader';
+import NotSignedupHeader from '../../components/header/header';
 import './landingPage.scss';
 
 function LandingPage() {

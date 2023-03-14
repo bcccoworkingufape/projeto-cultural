@@ -34,15 +34,15 @@ function Header() {
 				</div>
 
 				{!isUserLogged ? (
-					<div>
-						<div>
-							<Link to="/explore" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu"> Explorar </div></Link>
-							<Link to="/blog" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu"> Blog </div></Link>
-							<Link to="/about" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu"> Sobre nós </div></Link>
+					<div className="d-flex flex-row">
+						<div className="d-flex flex-row align-items-center">
+							<Link to="/explore" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Explorar </div></Link>
+							<Link to="/blog" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Blog </div></Link>
+							<Link to="/about" style={{ textDecoration: "none" }}><div className="text-header font-button-20-ubuntu link"> Sobre nós </div></Link>
 						</div>
-						<div className="d-flex col-5 offset-1">
+						{/*<div className="d-flex col-5 offset-1">
 							<InputHeader />
-						</div>
+						</div>*/}
 					</div>
 				) :
 					(
