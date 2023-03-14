@@ -43,6 +43,7 @@ import Search from './pages/search/search';
 import ViewProject from './pages/view-project/view-project';
 import Project from './pages/view-project/components/project';
 import MyProjects from './pages/profile/components/myProjects/myProjects';
+import CreateProjectTest from './pages/create-project/create-project';
 
 function getToken(){
 	const tokenString = sessionStorage.getItem('token');
@@ -97,11 +98,6 @@ function App() {
 						<Route path="/profiles/:userId" element={<UserProfile/>}/>
 						<Route path="/profiles/:userId/portfolio" element={<UserPortfolio/>}/>
 					</Route>
-					<Route path="/create" element={<CreateProject/>} user={user}>
-						<Route path="/create/initial" element={<FormCard/>}/>
-						<Route path="/create/description" element={<Description/>}/>
-						<Route path="/create/funding" element={<Funding/>}/>
-					</Route>
 					<Route path="/explore" element={<Explore/>}/>
 					<Route path="/search" element={<Search/>}>
 						<Route path="/search/:searchName" element={<Search/>}/>
@@ -111,9 +107,9 @@ function App() {
 					</Route>
 
 					<Route path="/my-projects" element={<MyProjects/>}/>
+
+					<Route path="/create-project" element={<CreateProjectTest/>}/>
 						
-
-
 					{/*Exemplos de uso dos botoes*/}
 					<Route path="/test" element={<SignInSignOutButton>Cadastrar</SignInSignOutButton>}/> 
 					<Route path="/test1" element={<ContinueGoogleButton href="/login"/>}/>

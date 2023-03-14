@@ -3,7 +3,7 @@
 .main_login {
 	border-radius: 5px;
 	width: 408px;
-	height: 552px;
+	padding: 48px;
 }
 .color_gray {
 	background: $color-dark-gray-02;
@@ -16,6 +16,7 @@
 	color: $color-link-01;
 	text-decoration: none;
 }
+
 .login_text {
 	color: $color-light-01;
 }

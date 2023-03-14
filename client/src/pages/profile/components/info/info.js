@@ -6,7 +6,9 @@ function Info(){
 	return(
 		<div className="info-container">
 			<p className="info-words font-h3-32-ubuntu">Perfil público</p>
-			<p className="info-words info-subword font-body-16-roboto pt-1">Im the Scatman Ski-bi dibby dib yo da dub dub Yo da dub dub Ski-bi dibby dib yo da dub dub Yo da dub dub (Im the Scatman) Ski-bi dibby dib yo da dub dub Yo da dub dub Ski-bi dibby dib yo da dub dub Yo da dub dub Ba-da-ba-da-ba-be bop bop bodda bope Bop ba bodda bope Be bop ba bodda bope Bop ba bodda Ba-da-ba-da-ba-be bop ba bodda bope Bop ba bodda bope Be bop ba bodda bope Bop ba bodda bope</p>
+			<p className="info-words info-subword font-body-16-roboto pt-1">
+			Aprimore seu perfil: Gerencie e atualize suas informações para melhorar sua visibilidade na plataforma e maximizar seu alcance
+			</p>
 			
 			<div className="d-flex flex-row info-subcontainer">
 				<div>

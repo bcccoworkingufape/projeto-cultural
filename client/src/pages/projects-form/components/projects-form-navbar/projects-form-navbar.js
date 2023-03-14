@@ -11,67 +11,57 @@ import axios from 'axios';
 import './projects-form-navbar.scss';
 
 function ProjectsFormNavbar(props) {
-	const [ sent, setSent ] = useState(false);
-	function handleSubmit(){
-		axios({
-			method: "post",
-			url: "http://3.87.47.178:3000/projects/createProject",
-			data: {
-				name: props.name,
-				description: props.description,
-				user_id: props.user.id,
-				category_id: 0,//props.categoryId,
-				locality: props.location,
-			}
-		});
-		setSent(true);
+
+	const [valor, setValor] = useState(1);
+
+	function handleChange(event) {
+		setValor(event.target.dataset.value);
+		props.navbarValue(event.target.dataset.value);
 	}
+
 	return (
 		<div className="projects-form-navbar-container">
 			<div className="project-image"> </div>
 			<h4 className="font-subtitle-24-ubuntu"> Nome do projeto </h4>
 
 			<div className="navbar-items d-flex flex-column justify-content-between">
-				<Link className="navbar-item d-flex align-items-center" to="/create/initial">
-					<BasicIcon />
-					<span style={{ marginLeft: '2px' }}> Básico </span>
-				</Link>
+				<a onClick={handleChange} data-value={1} className="navbar-item d-flex align-items-center">
+					<BasicIcon onClick={handleChange} data-value={1} />
+					<span onClick={handleChange} data-value={1} style={{ marginLeft: '2px' }}> Básico </span>
+				</a>
 
-				<Link className="navbar-item d-flex align-items-center" to="/create/description">
-					<DescriptionIcon />
-					<span style={{ marginLeft: '4px' }}> Descrição </span>
-				</Link>
+				<a onClick={handleChange} data-value={2} className="navbar-item d-flex align-items-center">
+					<DescriptionIcon onClick={handleChange} data-value={2} />
+					<span onClick={handleChange} data-value={2} style={{ marginLeft: '4px' }}> Descrição </span>
+				</a>
 
-				<Link className="navbar-item d-flex align-items-center" to="/create/funding">
-					<PaymentIcon />
-					<span style={{ marginLeft: '1px' }}> Financiamento </span>
-				</Link>
+				<a onClick={handleChange} data-value={3} className="navbar-item d-flex align-items-center">
+					<PaymentIcon onClick={handleChange} data-value={3} />
+					<span onClick={handleChange} data-value={3} style={{ marginLeft: '1px' }}> Financiamento </span>
+				</a>
 
-		<Link className="navbar-item d-flex align-items-center" to="/create/preview">
-					<PreviewIcon />
-					<span> Preview </span>
-				</Link>
+				<a onClick={handleChange} data-value={4} className="navbar-item d-flex align-items-center">
+					<PreviewIcon onClick={handleChange} data-value={4}/>
+					<span onClick={handleChange} data-value={4}> Preview </span>
+				</a>
 			</div>
 
 			<div className="navbar-buttons">
-		<div style={{textDecoration:"none"}} onClick={handleSubmit}>
-				<button>
-					<PublishIcon />
-					{sent &&
-						<p>Informações enviadas!</p>
-					}
-					<span className="font-button-20-ubuntu"> Publicar </span>
+				<div style={{ textDecoration: "none" }}>
+					<button onClick={props.submitButtonClick}>
+						<PublishIcon />
+						<span className="font-button-20-ubuntu"> Publicar </span>
+					</button>
+				</div>
+			</div>
+			<Link to="/explore" style={{ textDecoration: "none" }}>
+				<button className="delete-button">
+					<DeleteIcon />
+					<span className="font-button-20-ubuntu"> Deletar </span>
 				</button>
+			</Link>
 		</div>
-		</div>
-		<Link to="/" style={{textDecoration:"none"}}>
-                <button className="delete-button">
-                    <DeleteIcon />
-                    <span className="font-button-20-ubuntu"> Deletar </span>
-                </button>
-		</Link>
-            </div>
-    )
+	)
 }
 
 export default ProjectsFormNavbar;

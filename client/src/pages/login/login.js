@@ -38,12 +38,11 @@ function Login({ setToken }) {
 			password: passwordValue,
 		}
 		).then(response => { 
-			localStorage.setItem('logged_user', response.data);
+			localStorage.setItem('logged_user', JSON.stringify(response.data));
 			window.location.replace('http://localhost:3001/explore');
 		})
 		.catch(error => {
 			alert('Ocorreu um erro no login. Confira as informções e tente novamente');
-			//NotificationManager.error('Ocorreu um erro na criação de usuário', 'Confira as informções e tente novamente', 5000);
 		});
 	}
 

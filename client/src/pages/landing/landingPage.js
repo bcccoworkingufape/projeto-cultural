@@ -7,8 +7,8 @@ function LandingPage() {
         <div className="d-flex flex-column landing-page">
             <NotSignedupHeader></NotSignedupHeader>
             <div className="d-flex flex-column align-items-center center-text justify-content-center">
-                <h1 className="font-h1-64-ubuntu"> Laoreet condimentum odio malesuada id fames dolor tellus </h1>
-                <p className="font-subtitle-24-500-ubuntu"> Metus nisl condimentum egestas nulla sed mus eget mi tortor. </p>
+                <h1 className="font-h1-64-ubuntu"> Desperte sua criatividade e mergulhe na cultura: descubra o marketing cultural </h1>
+                <p className="font-subtitle-24-500-ubuntu"> Encontre, conecte-se, inspire-se </p>
 
                 <div className="d-flex align-items-center center-buttons">
                     <LoginNavButton> Financiar </LoginNavButton>

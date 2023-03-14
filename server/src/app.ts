@@ -9,6 +9,7 @@ import { router as userRouter } from './routes/User.route';
 import { router as likeRouter } from './routes/Like.route';
 import { router as supportRouter } from './routes/Support.route';
 import { router as projectRouter } from './routes/Project.route';
+import { router as categoriesRouter } from './routes/ProjectCategories.route';
 
 import swaggerUi from 'swagger-ui-express';
 import swaggerDocs from './swagger.json';
@@ -34,6 +35,7 @@ app.use('/users', userRouter);
 app.use('/likes', likeRouter);
 app.use('/supports', supportRouter);
 app.use('/projects', projectRouter);
+app.use('/categories', categoriesRouter);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
