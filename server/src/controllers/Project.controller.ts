@@ -28,6 +28,15 @@ export const getById = async(req: Request, res: Response, nextFunction: NextFunc
 	}
 }
 
+export const getByUserId = async(req: Request, res: Response, nextFunction: NextFunction) => {
+	try {
+		const project = await projectRepository.getProjectsByUser(req.query.user_id as string);
+		res.status(200).send({ project });
+	} catch (error: any) {
+		res.status(400).send({ message: 'The request has failed: ' + error });
+	}
+}
+
 export const update = async(req: Request, res: Response, NextFunction: NextFunction) => {
 	try {
 		const project = await projectRepository.getById(req.body.id);

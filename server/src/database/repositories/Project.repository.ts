@@ -34,7 +34,10 @@ export const deleteProject = async(id: string) => {
 
 export const getProjectsByUser = async (userId: string) => {
     return await repository.createQueryBuilder("projects")
-    .innerJoinAndSelect("project.user", "user")
-    .where("user.id = :userId", { userId })
+    .innerJoinAndSelect("projects.user", "user")
+    .where("user.id = :userId", { userId: userId })
     .getMany();
+	//return await repository.find({
+	//	where: { user: { id: userId }}});
+	//return await userId;
 }

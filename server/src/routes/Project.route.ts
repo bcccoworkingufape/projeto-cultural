@@ -4,3 +4,4 @@ export const router = express.Router();
 
 router.post('/createProject', projectController.create);
 router.post('/deleteProject', projectController.remove);
+router.get('/viewProject', projectController.getByUserId);
